@@ -1,0 +1,568 @@
+{
+  "label": "POST-HOC ROBUSTNESS ARTIFACT: technical-exclusion sensitivity audit of the frozen primary run",
+  "status": "post-result diagnostic; NOT part of the preregistered primary hypothesis test; the frozen exclusion rule and the frozen primary result are unmodified",
+  "generated_utc": "2026-08-25T20:44:07.237708+00:00",
+  "inputs": {
+    "raw_store": "data/scoring/primary/scores__gpt-5.4-mini-2026-03-17__plain.jsonl",
+    "frozen_sha256_verified": true,
+    "n_manifest": 11360,
+    "n_included": 10893,
+    "n_excluded": 467,
+    "exclusion_cause": "all 467: HTTP 429 after exhausting the frozen 3-retry policy"
+  },
+  "exclusion_rate_overall": 0.04111,
+  "exclusion_by_ell": {
+    "ELL": {
+      "n": 1039,
+      "excluded": 39,
+      "rate": 0.03754,
+      "rate_se": 0.0059
+    },
+    "non-ELL": {
+      "n": 10321,
+      "excluded": 428,
+      "rate": 0.04147,
+      "rate_se": 0.00196
+    },
+    "risk_difference_ELL_minus_nonELL": -0.00393,
+    "fisher_exact_p_descriptive": 0.6225
+  },
+  "exclusion_by_human_score": {
+    "1": {
+      "n": 62,
+      "excluded": 3,
+      "rate": 0.04839
+    },
+    "2": {
+      "n": 1932,
+      "excluded": 50,
+      "rate": 0.02588
+    },
+    "3": {
+      "n": 3409,
+      "excluded": 123,
+      "rate": 0.03608
+    },
+    "4": {
+      "n": 3597,
+      "excluded": 150,
+      "rate": 0.0417
+    },
+    "5": {
+      "n": 2024,
+      "excluded": 124,
+      "rate": 0.06126
+    },
+    "6": {
+      "n": 336,
+      "excluded": 17,
+      "rate": 0.0506
+    }
+  },
+  "exclusion_by_prompt": {
+    "Cell phones at school": {
+      "n": 1557,
+      "excluded": 62,
+      "rate": 0.03982
+    },
+    "Community service": {
+      "n": 1467,
+      "excluded": 46,
+      "rate": 0.03136
+    },
+    "Distance learning": {
+      "n": 2148,
+      "excluded": 100,
+      "rate": 0.04655
+    },
+    "Grades for extracurricular activities": {
+      "n": 1572,
+      "excluded": 47,
+      "rate": 0.0299
+    },
+    "Mandatory extracurricular activities": {
+      "n": 1605,
+      "excluded": 74,
+      "rate": 0.04611
+    },
+    "Seeking multiple opinions": {
+      "n": 1516,
+      "excluded": 60,
+      "rate": 0.03958
+    },
+    "Summer projects": {
+      "n": 1495,
+      "excluded": 78,
+      "rate": 0.05217
+    }
+  },
+  "exclusion_by_stratum": {
+    "Cell phones at school|2": {
+      "n": 432,
+      "excluded": 14,
+      "rate": 0.03241,
+      "note": ""
+    },
+    "Cell phones at school|3": {
+      "n": 783,
+      "excluded": 35,
+      "rate": 0.0447,
+      "note": ""
+    },
+    "Cell phones at school|4": {
+      "n": 342,
+      "excluded": 13,
+      "rate": 0.03801,
+      "note": ""
+    },
+    "Community service|1": {
+      "n": 17,
+      "excluded": 1,
+      "rate": 0.05882,
+      "note": "small stratum; rate unstable"
+    },
+    "Community service|2": {
+      "n": 533,
+      "excluded": 12,
+      "rate": 0.02251,
+      "note": ""
+    },
+    "Community service|3": {
+      "n": 613,
+      "excluded": 20,
+      "rate": 0.03263,
+      "note": ""
+    },
+    "Community service|4": {
+      "n": 304,
+      "excluded": 13,
+      "rate": 0.04276,
+      "note": ""
+    },
+    "Distance learning|2": {
+      "n": 91,
+      "excluded": 5,
+      "rate": 0.05495,
+      "note": ""
+    },
+    "Distance learning|3": {
+      "n": 386,
+      "excluded": 9,
+      "rate": 0.02332,
+      "note": ""
+    },
+    "Distance learning|4": {
+      "n": 657,
+      "excluded": 27,
+      "rate": 0.0411,
+      "note": ""
+    },
+    "Distance learning|5": {
+      "n": 678,
+      "excluded": 42,
+      "rate": 0.06195,
+      "note": ""
+    },
+    "Distance learning|6": {
+      "n": 336,
+      "excluded": 17,
+      "rate": 0.0506,
+      "note": ""
+    },
+    "Grades for extracurricular activities|1": {
+      "n": 30,
+      "excluded": 1,
+      "rate": 0.03333,
+      "note": ""
+    },
+    "Grades for extracurricular activities|2": {
+      "n": 547,
+      "excluded": 13,
+      "rate": 0.02377,
+      "note": ""
+    },
+    "Grades for extracurricular activities|3": {
+      "n": 641,
+      "excluded": 21,
+      "rate": 0.03276,
+      "note": ""
+    },
+    "Grades for extracurricular activities|4": {
+      "n": 354,
+      "excluded": 12,
+      "rate": 0.0339,
+      "note": ""
+    },
+    "Mandatory extracurricular activities|1": {
+      "n": 6,
+      "excluded": 1,
+      "rate": 0.16667,
+      "note": "small stratum; rate unstable"
+    },
+    "Mandatory extracurricular activities|2": {
+      "n": 163,
+      "excluded": 1,
+      "rate": 0.00613,
+      "note": ""
+    },
+    "Mandatory extracurricular activities|3": {
+      "n": 401,
+      "excluded": 16,
+      "rate": 0.0399,
+      "note": ""
+    },
+    "Mandatory extracurricular activities|4": {
+      "n": 664,
+      "excluded": 27,
+      "rate": 0.04066,
+      "note": ""
+    },
+    "Mandatory extracurricular activities|5": {
+      "n": 371,
+      "excluded": 29,
+      "rate": 0.07817,
+      "note": ""
+    },
+    "Seeking multiple opinions|1": {
+      "n": 3,
+      "excluded": 0,
+      "rate": 0.0,
+      "note": "small stratum; rate unstable"
+    },
+    "Seeking multiple opinions|2": {
+      "n": 119,
+      "excluded": 3,
+      "rate": 0.02521,
+      "note": ""
+    },
+    "Seeking multiple opinions|3": {
+      "n": 367,
+      "excluded": 15,
+      "rate": 0.04087,
+      "note": ""
+    },
+    "Seeking multiple opinions|4": {
+      "n": 727,
+      "excluded": 27,
+      "rate": 0.03714,
+      "note": ""
+    },
+    "Seeking multiple opinions|5": {
+      "n": 300,
+      "excluded": 15,
+      "rate": 0.05,
+      "note": ""
+    },
+    "Summer projects|1": {
+      "n": 6,
+      "excluded": 0,
+      "rate": 0.0,
+      "note": "small stratum; rate unstable"
+    },
+    "Summer projects|2": {
+      "n": 47,
+      "excluded": 2,
+      "rate": 0.04255,
+      "note": ""
+    },
+    "Summer projects|3": {
+      "n": 218,
+      "excluded": 7,
+      "rate": 0.03211,
+      "note": ""
+    },
+    "Summer projects|4": {
+      "n": 549,
+      "excluded": 31,
+      "rate": 0.05647,
+      "note": ""
+    },
+    "Summer projects|5": {
+      "n": 675,
+      "excluded": 38,
+      "rate": 0.0563,
+      "note": ""
+    }
+  },
+  "stratum_homogeneity_chi2_descriptive": {
+    "strata_used_n_ge_30": 27,
+    "chi2": 52.0,
+    "df": 26,
+    "p": 0.0018
+  },
+  "essay_length": {
+    "characters": {
+      "included_mean": 2417.6,
+      "excluded_mean": 2783.5,
+      "included_median": 2174.0,
+      "excluded_median": 2667.0,
+      "difference_excluded_minus_included": 365.9,
+      "standardized_mean_difference": 0.3107,
+      "mann_whitney_p_descriptive": 0.0
+    },
+    "words_corpus_field": {
+      "included_mean": 431.9,
+      "excluded_mean": 494.6,
+      "included_median": 391.0,
+      "excluded_median": 461.0,
+      "difference_excluded_minus_included": 62.7,
+      "standardized_mean_difference": 0.308,
+      "mann_whitney_p_descriptive": 0.0
+    },
+    "api_tokenizer_note": [
+      "prompt_tokens from the API accounting exist only for successful calls; the 467 excluded records carry prompt_tokens=0 because the call never completed, so a same-tokenizer comparison is impossible.  Characters and the corpus essay_word_count field are used instead; among included essays prompt_tokens correlates with characters at r=0.986, so character length is an adequate proxy."
+    ]
+  },
+  "request_order": {
+    "manifest_position_deciles": {
+      "decile_1": {
+        "n": 1136,
+        "excluded": 31,
+        "rate": 0.02729
+      },
+      "decile_2": {
+        "n": 1136,
+        "excluded": 30,
+        "rate": 0.02641
+      },
+      "decile_3": {
+        "n": 1136,
+        "excluded": 38,
+        "rate": 0.03345
+      },
+      "decile_4": {
+        "n": 1136,
+        "excluded": 35,
+        "rate": 0.03081
+      },
+      "decile_5": {
+        "n": 1136,
+        "excluded": 47,
+        "rate": 0.04137
+      },
+      "decile_6": {
+        "n": 1136,
+        "excluded": 62,
+        "rate": 0.05458
+      },
+      "decile_7": {
+        "n": 1136,
+        "excluded": 66,
+        "rate": 0.0581
+      },
+      "decile_8": {
+        "n": 1136,
+        "excluded": 56,
+        "rate": 0.0493
+      },
+      "decile_9": {
+        "n": 1136,
+        "excluded": 49,
+        "rate": 0.04313
+      },
+      "decile_10": {
+        "n": 1136,
+        "excluded": 53,
+        "rate": 0.04665
+      }
+    },
+    "wallclock_completion_tenths": {
+      "time_tenth_1": {
+        "n": 1136,
+        "excluded": 31,
+        "rate": 0.02729
+      },
+      "time_tenth_2": {
+        "n": 1136,
+        "excluded": 29,
+        "rate": 0.02553
+      },
+      "time_tenth_3": {
+        "n": 1136,
+        "excluded": 39,
+        "rate": 0.03433
+      },
+      "time_tenth_4": {
+        "n": 1136,
+        "excluded": 34,
+        "rate": 0.02993
+      },
+      "time_tenth_5": {
+        "n": 1136,
+        "excluded": 47,
+        "rate": 0.04137
+      },
+      "time_tenth_6": {
+        "n": 1136,
+        "excluded": 60,
+        "rate": 0.05282
+      },
+      "time_tenth_7": {
+        "n": 1136,
+        "excluded": 66,
+        "rate": 0.0581
+      },
+      "time_tenth_8": {
+        "n": 1136,
+        "excluded": 59,
+        "rate": 0.05194
+      },
+      "time_tenth_9": {
+        "n": 1136,
+        "excluded": 48,
+        "rate": 0.04225
+      },
+      "time_tenth_10": {
+        "n": 1136,
+        "excluded": 54,
+        "rate": 0.04754
+      }
+    },
+    "spearman_position_vs_exclusion": {
+      "rho": 0.0414,
+      "p_descriptive": 0.0
+    },
+    "note": "manifest position is the request submission order (10 concurrent workers consumed the manifest in order); the wall-clock view uses record append timestamps, which for excluded records mark retry exhaustion"
+  },
+  "retries": {
+    "excluded": "all 467 exhausted exactly 3 retries (by construction of the frozen policy)",
+    "included_retry_distribution": {
+      "0": 4955,
+      "1": 3934,
+      "2": 1366,
+      "3": 638
+    },
+    "included_mean_retries_by_ell": {
+      "ELL": 0.794,
+      "non-ELL": 0.787
+    }
+  },
+  "pre_outcome_logistic_model": {
+    "outcome": "excluded (1) vs included (0); judge score never used",
+    "converged": true,
+    "coefficients": {
+      "intercept": {
+        "beta": -2.9854,
+        "se": 0.136,
+        "odds_ratio": 0.0505,
+        "wald_p": 0.0
+      },
+      "ell": {
+        "beta": 0.035,
+        "se": 0.1896,
+        "odds_ratio": 1.0356,
+        "wald_p": 0.8535
+      },
+      "human_score_z": {
+        "beta": 0.0601,
+        "se": 0.0821,
+        "odds_ratio": 1.0619,
+        "wald_p": 0.4643
+      },
+      "essay_chars_z": {
+        "beta": 0.2645,
+        "se": 0.076,
+        "odds_ratio": 1.3027,
+        "wald_p": 0.0005
+      },
+      "manifest_pos_z": {
+        "beta": 0.2034,
+        "se": 0.048,
+        "odds_ratio": 1.2256,
+        "wald_p": 0.0
+      },
+      "prompt[Community service]": {
+        "beta": -0.2298,
+        "se": 0.1985,
+        "odds_ratio": 0.7947,
+        "wald_p": 0.2471
+      },
+      "prompt[Distance learning]": {
+        "beta": -0.3446,
+        "se": 0.2055,
+        "odds_ratio": 0.7085,
+        "wald_p": 0.0936
+      },
+      "prompt[Grades for extracurricular activities]": {
+        "beta": -0.2843,
+        "se": 0.1971,
+        "odds_ratio": 0.7525,
+        "wald_p": 0.1492
+      },
+      "prompt[Mandatory extracurricular activities]": {
+        "beta": -0.1689,
+        "se": 0.189,
+        "odds_ratio": 0.8446,
+        "wald_p": 0.3716
+      },
+      "prompt[Seeking multiple opinions]": {
+        "beta": -0.3399,
+        "se": 0.1979,
+        "odds_ratio": 0.7118,
+        "wald_p": 0.0859
+      },
+      "prompt[Summer projects]": {
+        "beta": -0.2057,
+        "se": 0.199,
+        "odds_ratio": 0.8141,
+        "wald_p": 0.3014
+      }
+    },
+    "lrt_vs_intercept_only": {
+      "chi2": 63.51,
+      "df": 10,
+      "p": 0.0
+    },
+    "note": "descriptive model of missingness; a null result does NOT establish missing-completely-at-random"
+  },
+  "conservative_sensitivity_bound": {
+    "what_this_is": "a diagnostic bound, not an imputation and not a replacement of the primary estimate: every excluded ELL essay (n=39) is assigned one hypothetical score and every excluded non-ELL essay (n=428) another, the essays are placed back into their true (prompt, human score) strata, and the preregistered stratum-size-weighted conditional mean difference is recomputed",
+    "observed_weighted_mean_difference_included_only": -0.3202,
+    "excluded_by_ell": {
+      "ELL": 39,
+      "non-ELL": 428
+    },
+    "grid_all_36_uniform_assignments": {
+      "excluded_ELL=1,excluded_nonELL=1": -0.2927,
+      "excluded_ELL=1,excluded_nonELL=2": -0.3331,
+      "excluded_ELL=1,excluded_nonELL=3": -0.3735,
+      "excluded_ELL=1,excluded_nonELL=4": -0.4138,
+      "excluded_ELL=1,excluded_nonELL=5": -0.4542,
+      "excluded_ELL=1,excluded_nonELL=6": -0.4946,
+      "excluded_ELL=2,excluded_nonELL=1": -0.2572,
+      "excluded_ELL=2,excluded_nonELL=2": -0.2975,
+      "excluded_ELL=2,excluded_nonELL=3": -0.3379,
+      "excluded_ELL=2,excluded_nonELL=4": -0.3783,
+      "excluded_ELL=2,excluded_nonELL=5": -0.4187,
+      "excluded_ELL=2,excluded_nonELL=6": -0.459,
+      "excluded_ELL=3,excluded_nonELL=1": -0.2216,
+      "excluded_ELL=3,excluded_nonELL=2": -0.262,
+      "excluded_ELL=3,excluded_nonELL=3": -0.3023,
+      "excluded_ELL=3,excluded_nonELL=4": -0.3427,
+      "excluded_ELL=3,excluded_nonELL=5": -0.3831,
+      "excluded_ELL=3,excluded_nonELL=6": -0.4235,
+      "excluded_ELL=4,excluded_nonELL=1": -0.186,
+      "excluded_ELL=4,excluded_nonELL=2": -0.2264,
+      "excluded_ELL=4,excluded_nonELL=3": -0.2668,
+      "excluded_ELL=4,excluded_nonELL=4": -0.3072,
+      "excluded_ELL=4,excluded_nonELL=5": -0.3475,
+      "excluded_ELL=4,excluded_nonELL=6": -0.3879,
+      "excluded_ELL=5,excluded_nonELL=1": -0.1505,
+      "excluded_ELL=5,excluded_nonELL=2": -0.1908,
+      "excluded_ELL=5,excluded_nonELL=3": -0.2312,
+      "excluded_ELL=5,excluded_nonELL=4": -0.2716,
+      "excluded_ELL=5,excluded_nonELL=5": -0.312,
+      "excluded_ELL=5,excluded_nonELL=6": -0.3523,
+      "excluded_ELL=6,excluded_nonELL=1": -0.1149,
+      "excluded_ELL=6,excluded_nonELL=2": -0.1553,
+      "excluded_ELL=6,excluded_nonELL=3": -0.1957,
+      "excluded_ELL=6,excluded_nonELL=4": -0.236,
+      "excluded_ELL=6,excluded_nonELL=5": -0.2764,
+      "excluded_ELL=6,excluded_nonELL=6": -0.3168
+    },
+    "most_favourable_to_null_ELL6_non1": -0.1149,
+    "most_adverse_ELL1_non6": -0.4946,
+    "assignments_eliminating_or_reversing": [],
+    "conclusion_mechanical": "even the most extreme admissible configuration (all 39 excluded ELL essays scored 6, all 428 excluded non-ELL essays scored 1) moves the weighted conditional mean difference from -0.3202 to -0.1149, which does NOT eliminate the deficit; no configuration of unobserved scores within 1-6 can produce a non-negative difference"
+  }
+}
