@@ -2,7 +2,6 @@
   "preregistration": "docs/preregistration.md",
   "frozen_date": "2026-08-25",
   "status": "FROZEN pending user approval; no judge scoring has occurred",
-
   "dataset": {
     "corpus": "PERSUADE 2.0",
     "essay_level_file": "data/persuade/persuade_essay_level.csv",
@@ -12,28 +11,70 @@
     },
     "license": "CC BY-NC-SA 4.0"
   },
-
   "population": {
-    "inclusion": "non-missing prompt_name, holistic_essay_score, ell_status; member of a usable (prompt, human_score) stratum (>=2 essays, both ELL categories)",
-    "ell_missing_encodings": ["", " "],
-    "n_population": 23334,
-    "n_usable_strata": 61
+    "inclusion": "task == 'Independent'; non-missing prompt_name, holistic_essay_score, ell_status; member of a usable (prompt, human_score) stratum (>=2 essays, both ELL categories)",
+    "task_filter": "Independent",
+    "ell_missing_encodings": [
+      "",
+      " "
+    ],
+    "n_population": 11360,
+    "n_usable_strata": 31,
+    "n_prompts": 7,
+    "n_ell": 1039
   },
-
-  "primary_sample_size": 10000,
+  "primary_sample_size": 11360,
   "sampling": {
-    "method": "proportional stratified (largest remainder) over the 61 usable strata; SRS without replacement within stratum; per-stratum SeedSequence(entropy=sampling_seed, spawn_key=(stratum_index,))",
+    "method": "census of the full usable Independent-task pool (n equals the pool size, so the largest-remainder allocation and within-stratum draw select every essay deterministically, independent of seed); verified seed-free by test",
     "attribute_free": true
   },
-  "sampling_seed": 20260825,
-
+  "sampling_seed": 20260901,
   "judge": {
-    "primary": "gpt-5-mini (OpenAI) -- API availability, exact snapshot id, and pricing to be verified before scoring; the verified snapshot id will be recorded here BEFORE any call",
-    "secondary": ["claude-haiku-4-5 (Anthropic)", "gemini-2.5-flash (Google)"],
+    "primary": {
+      "model_id": "gpt-5.4-mini-2026-03-17",
+      "alias": "gpt-5.4-mini",
+      "provider": "OpenAI",
+      "pricing_per_mtok": {
+        "input": 0.75,
+        "output": 4.5
+      },
+      "structured_outputs": true,
+      "reasoning_effort": "none (default)",
+      "pinned_snapshot": true,
+      "verified": "2026-08-25 from developers.openai.com/api/docs/models/gpt-5.4-mini"
+    },
+    "considered_and_rejected": {
+      "gpt-5.6-luna": "newest and cheapest ($0.20/$1.20 per MTok) but NO pinned snapshot exists as of 2026-08-25; a silently mutable alias is incompatible with a frozen design and replication",
+      "gpt-5-mini": "pinned (gpt-5-mini-2025-08-07, $0.25/$2.00) but a year old; weaker claim to contemporary-evaluator relevance"
+    },
+    "secondary": [
+      {
+        "model_id": "claude-haiku-4-5-20251001",
+        "provider": "Anthropic",
+        "pricing_per_mtok": {
+          "input": 1.0,
+          "output": 5.0
+        },
+        "pinned_snapshot": true,
+        "note": "extended thinking off by default; retirement not sooner than 2026-10-15",
+        "verified": "2026-08-25 from platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      {
+        "model_id": "gemini-3.7-flash",
+        "provider": "Google",
+        "pricing_per_mtok": {
+          "input": 0.75,
+          "output": 3.75,
+          "note": "promotional through 2026-12-31; thinking tokens billed as output"
+        },
+        "pinned_snapshot": "stable version ID (not a -latest alias)",
+        "to_verify_before_scoring": "thinking-budget control to keep billed thinking tokens near zero",
+        "verified": "2026-08-25 from ai.google.dev/gemini-api/docs/{models,pricing}"
+      }
+    ],
     "temperature": 0,
-    "notes": "temperature 0 (plus fixed seed parameter where the API offers one); exact determinism is not guaranteed by providers and is not assumed by the analysis"
+    "notes": "temperature 0 (plus fixed seed parameter where offered); providers do not guarantee bitwise determinism and the analysis does not assume it"
   },
-
   "conditions": {
     "primary": "plain",
     "secondary": "ignore_demographics",
@@ -43,7 +84,6 @@
       "prompts/condition_ignore_demographics.txt"
     ]
   },
-
   "analysis": {
     "null": "S independent of A given (Y, P)",
     "attribute": "ell_status in {No, Yes}",
@@ -55,18 +95,35 @@
     "n_permutations": 999,
     "p_value": "(1 + #{T_b >= T_obs}) / (B + 1)",
     "alpha": 0.05,
-    "companion_statistics_same_draws": ["stratified_mean_disparity", "stratified_regression_lrt"]
+    "companion_statistics_same_draws": [
+      "stratified_mean_disparity",
+      "stratified_regression_lrt"
+    ]
   },
   "permutation_seed": 427183,
   "seed_slots": {
-    "primary": [0, 0],
-    "secondary_judge_1_plain": [1, 0],
-    "secondary_judge_2_plain": [2, 0],
-    "primary_judge_ignore_demographics": [0, 1],
-    "negative_control": [9, 9]
+    "primary": [
+      0,
+      0
+    ],
+    "secondary_judge_1_plain": [
+      1,
+      0
+    ],
+    "secondary_judge_2_plain": [
+      2,
+      0
+    ],
+    "primary_judge_ignore_demographics": [
+      0,
+      1
+    ],
+    "negative_control": [
+      9,
+      9
+    ]
   },
   "label_permutation_seed": 771029,
-
   "multiplicity": {
     "primary_family": "exactly one test: primary judge, plain condition, ELL, conditional G2",
     "secondary_confirmatory_family": [
@@ -77,15 +134,36 @@
     "correction": "Holm, family size 3, alpha 0.05",
     "everything_else": "exploratory; reported without correction and never as confirmatory"
   },
-
   "exclusion_rules": {
     "unparseable_response": "excluded and logged; format is exactly 'SCORE: <1-6>' after whitespace strip; no repair, no reprompt",
     "api_failure": "up to 3 retries of the identical request; then excluded as technical-failure and logged",
     "no_other_exclusions": true
   },
-
   "controls": {
     "negative_control": "single within-stratum random relabelling of A (label_permutation_seed) run through the ENTIRE analysis path; plus 200-draw p-value uniformity sweep (exploratory diagnostic)",
     "positive_control_helpsteer2": "DROPPED for the Junior Spotlight version"
+  },
+  "revision": {
+    "version": 2,
+    "date": "2026-08-25",
+    "reason": "Pre-data design revision, before any judge output exists: primary restricted to Independent-task prompts because the canonical corpus does not distribute the source passages for Text-dependent prompts, so an LLM judge cannot apply the source-based holistic rubric the human raters applied (construct mismatch, not merely a stratification issue). Source-based prompts are exploratory only."
+  },
+  "minimum_data_thresholds": {
+    "analysed_ell_min": 900,
+    "informative_strata_min": 28,
+    "note": "the census fixes the scored set (1,039 ELL, 31 informative strata); these thresholds guard only post-exclusion attrition from unparseable responses or technical failures"
+  },
+  "inference_volume": {
+    "calls_primary": 11360,
+    "calls_confirmatory_program": 45440,
+    "input_tokens_per_call_estimate": "1,520-1,640 (435 essay words + 736 prompt-overhead words at 1.3-1.4 tokens/word)",
+    "input_tokens_per_condition_estimate": "17.3M-18.6M",
+    "estimated_cost_usd": {
+      "primary_gpt-5.4-mini_plain": "13.0-14.5",
+      "gpt-5.4-mini_ignore_demographics": "13.0-14.5",
+      "claude-haiku-4-5_plain": "17.4-19.2",
+      "gemini-3.7-flash_plain": "13.0-14.5 plus thinking-token uncertainty",
+      "complete_program_total": "approximately 56-63"
+    }
   }
 }

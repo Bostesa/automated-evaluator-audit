@@ -42,7 +42,8 @@ def main() -> None:
 
     print(f"[1/5] drawing primary sample: n={n}, seed={config['sampling_seed']}")
     manifest = draw_primary_sample(
-        data / "persuade_essay_level.csv", n=n, seed=config["sampling_seed"]
+        data / "persuade_essay_level.csv", n=n, seed=config["sampling_seed"],
+        task=config["population"].get("task_filter"),
     )
     manifest.write_csv(out / "sample_manifest.csv")
 

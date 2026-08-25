@@ -173,6 +173,28 @@ def test_manifest_excludes_scores_and_demographics(corpus_csv: Path, tmp_path: P
     assert header == ["essay_id_comp", "prompt_name", "task"]
 
 
+def test_task_filter_restricts_population(corpus_csv: Path) -> None:
+    rows = list(csv.DictReader(corpus_csv.open()))
+    only_ind = usable_strata(rows, task="Independent")
+    assert only_ind and all(
+        rows[i]["task"] == "Independent" for v in only_ind.values() for i in v
+    )
+    manifest = draw_primary_sample(corpus_csv, n=20, seed=2, task="Independent")
+    assert set(manifest.tasks) == {"Independent"}
+
+
+def test_full_pool_draw_is_census_and_seed_free(corpus_csv: Path) -> None:
+    rows = list(csv.DictReader(corpus_csv.open()))
+    pool = usable_strata(rows, task="Independent")
+    n_full = sum(len(v) for v in pool.values())
+    m1 = draw_primary_sample(corpus_csv, n=n_full, seed=1, task="Independent")
+    m2 = draw_primary_sample(corpus_csv, n=n_full, seed=999, task="Independent")
+    assert m1.essay_ids == m2.essay_ids  # census: seed-independent
+    assert len(m1.essay_ids) == n_full
+    expected = sorted(rows[i]["essay_id_comp"] for v in pool.values() for i in v)
+    assert list(m1.essay_ids) == expected
+
+
 def test_sample_is_proportional_within_one(corpus_csv: Path) -> None:
     manifest = draw_primary_sample(corpus_csv, n=36, seed=5)
     rows = list(csv.DictReader(corpus_csv.open()))

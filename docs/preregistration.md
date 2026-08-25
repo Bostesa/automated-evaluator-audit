@@ -20,7 +20,7 @@ H0 :  S  _||_  A  |  Y, P
 - `S` — LLM judge holistic score (native 1–6 rubric scale; not yet collected)
 - `A` — writer ELL status (`Yes` / `No`)
 - `Y` — PERSUADE human holistic score (1–6)
-- `P` — writing prompt (14 prompts with ELL coding)
+- `P` — **independent-writing** prompt (7 prompts with ELL coding; §21)
 
 This is an **observational conditional-dependence null**. `Y` is an observed
 human rating serving as a proxy for the intended writing construct, not
@@ -33,56 +33,50 @@ distribution via https://github.com/scrosseye/persuade_corpus_2.0, CC
 BY-NC-SA 4.0, SHA-256 checksums in `data/persuade/README.md`. Deduplicated to
 25,996 essays keyed by `essay_id_comp`.
 
-Included: essays with non-missing `prompt_name`, `holistic_essay_score`, and
-`ell_status`, belonging to a **usable** `(prompt, human_score)` stratum — one
-with at least two essays and both ELL categories observed. Population:
-**23,334 essays, 61 usable strata, 2,235 ELL**. Both raw missing encodings of
-`ell_status` (`''` and `' '`) are missing data (§15). The prompt "Phones and
-driving" has no ELL coding and is therefore absent by the inclusion rule, not
-by choice.
+Included: essays with `task == "Independent"` and non-missing
+`prompt_name`, `holistic_essay_score`, and `ell_status`, belonging to a
+**usable** `(prompt, human_score)` stratum — one with at least two essays and
+both ELL categories observed. Population: **11,360 essays, 31 usable strata,
+1,039 ELL, 7 prompts** (`results/persuade_feasibility_independent/`). Both
+raw missing encodings of `ell_status` (`''` and `' '`) are missing data
+(§15). The prompt "Phones and driving" has no ELL coding and is therefore
+absent by the inclusion rule, not by choice.
+
+**Why Independent-task only (v2 revision, §21):** the canonical corpus does
+not distribute the source passages for Text-dependent prompts (only their
+titles; the passages are third-party copyrighted articles). The human
+holistic rubric for source-based writing explicitly evaluates evidence taken
+from the source text, so a judge without the passages cannot measure the
+construct the human raters measured — a construct mismatch that conditioning
+on prompt does not repair. Text-dependent prompts may appear only in clearly
+labelled exploratory analyses, with the mismatch stated. No passages are
+reconstructed, summarised, substituted, or scraped.
 
 ## 4. Sampling procedure
 
-Primary sample of **n = 10,000** essays (§10), drawn before any scoring and
-without reference to any future judge output:
-
-1. proportional allocation across the 61 usable strata by the
-   largest-remainder method;
-2. simple random sampling without replacement within each stratum, with a
-   position-addressed per-stratum seed
-   (`SeedSequence(entropy=20260825, spawn_key=(stratum_index,))`), strata
-   ordered lexicographically.
-
-The procedure is deterministic given the frozen seed and **never consults
-ELL status for individual selection** (the attribute enters only the
-population-level usable-stratum definition fixed at feasibility). The test
-suite verifies that permuting the ELL column leaves the selected IDs
-unchanged. ELL counts in the sample are therefore random with expectation
-matching the population share (~9.6%, ≈ 958 expected); we do **not**
-oversample ELL. (Oversampling would change the estimand: the permutation
-test would still be valid for the sampled conditional law, but descriptive
-quantities would weight ELL essays differently from the corpus population.
-If detecting weaker effects ever justifies it, that is a new design, not a
-tweak.)
+The primary sample is a **census of the full usable Independent-task
+pool: n = 11,360** (§10), fixed before any scoring and without reference to
+any future judge output. The selection code path (largest-remainder
+allocation + within-stratum SRS, frozen seed 20260901) reduces to a census
+at the full pool size, so the draw is deterministic and seed-independent —
+verified by test. There is no sampling variance, no ELL oversampling (ELL
+count is the population's 1,039, 9.1%), and the estimand is the usable-pool
+conditional law itself.
 
 The manifest (`essay_id_comp`, `prompt_name`, `task` only — no attribute, no
 human score) is written before scoring and is immutable thereafter.
 
 ## 5. Judge and rubric
 
-The rubric is the corpus's own holistic rating form (SAT-based, 1–6), taken
-verbatim from the canonical PDFs (`sat_rubric_only_indy.pdf`,
-`sat_rubric_only_source_based.pdf`) including their typographical quirks, one
-variant per task type. Frozen prompt templates: [`prompts/`](../prompts/).
+The rubric is the corpus's own holistic rating form for independent
+writing (SAT-based, 1–6), taken verbatim from the canonical
+`sat_rubric_only_indy.pdf` including its typographical quirks. Frozen prompt
+template: [`prompts/judge_prompt_independent.txt`](../prompts/judge_prompt_independent.txt).
+(The source-based template remains in the repository solely for possible
+exploratory use, per §3.)
 
-The judge receives: task-appropriate rubric, the assignment text shown to the
-student, source-text **titles** for text-dependent prompts, and the essay.
-The canonical corpus does not distribute the source passages (third-party
-copyrighted articles); the prompt states this explicitly. Consequence: the
-judge scores text-dependent essays without the sources the human raters had.
-This affects what the judge's score measures, not the validity of the test,
-and `P` is in the conditioning set, so task- or prompt-specific judge
-behaviour cannot by itself induce dependence within strata.
+The judge receives: the independent-writing rubric, the assignment text
+shown to the student, and the essay — nothing else.
 
 The judge NEVER receives: ELL status, any demographic field, the human
 holistic score, or any corpus metadata beyond the materials above. Enforced
@@ -92,12 +86,21 @@ Output: exactly `SCORE: <integer 1–6>`; no chain-of-thought is requested or
 stored; temperature 0 (plus a fixed seed parameter where offered). Providers
 do not guarantee bitwise determinism; the analysis does not assume it.
 
-Judges (§7 of the design discussion): **primary gpt-5-mini (OpenAI)**;
-**secondary claude-haiku-4-5 (Anthropic) and gemini-2.5-flash (Google)**.
-Exact snapshot IDs, availability, and pricing must be verified and recorded
-in `config/preregistered.json` before the first call; if the primary judge
-is unavailable, the substitution will be chosen before scoring and recorded
-as a pre-scoring amendment.
+Judges, verified 2026-08-25 against official provider documentation
+(details and rejected alternatives in `config/preregistered.json`):
+
+- **Primary: `gpt-5.4-mini-2026-03-17`** (OpenAI; pinned snapshot; $0.75/$4.50
+  per MTok; structured outputs; reasoning effort `none` by default).
+  `gpt-5.6-luna` is newer and cheaper but has **no pinned snapshot** — a
+  mutable alias is incompatible with a frozen, replicable design;
+  `gpt-5-mini` is pinned but a year old.
+- **Secondary: `claude-haiku-4-5-20251001`** (Anthropic; pinned; $1/$5 per
+  MTok) and **`gemini-3.7-flash`** (Google; stable version ID; $0.75/$3.75
+  per MTok promotional through 2026-12-31; thinking tokens bill as output, so
+  the thinking-budget control must be verified before scoring).
+
+If a listed judge is unavailable at scoring time, the substitution is chosen
+before any call and recorded as a pre-scoring amendment (§20).
 
 ## 6. Primary condition
 
@@ -154,35 +157,42 @@ config.
 
 ## 10. Primary sample size
 
-**n = 10,000** (of 23,334). Rationale recorded at freeze time from the
-planning simulations (observed strata, observed ELL imbalance, native
-6-category scores; see `persuade_feasibility.md` for the planning model and
-its assumptions): rejection rates at alpha = 0.05 were
-| n | Type I (pi=0) | weak (pi=0.05) | moderate (pi=0.10) | strong (pi=0.20) |
+**n = 11,360 — the full usable Independent-task pool (census).** Planning
+simulations on the exact independent-only stratum structure (same planning
+model as before: observed strata and ELL labels, judge
+`S = clamp(Y + e, 1, 6)` with `P(e = −1, 0, +1) = (0.2, 0.6, 0.2)`, ELL
+downshift probability π; 500 replicates/cell, B = 999, α = 0.05;
+`results/persuade_feasibility_independent/power_planning.csv`):
+
+| n | Type I (π=0) | weak (π=0.05) | moderate (π=0.10) | strong (π=0.20) |
 |---|---|---|---|---|
-| 4,000 | 0.036 | 0.172 | 0.374 | 0.884 |
-| 8,000 | 0.042 | 0.300 | 0.752 | 0.990 |
-| **10,000** | 0.064 | 0.348 | **0.840** | 1.000 |
-| 12,000 | 0.032 | 0.444 | 0.914 | 1.000 |
-| 23,334 | 0.052 | 0.830 | 1.000 | 1.000 |
+| 4,000 | 0.062 | 0.218 | 0.540 | 0.948 |
+| 6,000 | 0.044 | 0.306 | 0.726 | 0.992 |
+| 8,000 | 0.046 | 0.390 | 0.892 | 1.000 |
+| 10,000 | 0.048 | 0.526 | 0.946 | 1.000 |
+| **11,360** | 0.044 | **0.608** | **0.970** | **1.000** |
 
-(500 replicates/cell; Monte Carlo SE ≈ 0.010 near 0.05, ≈ 0.018 near 0.8;
-the two null-cell departures from 0.05 are within that noise.)
-Planning power at n = 10,000 is 0.840 for the moderate planning alternative
-(0.1-point conditional mean shift) while remaining feasible in calls
-(§ inference volume) before the deadline; n = 4,000 would be powered only
-for strong effects, and the weak alternative is out of reach of any sample
-smaller than approximately the full usable corpus. These planning
-alternatives are not universal effect-size thresholds. The frozen seed
-makes the sample deterministic; the realized draw (verified in the dry run,
-before any scoring) contains 943 ELL essays and 56 informative strata — both
-above the §19 failure thresholds.
+(Monte Carlo SE ≈ 0.010 near 0.05, ≈ 0.02 near 0.6–0.9; null cells are all
+within noise of 0.05.) The census costs only 14% more calls than n = 10,000,
+buys the best achievable power under this design — 0.970 moderate, 0.608
+weak — and eliminates sampling variance entirely. These planning
+alternatives are a specific synthetic mean-shift model, not universal
+detectable-effect thresholds; in particular, weak dependence (π = 0.05) has
+only ~0.61 power even at the census, and a null result must not be read as
+evidence against it.
 
-Inference volume at n = 10,000: 10,000 calls for the primary test; 40,000
-calls for the full confirmatory program (primary judge x 2 conditions +
-2 secondary judges x plain). Mean essay ≈ 418 words; template ≈ 680–760
-words; ≈ 1,500 input tokens/call ≈ 60M input tokens for the full program,
-~10 output tokens/call.
+The frozen census (verified in the dry run, before any scoring): 11,360
+essays, **1,039 ELL**, **31 informative strata**, 7 prompts, human scores
+1: 62 · 2: 1,932 · 3: 3,409 · 4: 3,597 · 5: 2,024 · 6: 336.
+
+Inference volume (mean essay 434.5 words + 736 words prompt overhead at
+1.3–1.4 tokens/word ≈ 1,520–1,640 input tokens/call; ~10 output
+tokens/call): 11,360 calls and ≈ 17.3–18.6M input tokens per
+judge-condition; 45,440 calls for the full confirmatory program. Estimated
+costs from verified official prices: primary ≈ **$13.0–14.5**; complete
+confirmatory program ≈ **$56–63** (gpt-5.4-mini both conditions
+$26.0–29.0; claude-haiku-4-5 $17.4–19.2; gemini-3.7-flash $13.0–14.5 plus
+thinking-token uncertainty pending the §5 verification).
 
 ## 11. Multiplicity plan
 
@@ -253,7 +263,8 @@ sampling, so scored essays never lack analysis variables.
 ## 16. Random seeds
 
 All frozen before scoring, in `config/preregistered.json`: sampling seed
-20260825; permutation seed 427183 with per-test spawn slots; negative-control
+20260901 (vestigial under the census — the draw is seed-independent, verified
+by test); permutation seed 427183 with per-test spawn slots; negative-control
 label seed 771029. Every analysis component takes an explicit seeded
 generator; nothing uses global RNG state.
 
@@ -302,9 +313,10 @@ Declared in advance:
 - **Procedure failure**: > 5% unparseable responses from the primary judge →
   the primary result is reported with that caveat prominently; the judge is
   not swapped post hoc.
-- **Power failure**: realized informative strata < 45 or realized ELL < 700
-  in the analysed sample → report as underpowered relative to plan; do not
-  silently re-draw a larger sample after seeing results.
+- **Power failure**: the census fixes the scored set (1,039 ELL, 31
+  informative strata), so these thresholds guard post-exclusion attrition
+  only: analysed ELL < 900 or informative strata < 28 after exclusions →
+  report as underpowered relative to plan; do not silently re-score.
 - The primary claim of the paper must survive the primary test alone; if
   p > alpha, the paper reports a null result with the power caveats of §10.
 
@@ -317,3 +329,21 @@ repository. Amendments made before the first judge call (e.g. a verified
 snapshot ID, or judge substitution for availability) are recorded in
 `config/preregistered.json` and dated; they are pre-scoring amendments, not
 deviations.
+
+## 21. Revision log
+
+- **v1 (2026-08-25).** Initial freeze: all 14 ELL-coded prompts, n = 10,000
+  proportional stratified sample, primary judge gpt-5-mini (unverified).
+- **v2 (2026-08-25, pre-data; no judge output of any kind has been
+  observed).** (a) Primary restricted to Independent-task prompts: the
+  corpus lacks the source passages for Text-dependent prompts, and the
+  source-based human rubric explicitly evaluates evidence taken from the
+  source text, so a judge without the passages measures a different
+  construct than the human raters — a mismatch that conditioning on prompt
+  does not repair. Text-dependent prompts are exploratory only. (b) Sample
+  becomes a census of the usable independent pool (n = 11,360). (c) Judges
+  verified against official documentation and pinned:
+  gpt-5.4-mini-2026-03-17 primary (gpt-5.6-luna rejected for lacking a
+  pinned snapshot), claude-haiku-4-5-20251001 and gemini-3.7-flash
+  secondary. (d) Data thresholds restated for a census (§19). This is a
+  legitimate pre-data design revision under the §20 policy.

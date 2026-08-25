@@ -62,16 +62,22 @@ def _complete(row: dict[str, str]) -> bool:
     )
 
 
-def usable_strata(rows: list[dict[str, str]]) -> dict[tuple[str, str], list[int]]:
+def usable_strata(
+    rows: list[dict[str, str]], task: str | None = None
+) -> dict[tuple[str, str], list[int]]:
     """Map each usable ``(prompt, human_score)`` stratum to member row indices.
 
     Usable: >= 2 essays and both ELL categories present.  This is the same
     definition used by the feasibility analysis and by ``Strata.n_usable``.
+    ``task`` restricts the population to one writing task (the revised
+    primary design uses ``"Independent"`` -- see docs/preregistration.md §3).
     """
     members: dict[tuple[str, str], list[int]] = defaultdict(list)
     ell_yes: Counter[tuple[str, str]] = Counter()
     for i, row in enumerate(rows):
         if not _complete(row):
+            continue
+        if task is not None and row["task"] != task:
             continue
         key = (row["prompt_name"], row["holistic_essay_score"])
         members[key].append(i)
@@ -108,12 +114,17 @@ def _largest_remainder(sizes: list[int], n: int) -> list[int]:
 
 
 def draw_primary_sample(
-    essay_level_csv: Path, n: int, seed: int
+    essay_level_csv: Path, n: int, seed: int, task: str | None = None
 ) -> SampleManifest:
-    """Draw the preregistered primary sample.  Deterministic given ``seed``."""
+    """Draw the preregistered primary sample.  Deterministic given ``seed``.
+
+    With ``n`` equal to the full usable-pool size the draw is a census: the
+    allocation gives every stratum its full membership and the within-stratum
+    draw selects everyone, independent of ``seed``.
+    """
     with essay_level_csv.open(newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
-    strata = usable_strata(rows)
+    strata = usable_strata(rows, task=task)
     keys = sorted(strata)  # deterministic stratum order and index
     sizes = [len(strata[k]) for k in keys]
     if not 0 < n <= sum(sizes):
