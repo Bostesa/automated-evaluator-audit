@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "offcriterion"
+version = "0.1.0"
+description = "Stratified permutation test for conditional independence between evaluator scores and a prespecified off-criterion attribute"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+offcriterion = "offcriterion.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: long-running Monte Carlo calibration tests (deselect with '-m \"not slow\"')",
+]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true

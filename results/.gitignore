@@ -1,0 +1,5 @@
+# Experiment outputs are reproducible from `offcriterion run`; keep the
+# publication tables in version control and leave the bulk data untracked.
+*.csv
+*.json
+!.gitignore
