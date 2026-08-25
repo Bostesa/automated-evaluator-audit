@@ -60,6 +60,7 @@ class RawScoreStore:
         essay_id_comp: str,
         prompt_sha256: str,
         raw_response: str,
+        extra: dict[str, object] | None = None,
     ) -> None:
         if self.is_frozen():
             raise StorageError("store is frozen; no further writes are allowed")
@@ -77,6 +78,9 @@ class RawScoreStore:
             "prompt_sha256": prompt_sha256,
             "raw_response": raw_response,
         }
+        if extra:
+            for key, value in extra.items():
+                record.setdefault(key, value)
         with path.open("a", encoding="utf-8") as f:
             f.write(json.dumps(record, sort_keys=True) + "\n")
         keys.add(essay_id_comp)

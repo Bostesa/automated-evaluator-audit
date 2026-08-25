@@ -1,0 +1,25 @@
+{
+  "stage": "D",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "condition": "plain",
+  "n_manifest": 11360,
+  "n_records": 11360,
+  "n_valid_scores": 10893,
+  "n_invalid_responses": 0,
+  "n_technical_failures": 467,
+  "retries_total": 9981,
+  "records_with_retries": 6405,
+  "temperature_omitted_any": false,
+  "provider_model_strings": [
+    "",
+    "gpt-5.4-mini-2026-03-17"
+  ],
+  "input_tokens": 15600605,
+  "output_tokens": 142680,
+  "actual_cost_usd": 12.34,
+  "sha256": {
+    "scores__gpt-5.4-mini-2026-03-17__plain.jsonl": "5fc3370745f37e15bc14be97b91dacbf144c12a6507cbc2ac34fbf87f6103506",
+    "primary_scores_only.csv": "2f3fca6f1de778ee4698927acf601f4f20af287056e9397e9e70cf13e9242f5c",
+    "FROZEN.json": "7f69f0231a8844c87963cf7704d6d6f8ce78385e4b2dcb60e4285ef97e661c73"
+  }
+}
