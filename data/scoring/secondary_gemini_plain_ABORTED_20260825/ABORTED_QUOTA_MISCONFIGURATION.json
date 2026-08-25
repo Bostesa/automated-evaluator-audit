@@ -1,0 +1,17 @@
+{
+  "status": "ABORTED_QUOTA_MISCONFIGURATION",
+  "no_scientific_analysis": "this store is preserved as an audit trail only; no hypothesis analysis has been or will be performed on it",
+  "cell": "gemini_plain (secondary confirmatory)",
+  "model": "gemini-3.7-flash",
+  "condition": "plain",
+  "n_records": 87,
+  "n_valid_scores": 1,
+  "n_http429_technical_failures": 86,
+  "trigger": "provider quota configuration: the API key's project was on the Gemini free tier (5 requests/minute for gemini-3.7-flash), under which the frozen 3-retry policy fails essentially every call; 86 of 87 records were HTTP-429 exclusions before the run was stopped",
+  "decision": "pre-usability execution failure declared by the investigator BEFORE any Gemini hypothesis analysis or result inspection; the confirmatory cell restarts from the full frozen 11,360-essay census in a new append-only store after billing is enabled and paid quota verified; prompt, model, retry policy, analysis, sample and all other scientific choices unchanged",
+  "documented_as": "post-preregistration technical deviation (docs/deviations.md)",
+  "aborted_utc": "2026-08-25T21:37:10.391173+00:00",
+  "sha256": {
+    "scores__gemini-3.7-flash__plain.jsonl": "2a9b0ee2943b0ba44480a938fd521fac3072557d0341d4ef4b784ee252caf01f"
+  }
+}
