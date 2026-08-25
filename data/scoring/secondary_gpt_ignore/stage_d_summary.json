@@ -1,0 +1,27 @@
+{
+  "stage": "D-secondary",
+  "cell": "gpt_ignore",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "condition": "ignore_demographics",
+  "n_manifest": 11360,
+  "n_records": 11360,
+  "n_valid_scores": 10797,
+  "n_invalid_responses": 0,
+  "n_technical_failures": 563,
+  "retries_total": 10350,
+  "records_with_retries": 6609,
+  "provider_model_strings": [
+    "",
+    "gpt-5.4-mini-2026-03-17"
+  ],
+  "input_tokens": 15933623,
+  "output_tokens": 143822,
+  "thinking_tokens": 0,
+  "thinking_billed_as_output": false,
+  "actual_cost_usd": 12.6,
+  "sha256": {
+    "scores__gpt-5.4-mini-2026-03-17__ignore_demographics.jsonl": "0db40aa3d102ed531594d01433b3d9b547f65b3f93d80459d586eda20738f678",
+    "scores_only.csv": "263418a5d37271b6a4507206600139f99fc56e6828fca8312335dfc27def21a4",
+    "FROZEN.json": "73a46ec85c67fcd60438fca9c10709f4f4e6fd67ee28281ad2eb12a7124d3c80"
+  }
+}
