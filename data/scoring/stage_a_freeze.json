@@ -1,0 +1,72 @@
+{
+  "stage": "A",
+  "date": "2026-08-25",
+  "git_commit": "16c9925cb7edda2007309b8bb168f515e24fda48",
+  "working_tree_clean_before_record": true,
+  "sample_verified": {
+    "n": 11360,
+    "unique_ids": 11360,
+    "ell_yes": 1039,
+    "strata": 31,
+    "informative_strata": 31,
+    "task": "Independent",
+    "prompts": 7
+  },
+  "model": "gpt-5.4-mini-2026-03-17",
+  "api_parameters": {
+    "endpoint": "POST https://api.openai.com/v1/chat/completions",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "messages": "single user message containing the rendered frozen prompt",
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "holistic_score",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "reasoning_effort": "none",
+    "seed": 427183,
+    "max_completion_tokens": 100,
+    "temperature": "0 attempted; omitted if the API rejects the parameter for this model class (smoke test decides; outcome recorded)",
+    "n": 1,
+    "tools": "none",
+    "retry_policy": "up to 3 retries on 429/5xx/network errors with exponential backoff; any other 4xx aborts the run for report"
+  },
+  "sha256": {
+    "docs/preregistration.md": "b09db9232abe610d5518a5a7aa0862d5b4706b7d6f132304f7712935549862c5",
+    "config/preregistered.json": "6643306fd89f03e88d7c08c1b66010563e70969d492de0b80abb7de47b58415f",
+    "data/scoring/primary_sample_manifest.csv": "c226fcab56357ec27ef8ae67e75db67f8e655b871357d7440fa1e5461fbb713d",
+    "prompts/judge_prompt_independent.txt": "eefea6040926c0da715b38efddc96d854ebe55a09d5456237dd1f2a182b1670e",
+    "prompts/judge_prompt_source_based.txt": "e012cf29a221e43808ecfc15c5501a9d2037b36a7976046a0c3f6a51e07cac01",
+    "prompts/condition_ignore_demographics.txt": "95cc38f8e6cf7989aba54eeed741699bd72d1a05d7366622edabcc1090ce6ede",
+    "src/offcriterion/pipeline/analysis.py": "36d03cdebcebf9d756c3d1d4215c5dd1b2e574737057aa405a893498e485137b",
+    "src/offcriterion/pipeline/parse.py": "84f16276ba348c79ac58b9df32d1e2b62240a1d0f35c2024eaed9c37d5f3a2cd",
+    "src/offcriterion/pipeline/prompts.py": "4ed8e11d1d86df5540851541e792e6af48ac9c12cdce194059887068bacd826d",
+    "src/offcriterion/pipeline/sampling.py": "bd1df44fd40d2b5ac9e4c79339b9d175db5f8fb1d79bd95644db918d67dddc30",
+    "src/offcriterion/permutation.py": "eb59142e4bee66d63eb8662e81ccb25316074929bad1d5d6b20365af5982346f",
+    "src/offcriterion/statistics.py": "98a230a8889b5d96641c3bf2cf4ee02a7e9dae926047326863bfdd7db4438c64",
+    "src/offcriterion/data.py": "20f862d6b12d9e30ab3c1e4057cdaaa03699787396c3bc88c2464dd23329ad38"
+  },
+  "working_tree_note": "verified clean at commit 16c9925 immediately before Stage A; the only files created by Stage A are primary_sample_manifest.csv and this record, committed together as the freeze",
+  "prompt_safety_tests": "4 passed (builder signature, demographic tokens, manifest columns)"
+}
