@@ -252,6 +252,10 @@ calibration under known nulls. Revisit for any longer version.
    as technical failure and logged.
 3. No other exclusions of any kind.
 
+*(v3 amendment: rule 1's frozen format is the JSON object
+`{"score": <integer 1–6>}` enforced by a strict structured-output schema;
+see §21.)*
+
 ## 15. Missing-data handling
 
 Complete-case on `(prompt, human score, ELL)`; both raw encodings `''` and
@@ -347,3 +351,10 @@ deviations.
   pinned snapshot), claude-haiku-4-5-20251001 and gemini-3.7-flash
   secondary. (d) Data thresholds restated for a census (§19). This is a
   legitimate pre-data design revision under the §20 policy.
+- **v3 (2026-08-25, pre-scoring; no judge output of any kind has been
+  observed).** Structured output, required by the approved execution plan:
+  the judge response is constrained by a strict JSON schema to
+  `{"score": <integer 1–6>}`; the prompt's final format line, the strict
+  parser, and exclusion rule 1 are amended accordingly. Full API parameters
+  are frozen in `config/preregistered.json` (`api_parameters`). Nothing
+  else changes.

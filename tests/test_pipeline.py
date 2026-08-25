@@ -100,7 +100,8 @@ def test_primary_prompt_contains_no_demographic_tokens(task: str) -> None:
                   "demographic", "race", "gender", "disability",
                   "human score", "human holistic"):
         assert re.search(r"\b" + re.escape(token) + r"\b", prompt, re.IGNORECASE) is None, token
-    assert "{" not in prompt and "}" not in prompt  # all placeholders filled
+    for ph in ("{assignment}", "{essay}", "{source_titles}"):
+        assert ph not in prompt  # all placeholders filled
 
 
 @pytest.mark.parametrize("task", ["Independent", "Text dependent"])
@@ -121,7 +122,7 @@ def test_prompt_output_format_line_is_frozen() -> None:
         essay_text="Body.", task="Independent", assignment="A.",
         source_titles="",
     )
-    assert "SCORE: <integer from 1 to 6>" in prompt
+    assert '{"score": <integer from 1 to 6>}' in prompt.replace("{assignment}", "")
     assert "chain of thought" not in prompt.lower()
     assert "reasoning" not in prompt.lower()
 
@@ -217,15 +218,18 @@ def test_sample_is_proportional_within_one(corpus_csv: Path) -> None:
 
 
 @pytest.mark.parametrize("raw,expected", [
-    ("SCORE: 1", 1), ("SCORE: 6", 6), ("  SCORE: 4  ", 4), ("SCORE:3", 3),
+    ('{"score": 1}', 1), ('{"score": 6}', 6), ('  {"score": 4}  ', 4),
+    ('{"score":3}', 3),
 ])
 def test_parse_valid(raw: str, expected: int) -> None:
     assert parse_score(raw) == expected
 
 
 @pytest.mark.parametrize("raw", [
-    "score: 3", "SCORE: 7", "SCORE: 0", "3", "SCORE: 3.5", "SCORE: 3/6",
-    "The score is SCORE: 3", "SCORE: 3\nGreat essay!", "", "SCORE: three",
+    "SCORE: 3", '{"score": 7}', '{"score": 0}', "3", '{"score": 3.5}',
+    '{"score": "3"}', '{"score": true}', '{"Score": 3}',
+    '{"score": 3, "why": "x"}', 'The score is {"score": 3}', "", "[3]",
+    '{"score": null}',
 ])
 def test_parse_invalid_raises(raw: str) -> None:
     with pytest.raises(ParseError):
@@ -239,7 +243,7 @@ def test_parse_invalid_raises(raw: str) -> None:
 
 def _rec(i: int) -> dict[str, str]:
     return dict(judge="j", condition="plain", essay_id_comp=f"E{i}",
-                prompt_sha256="ab" * 32, raw_response="SCORE: 3")
+                prompt_sha256="ab" * 32, raw_response='{"score": 3}')
 
 
 def test_store_refuses_overwrite(tmp_path: Path) -> None:
@@ -268,7 +272,7 @@ def test_tampering_after_freeze_is_detected(tmp_path: Path) -> None:
     store.freeze()
     victim = next((tmp_path / "raw").glob("scores__*.jsonl"))
     line = json.loads(victim.read_text())
-    line["raw_response"] = "SCORE: 6"
+    line["raw_response"] = '{"score": 6}' 
     victim.write_text(json.dumps(line, sort_keys=True) + "\n")
     with pytest.raises(StorageError, match="checksum mismatch"):
         store.verify_frozen()
@@ -356,4 +360,4 @@ def test_invalid_responses_are_excluded_and_logged(corpus_csv: Path, tmp_path: P
     assert len(report["exclusions"]) == n_excl
     assert report["n_analysed"] == 48 - n_excl
     for entry in report["exclusions"]:
-        assert "does not match" in entry["reason"]
+        assert "not valid JSON" in entry["reason"]

@@ -135,7 +135,7 @@
     "everything_else": "exploratory; reported without correction and never as confirmatory"
   },
   "exclusion_rules": {
-    "unparseable_response": "excluded and logged; format is exactly 'SCORE: <1-6>' after whitespace strip; no repair, no reprompt",
+    "unparseable_response": "excluded and logged; response must parse as a JSON object with the single key 'score' and an integer value 1..6; no repair, no reprompt",
     "api_failure": "up to 3 retries of the identical request; then excluded as technical-failure and logged",
     "no_other_exclusions": true
   },
@@ -144,7 +144,7 @@
     "positive_control_helpsteer2": "DROPPED for the Junior Spotlight version"
   },
   "revision": {
-    "version": 2,
+    "version": 3,
     "date": "2026-08-25",
     "reason": "Pre-data design revision, before any judge output exists: primary restricted to Independent-task prompts because the canonical corpus does not distribute the source passages for Text-dependent prompts, so an LLM judge cannot apply the source-based holistic rubric the human raters applied (construct mismatch, not merely a stratification issue). Source-based prompts are exploratory only."
   },
@@ -165,5 +165,53 @@
       "gemini-3.7-flash_plain": "13.0-14.5 plus thinking-token uncertainty",
       "complete_program_total": "approximately 56-63"
     }
+  },
+  "amendments": [
+    {
+      "version": 3,
+      "date": "2026-08-25",
+      "pre_scoring": true,
+      "no_judge_output_observed": true,
+      "change": "Structured output (execution requirement from the approving instruction): the judge response is constrained by a strict JSON schema to {\"score\": <integer 1-6>}. The frozen prompt's final format line, the strict parser, and the exclusion rule are amended from the plain-text 'SCORE: <1-6>' form to the JSON form. Rubric, essay handling, statistic, strata, sample, and hypothesis are unchanged."
+    }
+  ],
+  "api_parameters": {
+    "endpoint": "POST https://api.openai.com/v1/chat/completions",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "messages": "single user message containing the rendered frozen prompt",
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "holistic_score",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          },
+          "required": [
+            "score"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "reasoning_effort": "none",
+    "seed": 427183,
+    "max_completion_tokens": 100,
+    "temperature": "0 attempted; omitted if the API rejects the parameter for this model class (smoke test decides; outcome recorded)",
+    "n": 1,
+    "tools": "none",
+    "retry_policy": "up to 3 retries on 429/5xx/network errors with exponential backoff; any other 4xx aborts the run for report"
   }
 }

@@ -45,4 +45,5 @@ class FakeDeterministicJudge:
             gate = int.from_bytes(digest[8:12], "big") % self.invalid_every
             if gate == 0:
                 return "I think this essay deserves a 4 out of 6."
-        return f"SCORE: {1 + digest[0] % 6}"
+        return f'{{"score": {1 + digest[0] % 6}}}'
+

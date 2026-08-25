@@ -28,6 +28,6 @@ ESSAY
 
 {essay}
 
-Respond with exactly one line, in exactly this format, and nothing else:
+Respond with a JSON object in exactly this form, and nothing else:
 
-SCORE: <integer from 1 to 6>
+{"score": <integer from 1 to 6>}
