@@ -59,17 +59,26 @@ Strata are conditionally independent, so the joint conditional law of the labels
 is exchangeable within strata and independent across them. Conditioning further
 on the observed multiset of labels in each stratum, every within-stratum
 arrangement is equally likely. Hence the within-stratum permutation distribution
-*is* the exact conditional null distribution of any statistic, and the Monte
-Carlo p-value above is the standard exact Monte Carlo test over `B + 1`
-exchangeable draws.
+*is* the exact conditional null distribution of any statistic. The
+implementation does **not** enumerate that distribution: it is a Monte Carlo
+(random) permutation test, drawing `B` permutations i.i.d. uniformly from the
+product of within-stratum symmetric groups. With the `+1` p-value construction
+the observed arrangement and the `B` draws are `B + 1` exchangeable draws under
+`H0`, which gives finite-sample validity (`P(p <= alpha | H0) <= alpha`) for
+any `B` -- a finite-sample-valid Monte Carlo test, not an exhaustive
+enumeration of the permutation group.
 
 ### A1. Units are i.i.d., or at least exchangeable within strata
 
 The factorisation step requires it. **This is the assumption most likely to fail
-on real evaluator data**, and it fails silently. Multiple items generated from
-one prompt, repeated evaluator calls on one item, items sharing an author or a
-source document, or any temporal drift in the evaluator all induce dependence
-between units in the same stratum. Under clustering the permutation
+on real evaluator data**, and it fails silently. The concern is dependence
+*between observational units*: repeated writers contributing several items,
+duplicated items, treating repeated evaluator calls on one item as independent
+units, items sharing a source document, or temporal drift in the evaluator.
+Units merely sharing a covariate value -- for example the same prompt, when the
+prompt is part of `Z` -- do not by themselves violate within-stratum
+exchangeability; that is precisely the situation the stratification is built
+for. Under genuine between-unit dependence the permutation
 distribution is too narrow and the test is anti-conservative -- it rejects too
 often, which for an audit is the dangerous direction.
 
@@ -212,9 +221,14 @@ They establish none of the following, and the README does not claim them:
 - **Continuous or high-cardinality `Z`.** Exact matching breaks down. Requires
   either a coarsening whose cost is quantified (see A2) or a conditional
   randomisation approach that models `P(A | Z)`.
-- **Choosing the binning.** Currently fixed a priori at 8 pooled quantile bins.
-  Selecting it by looking at results would be a garden-of-forking-paths problem;
-  selecting it on held-out data would not.
+- **Choosing the binning.** The 8 pooled quantile bins are a choice made for
+  the *continuous synthetic scores* in this validation stage, fixed a priori.
+  They are not a commitment for a real experiment: if the judge emits an
+  ordinal rubric score (for example a 1-6 holistic scale), the native score
+  categories should be used directly, with no discretisation step at all,
+  unless there is a documented statistical reason not to. Where a binning
+  choice is genuinely needed, selecting it by looking at results would be a
+  garden-of-forking-paths problem; selecting it on held-out data would not.
 - **Multiplicity.** Auditing several attributes, or several score dimensions,
   needs an explicit correction. None is implemented.
 - **Interpretation.** Rejecting `H0` says the score carries information about `A`

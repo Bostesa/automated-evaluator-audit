@@ -1,0 +1,18 @@
+prompt                                           Y=1           Y=2           Y=3           Y=4           Y=5           Y=6     total  usable
+--------------------------------------------------------------------------------------------------------------------------------------------
+"A Cowboy Who Rode the Waves"             141/  10      641/  15      470/   5      106/   0*      10/   0*              -      1368       3
+Car-free cities                           139/  17      412/  23      701/  22      539/   5      160/   0*       8/   0*       1959       4
+Cell phones at school                      10/   0*     432/  33      783/  34      342/   2       84/   0*       5/   0*       1656       3
+Community service                          17/   4      533/  47      613/   9      304/   5       73/   0*       2/   0*       1542       4
+Distance learning                           9/   9*      91/  77      386/ 255      657/ 214      678/  43      336/   3        2157       5
+Does the electoral college work?          191/  21      513/  29      674/  16      466/   5      170/   0*      32/   0*       2046       4
+Driverless cars                            36/   7      408/  19      741/  21      477/  12      143/   2        4/   0*       1809       5
+Exploring Venus                           197/  82      548/ 167      570/ 117      386/  44      124/   0*      31/   1        1856       5
+Facial action coding system               173/  67      660/ 195      780/ 190      332/  38      138/   5       49/   0*       2132       5
+Grades for extracurricular activities      30/   8      547/  42      641/  17      354/   5       52/   0*       2/   0*       1626       4
+Mandatory extracurricular activities        6/   3      163/  43      401/  46      664/  16      371/  11       65/   0*       1670       5
+Seeking multiple opinions                   3/   1      119/  19      367/  28      727/  17      300/   4       36/   0*       1552       5
+Summer projects                             6/   4       47/  10      218/  18      549/  16      675/   5      255/   0*       1750       5
+The Face on Mars                           66/   4      476/  36      620/  16      305/   5       88/   0*      17/   0*       1572       4
+
+cell format: n_total/n_ELL_Yes ; * = stratum NOT usable (constant attribute or <2 units); - = stratum absent

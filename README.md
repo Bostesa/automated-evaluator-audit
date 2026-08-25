@@ -42,13 +42,19 @@ with no asymptotics and no assumption on the shape of `P(S | Z)`. The argument,
 and the four assumptions it depends on, are in
 [`docs/assumptions.md`](docs/assumptions.md).
 
-The p-value is the Monte Carlo form
+The implementation is a **Monte Carlo (random) permutation test**: it draws
+`B` within-stratum permutations uniformly at random rather than enumerating
+the full permutation group. The p-value is
 
 ```
 p = (1 + #{ b : T_b >= T_obs }) / (B + 1)
 ```
 
-which is bounded below by `1/(B+1)` and therefore never zero.
+which is bounded below by `1/(B+1)` and therefore never zero. Because the
+observed arrangement and the `B` draws are exchangeable under `H0`, this
+random-permutation construction is itself finite-sample valid for any `B`;
+exhaustive enumeration is not required for validity, only for removing the
+Monte Carlo component of the p-value.
 
 ### The statistic
 
@@ -65,6 +71,12 @@ modality alike -- it does not privilege the mean. Its limitation is stated
 precisely rather than glossed: it is omnibus **with respect to the score
 discretisation**, and conditional laws that induce identical bin probabilities
 are invisible to it at any sample size.
+
+The 8 pooled quantile bins used below are a choice for the *continuous
+synthetic scores* only. A real experiment whose judge emits an ordinal rubric
+score (e.g. a 1-6 holistic scale) should use the native score categories
+directly, with no discretisation step, unless there is a documented statistical
+reason not to.
 
 Statistics live in a registry (`offcriterion.statistics.STATISTICS`) and are
 interchangeable. Validity holds for any of them -- the permutation argument never
