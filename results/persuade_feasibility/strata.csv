@@ -1,0 +1,84 @@
+prompt_name,holistic_score,n_total,n_ell_No,n_ell_Yes,n_categories,usable,minority_share
+"""A Cowboy Who Rode the Waves""",1,141,131,10,2,True,0.0709
+"""A Cowboy Who Rode the Waves""",2,641,626,15,2,True,0.0234
+"""A Cowboy Who Rode the Waves""",3,470,465,5,2,True,0.0106
+"""A Cowboy Who Rode the Waves""",4,106,106,0,1,False,
+"""A Cowboy Who Rode the Waves""",5,10,10,0,1,False,
+Car-free cities,1,139,122,17,2,True,0.1223
+Car-free cities,2,412,389,23,2,True,0.0558
+Car-free cities,3,701,679,22,2,True,0.0314
+Car-free cities,4,539,534,5,2,True,0.0093
+Car-free cities,5,160,160,0,1,False,
+Car-free cities,6,8,8,0,1,False,
+Cell phones at school,1,10,10,0,1,False,
+Cell phones at school,2,432,399,33,2,True,0.0764
+Cell phones at school,3,783,749,34,2,True,0.0434
+Cell phones at school,4,342,340,2,2,True,0.0058
+Cell phones at school,5,84,84,0,1,False,
+Cell phones at school,6,5,5,0,1,False,
+Community service,1,17,13,4,2,True,0.2353
+Community service,2,533,486,47,2,True,0.0882
+Community service,3,613,604,9,2,True,0.0147
+Community service,4,304,299,5,2,True,0.0164
+Community service,5,73,73,0,1,False,
+Community service,6,2,2,0,1,False,
+Distance learning,1,9,0,9,1,False,
+Distance learning,2,91,14,77,2,True,0.1538
+Distance learning,3,386,131,255,2,True,0.3394
+Distance learning,4,657,443,214,2,True,0.3257
+Distance learning,5,678,635,43,2,True,0.0634
+Distance learning,6,336,333,3,2,True,0.0089
+Does the electoral college work?,1,191,170,21,2,True,0.1099
+Does the electoral college work?,2,513,484,29,2,True,0.0565
+Does the electoral college work?,3,674,658,16,2,True,0.0237
+Does the electoral college work?,4,466,461,5,2,True,0.0107
+Does the electoral college work?,5,170,170,0,1,False,
+Does the electoral college work?,6,32,32,0,1,False,
+Driverless cars,1,36,29,7,2,True,0.1944
+Driverless cars,2,408,389,19,2,True,0.0466
+Driverless cars,3,741,720,21,2,True,0.0283
+Driverless cars,4,477,465,12,2,True,0.0252
+Driverless cars,5,143,141,2,2,True,0.014
+Driverless cars,6,4,4,0,1,False,
+Exploring Venus,1,197,115,82,2,True,0.4162
+Exploring Venus,2,548,381,167,2,True,0.3047
+Exploring Venus,3,570,453,117,2,True,0.2053
+Exploring Venus,4,386,342,44,2,True,0.114
+Exploring Venus,5,124,124,0,1,False,
+Exploring Venus,6,31,30,1,2,True,0.0323
+Facial action coding system,1,173,106,67,2,True,0.3873
+Facial action coding system,2,660,465,195,2,True,0.2955
+Facial action coding system,3,780,590,190,2,True,0.2436
+Facial action coding system,4,332,294,38,2,True,0.1145
+Facial action coding system,5,138,133,5,2,True,0.0362
+Facial action coding system,6,49,49,0,1,False,
+Grades for extracurricular activities,1,30,22,8,2,True,0.2667
+Grades for extracurricular activities,2,547,505,42,2,True,0.0768
+Grades for extracurricular activities,3,641,624,17,2,True,0.0265
+Grades for extracurricular activities,4,354,349,5,2,True,0.0141
+Grades for extracurricular activities,5,52,52,0,1,False,
+Grades for extracurricular activities,6,2,2,0,1,False,
+Mandatory extracurricular activities,1,6,3,3,2,True,0.5
+Mandatory extracurricular activities,2,163,120,43,2,True,0.2638
+Mandatory extracurricular activities,3,401,355,46,2,True,0.1147
+Mandatory extracurricular activities,4,664,648,16,2,True,0.0241
+Mandatory extracurricular activities,5,371,360,11,2,True,0.0296
+Mandatory extracurricular activities,6,65,65,0,1,False,
+Seeking multiple opinions,1,3,2,1,2,True,0.3333
+Seeking multiple opinions,2,119,100,19,2,True,0.1597
+Seeking multiple opinions,3,367,339,28,2,True,0.0763
+Seeking multiple opinions,4,727,710,17,2,True,0.0234
+Seeking multiple opinions,5,300,296,4,2,True,0.0133
+Seeking multiple opinions,6,36,36,0,1,False,
+Summer projects,1,6,2,4,2,True,0.3333
+Summer projects,2,47,37,10,2,True,0.2128
+Summer projects,3,218,200,18,2,True,0.0826
+Summer projects,4,549,533,16,2,True,0.0291
+Summer projects,5,675,670,5,2,True,0.0074
+Summer projects,6,255,255,0,1,False,
+The Face on Mars,1,66,62,4,2,True,0.0606
+The Face on Mars,2,476,440,36,2,True,0.0756
+The Face on Mars,3,620,604,16,2,True,0.0258
+The Face on Mars,4,305,300,5,2,True,0.0164
+The Face on Mars,5,88,88,0,1,False,
+The Face on Mars,6,17,17,0,1,False,

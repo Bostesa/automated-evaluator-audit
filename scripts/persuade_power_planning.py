@@ -42,7 +42,7 @@ ROOT_SEED = 20260825
 ALPHA = 0.05
 B = 999
 R = 500
-SAMPLE_SIZES = (500, 1000, 2000, 4000, 8000, 16000, 23334)
+SAMPLE_SIZES = (500, 1000, 2000, 4000, 8000, 10000, 12000, 16000, 23334)
 PIS = {"null": 0.0, "weak": 0.05, "moderate": 0.10, "strong": 0.20}
 NOISE_P = (0.2, 0.6, 0.2)  # P(e = -1, 0, +1): planning assumption
 

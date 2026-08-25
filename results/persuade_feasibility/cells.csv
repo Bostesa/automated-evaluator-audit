@@ -1,0 +1,145 @@
+prompt_name,holistic_score,ell_status,n
+"""A Cowboy Who Rode the Waves""",1,No,131
+"""A Cowboy Who Rode the Waves""",1,Yes,10
+"""A Cowboy Who Rode the Waves""",2,No,626
+"""A Cowboy Who Rode the Waves""",2,Yes,15
+"""A Cowboy Who Rode the Waves""",3,No,465
+"""A Cowboy Who Rode the Waves""",3,Yes,5
+"""A Cowboy Who Rode the Waves""",4,No,106
+"""A Cowboy Who Rode the Waves""",5,No,10
+Car-free cities,1,No,122
+Car-free cities,1,Yes,17
+Car-free cities,2,No,389
+Car-free cities,2,Yes,23
+Car-free cities,3,No,679
+Car-free cities,3,Yes,22
+Car-free cities,4,No,534
+Car-free cities,4,Yes,5
+Car-free cities,5,No,160
+Car-free cities,6,No,8
+Cell phones at school,1,No,10
+Cell phones at school,2,No,399
+Cell phones at school,2,Yes,33
+Cell phones at school,3,No,749
+Cell phones at school,3,Yes,34
+Cell phones at school,4,No,340
+Cell phones at school,4,Yes,2
+Cell phones at school,5,No,84
+Cell phones at school,6,No,5
+Community service,1,No,13
+Community service,1,Yes,4
+Community service,2,No,486
+Community service,2,Yes,47
+Community service,3,No,604
+Community service,3,Yes,9
+Community service,4,No,299
+Community service,4,Yes,5
+Community service,5,No,73
+Community service,6,No,2
+Distance learning,1,Yes,9
+Distance learning,2,No,14
+Distance learning,2,Yes,77
+Distance learning,3,No,131
+Distance learning,3,Yes,255
+Distance learning,4,No,443
+Distance learning,4,Yes,214
+Distance learning,5,No,635
+Distance learning,5,Yes,43
+Distance learning,6,No,333
+Distance learning,6,Yes,3
+Does the electoral college work?,1,No,170
+Does the electoral college work?,1,Yes,21
+Does the electoral college work?,2,No,484
+Does the electoral college work?,2,Yes,29
+Does the electoral college work?,3,No,658
+Does the electoral college work?,3,Yes,16
+Does the electoral college work?,4,No,461
+Does the electoral college work?,4,Yes,5
+Does the electoral college work?,5,No,170
+Does the electoral college work?,6,No,32
+Driverless cars,1,No,29
+Driverless cars,1,Yes,7
+Driverless cars,2,No,389
+Driverless cars,2,Yes,19
+Driverless cars,3,No,720
+Driverless cars,3,Yes,21
+Driverless cars,4,No,465
+Driverless cars,4,Yes,12
+Driverless cars,5,No,141
+Driverless cars,5,Yes,2
+Driverless cars,6,No,4
+Exploring Venus,1,No,115
+Exploring Venus,1,Yes,82
+Exploring Venus,2,No,381
+Exploring Venus,2,Yes,167
+Exploring Venus,3,No,453
+Exploring Venus,3,Yes,117
+Exploring Venus,4,No,342
+Exploring Venus,4,Yes,44
+Exploring Venus,5,No,124
+Exploring Venus,6,No,30
+Exploring Venus,6,Yes,1
+Facial action coding system,1,No,106
+Facial action coding system,1,Yes,67
+Facial action coding system,2,No,465
+Facial action coding system,2,Yes,195
+Facial action coding system,3,No,590
+Facial action coding system,3,Yes,190
+Facial action coding system,4,No,294
+Facial action coding system,4,Yes,38
+Facial action coding system,5,No,133
+Facial action coding system,5,Yes,5
+Facial action coding system,6,No,49
+Grades for extracurricular activities,1,No,22
+Grades for extracurricular activities,1,Yes,8
+Grades for extracurricular activities,2,No,505
+Grades for extracurricular activities,2,Yes,42
+Grades for extracurricular activities,3,No,624
+Grades for extracurricular activities,3,Yes,17
+Grades for extracurricular activities,4,No,349
+Grades for extracurricular activities,4,Yes,5
+Grades for extracurricular activities,5,No,52
+Grades for extracurricular activities,6,No,2
+Mandatory extracurricular activities,1,No,3
+Mandatory extracurricular activities,1,Yes,3
+Mandatory extracurricular activities,2,No,120
+Mandatory extracurricular activities,2,Yes,43
+Mandatory extracurricular activities,3,No,355
+Mandatory extracurricular activities,3,Yes,46
+Mandatory extracurricular activities,4,No,648
+Mandatory extracurricular activities,4,Yes,16
+Mandatory extracurricular activities,5,No,360
+Mandatory extracurricular activities,5,Yes,11
+Mandatory extracurricular activities,6,No,65
+Seeking multiple opinions,1,No,2
+Seeking multiple opinions,1,Yes,1
+Seeking multiple opinions,2,No,100
+Seeking multiple opinions,2,Yes,19
+Seeking multiple opinions,3,No,339
+Seeking multiple opinions,3,Yes,28
+Seeking multiple opinions,4,No,710
+Seeking multiple opinions,4,Yes,17
+Seeking multiple opinions,5,No,296
+Seeking multiple opinions,5,Yes,4
+Seeking multiple opinions,6,No,36
+Summer projects,1,No,2
+Summer projects,1,Yes,4
+Summer projects,2,No,37
+Summer projects,2,Yes,10
+Summer projects,3,No,200
+Summer projects,3,Yes,18
+Summer projects,4,No,533
+Summer projects,4,Yes,16
+Summer projects,5,No,670
+Summer projects,5,Yes,5
+Summer projects,6,No,255
+The Face on Mars,1,No,62
+The Face on Mars,1,Yes,4
+The Face on Mars,2,No,440
+The Face on Mars,2,Yes,36
+The Face on Mars,3,No,604
+The Face on Mars,3,Yes,16
+The Face on Mars,4,No,300
+The Face on Mars,4,Yes,5
+The Face on Mars,5,No,88
+The Face on Mars,6,No,17

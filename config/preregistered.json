@@ -1,0 +1,91 @@
+{
+  "preregistration": "docs/preregistration.md",
+  "frozen_date": "2026-08-25",
+  "status": "FROZEN pending user approval; no judge scoring has occurred",
+
+  "dataset": {
+    "corpus": "PERSUADE 2.0",
+    "essay_level_file": "data/persuade/persuade_essay_level.csv",
+    "source_sha256": {
+      "persuade_train.csv": "f61319edd8bf16a982711ea0399fad59c05afaec05cdf0767f16a2c05c467e23",
+      "persuade_test.zip": "51c907f90b1303d610e8fcd8c0cbf3656ec88116bc34b60b93794affa77facb2"
+    },
+    "license": "CC BY-NC-SA 4.0"
+  },
+
+  "population": {
+    "inclusion": "non-missing prompt_name, holistic_essay_score, ell_status; member of a usable (prompt, human_score) stratum (>=2 essays, both ELL categories)",
+    "ell_missing_encodings": ["", " "],
+    "n_population": 23334,
+    "n_usable_strata": 61
+  },
+
+  "primary_sample_size": 10000,
+  "sampling": {
+    "method": "proportional stratified (largest remainder) over the 61 usable strata; SRS without replacement within stratum; per-stratum SeedSequence(entropy=sampling_seed, spawn_key=(stratum_index,))",
+    "attribute_free": true
+  },
+  "sampling_seed": 20260825,
+
+  "judge": {
+    "primary": "gpt-5-mini (OpenAI) -- API availability, exact snapshot id, and pricing to be verified before scoring; the verified snapshot id will be recorded here BEFORE any call",
+    "secondary": ["claude-haiku-4-5 (Anthropic)", "gemini-2.5-flash (Google)"],
+    "temperature": 0,
+    "notes": "temperature 0 (plus fixed seed parameter where the API offers one); exact determinism is not guaranteed by providers and is not assumed by the analysis"
+  },
+
+  "conditions": {
+    "primary": "plain",
+    "secondary": "ignore_demographics",
+    "templates": [
+      "prompts/judge_prompt_independent.txt",
+      "prompts/judge_prompt_source_based.txt",
+      "prompts/condition_ignore_demographics.txt"
+    ]
+  },
+
+  "analysis": {
+    "null": "S independent of A given (Y, P)",
+    "attribute": "ell_status in {No, Yes}",
+    "strata": "exact (prompt_name, holistic_essay_score); no pooling",
+    "score_categories": 6,
+    "score_binning": "native ordinal categories; category space fixed at 1..6 a priori",
+    "statistic": "conditional_g2",
+    "inference": "within-stratum Monte Carlo random-permutation test",
+    "n_permutations": 999,
+    "p_value": "(1 + #{T_b >= T_obs}) / (B + 1)",
+    "alpha": 0.05,
+    "companion_statistics_same_draws": ["stratified_mean_disparity", "stratified_regression_lrt"]
+  },
+  "permutation_seed": 427183,
+  "seed_slots": {
+    "primary": [0, 0],
+    "secondary_judge_1_plain": [1, 0],
+    "secondary_judge_2_plain": [2, 0],
+    "primary_judge_ignore_demographics": [0, 1],
+    "negative_control": [9, 9]
+  },
+  "label_permutation_seed": 771029,
+
+  "multiplicity": {
+    "primary_family": "exactly one test: primary judge, plain condition, ELL, conditional G2",
+    "secondary_confirmatory_family": [
+      "secondary judge 1, plain, ELL, conditional G2",
+      "secondary judge 2, plain, ELL, conditional G2",
+      "primary judge, ignore_demographics, ELL, conditional G2"
+    ],
+    "correction": "Holm, family size 3, alpha 0.05",
+    "everything_else": "exploratory; reported without correction and never as confirmatory"
+  },
+
+  "exclusion_rules": {
+    "unparseable_response": "excluded and logged; format is exactly 'SCORE: <1-6>' after whitespace strip; no repair, no reprompt",
+    "api_failure": "up to 3 retries of the identical request; then excluded as technical-failure and logged",
+    "no_other_exclusions": true
+  },
+
+  "controls": {
+    "negative_control": "single within-stratum random relabelling of A (label_permutation_seed) run through the ENTIRE analysis path; plus 200-draw p-value uniformity sweep (exploratory diagnostic)",
+    "positive_control_helpsteer2": "DROPPED for the Junior Spotlight version"
+  }
+}

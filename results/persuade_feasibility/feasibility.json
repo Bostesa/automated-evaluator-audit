@@ -1,0 +1,97 @@
+{
+  "source": {
+    "repository": "https://github.com/scrosseye/persuade_corpus_2.0",
+    "files": [
+      "persuade_train.csv (Google Drive id 13phHyDzIsb0MHyJr6q-B-qIa9P2tM135)",
+      "persuade_corpus_2.0_test.csv (from persuade_test.zip, Google Drive id 1K1SIJiG-2zWgMlTzxQeYOcLwOsFaVel1)"
+    ],
+    "sha256": {
+      "persuade_train.csv": "f61319edd8bf16a982711ea0399fad59c05afaec05cdf0767f16a2c05c467e23",
+      "persuade_test.zip": "51c907f90b1303d610e8fcd8c0cbf3656ec88116bc34b60b93794affa77facb2"
+    },
+    "license": "CC BY-NC-SA 4.0",
+    "citation": "Crossley et al. (2024), Assessing Writing 61, PERSUADE 2.0",
+    "downloaded": "2026-08-25"
+  },
+  "essays": {
+    "total": 25996,
+    "unique_essay_id_comp": 25996,
+    "duplicated_essay_id_comp": 0,
+    "unique_excel_mangled_essay_id": 25994,
+    "duplicate_full_text_groups": 0,
+    "essays_in_duplicate_text_groups": 0,
+    "writer_id_column_present": false
+  },
+  "prompts": {
+    "count": 15,
+    "names": [
+      "\"A Cowboy Who Rode the Waves\"",
+      "Car-free cities",
+      "Cell phones at school",
+      "Community service",
+      "Distance learning",
+      "Does the electoral college work?",
+      "Driverless cars",
+      "Exploring Venus",
+      "Facial action coding system",
+      "Grades for extracurricular activities",
+      "Mandatory extracurricular activities",
+      "Phones and driving",
+      "Seeking multiple opinions",
+      "Summer projects",
+      "The Face on Mars"
+    ]
+  },
+  "holistic_score_distribution": {
+    "1": 1028,
+    "2": 5699,
+    "3": 8368,
+    "4": 6731,
+    "5": 3297,
+    "6": 873
+  },
+  "ell_status_raw": {
+    "''": 1209,
+    "' '": 92,
+    "'No'": 22451,
+    "'Yes'": 2244
+  },
+  "missingness": {
+    "ell_status": {
+      "n": 1301,
+      "prop": 0.05
+    },
+    "prompt_name": {
+      "n": 0,
+      "prop": 0.0
+    },
+    "holistic_essay_score": {
+      "n": 0,
+      "prop": 0.0
+    }
+  },
+  "grade_level_raw": {
+    "''": 1168,
+    "'10'": 8274,
+    "'11'": 3083,
+    "'12'": 404,
+    "'6'": 1372,
+    "'8'": 9629,
+    "'9'": 2066
+  },
+  "complete_cases": 24695,
+  "strata": {
+    "total": 83,
+    "usable_ge2_units_ge2_categories": 61,
+    "degenerate_constant_attribute_or_singleton": 22,
+    "units_in_usable_strata": 23334,
+    "units_lost_to_degenerate_strata": 1361,
+    "usable_size_min": 3,
+    "usable_size_median": 386,
+    "usable_size_mean": 382.5,
+    "usable_size_max": 783,
+    "minority_share_min": 0.0058,
+    "minority_share_median": 0.0634,
+    "minority_share_max": 0.5
+  }
+}

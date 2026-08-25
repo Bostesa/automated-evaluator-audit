@@ -3,3 +3,9 @@
 *.csv
 *.json
 !.gitignore
+# Feasibility and power-planning tables are part of the preregistration
+# record: small, frozen, and tracked.
+!persuade_feasibility/*.csv
+!persuade_feasibility/*.json
+# Dry-run outputs are disposable pipeline-validation artifacts.
+dryrun/
