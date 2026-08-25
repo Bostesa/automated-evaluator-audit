@@ -1,0 +1,61 @@
+{
+  "condition": "plain",
+  "descriptive_diagnostics": {
+    "weighted_cumulative_shift": {
+      "P(S>=2)": -0.0009,
+      "P(S>=3)": -0.2304,
+      "P(S>=4)": -0.3435,
+      "P(S>=5)": -0.0235,
+      "P(S>=6)": 0.0
+    },
+    "weighted_mean_difference": -0.5982,
+    "weighted_variance_difference": -0.0227
+  },
+  "exclusions": [],
+  "family": "secondary_confirmatory",
+  "judge": "claude-haiku-4-5-20251001",
+  "n_analysed": 11360,
+  "n_ell": 1039,
+  "n_excluded_unparseable": 0,
+  "n_informative_strata": 31,
+  "n_scored_records": 11360,
+  "n_strata": 31,
+  "permutation_calibrated_baselines": {
+    "stratified_mean_disparity": {
+      "observed": 0.5990191265212392,
+      "p_value": 0.001
+    },
+    "stratified_regression_lrt": {
+      "observed": 765.3789053210752,
+      "p_value": 0.001
+    }
+  },
+  "primary_test": {
+    "n_permutations": 999,
+    "observed": 691.5796441108396,
+    "p_value": 0.001,
+    "statistic": "conditional_g2"
+  },
+  "score_distribution_by_ell": {
+    "A=0": [
+      30,
+      1236,
+      3487,
+      5277,
+      291,
+      0
+    ],
+    "A=1": [
+      20,
+      489,
+      421,
+      108,
+      1,
+      0
+    ]
+  },
+  "seed_slot": [
+    1,
+    0
+  ]
+}

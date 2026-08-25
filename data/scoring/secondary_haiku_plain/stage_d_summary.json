@@ -1,0 +1,26 @@
+{
+  "stage": "D-secondary",
+  "cell": "haiku_plain",
+  "model": "claude-haiku-4-5-20251001",
+  "condition": "plain",
+  "n_manifest": 11360,
+  "n_records": 11360,
+  "n_valid_scores": 11360,
+  "n_invalid_responses": 0,
+  "n_technical_failures": 0,
+  "retries_total": 0,
+  "records_with_retries": 0,
+  "provider_model_strings": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "input_tokens": 18770595,
+  "output_tokens": 102240,
+  "thinking_tokens": 0,
+  "thinking_billed_as_output": false,
+  "actual_cost_usd": 19.28,
+  "sha256": {
+    "scores__claude-haiku-4-5-20251001__plain.jsonl": "1f9c2d42eba4ecae40dbeef7fe94655c980cf98c33e767bf3f0bb8bac141a516",
+    "scores_only.csv": "36a634b41c7b4684dabdc09c2e480ac61c1784bf4f1bec16d323b1e08b4f4c86",
+    "FROZEN.json": "dceda0d19d84a525fab09a9073fa862b55d3ac5da8beeb38ce5427512087e8e5"
+  }
+}
