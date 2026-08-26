@@ -32,3 +32,19 @@ discourse-element-level CSVs (285,383 rows total) to one row per unique
 `full_text`. Metadata was verified constant across the discourse rows of every
 essay (0 conflicts). Note the numeric `essay_id` column is Excel-mangled
 scientific notation and is NOT unique; `essay_id_comp` is the reliable key.
+
+## Regenerating the derived files
+
+All three derived inputs (`persuade_essay_level.csv`, `essay_texts.csv`,
+`prompt_materials.csv`) are reconstructed deterministically from the two raw
+corpus CSVs by:
+
+    python scripts/prepare_persuade.py --out-dir data/persuade
+
+By default the script writes to `data/persuade/prepared/` so existing copies
+are never overwritten. It verifies its outputs against the recorded SHA-256
+values (byte-exact reproduction confirmed 2026-08-26):
+
+- `persuade_essay_level.csv`: `b45aa58f7c4b4d9018511515cd1cf1dd409299ea093329272a05571f8203be8f`
+- `essay_texts.csv`: `df3b411a8644e81e72289d96baae59aa75a5e49805008aa58a7231ff4330f0d7`
+- `prompt_materials.csv`: `2e169ec033627459e4199750710143cbf87e693a5a78de76a53fafe0bb71e0e6`
