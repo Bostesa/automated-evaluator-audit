@@ -63,3 +63,18 @@ single-provenance, single-quota-regime run.
 - **Post-exclusion thresholds:** all cells satisfy the preregistered
   minimums (analysed ELL >= 900, informative strata >= 28): primary 1,000 /
   31; Haiku 1,039 / 31; Gemini 958 / 31; GPT-ignore 977 / 31.
+
+## D2 — post-hoc plan implementation correction (dedup key), 2026-08-25
+
+The frozen post-hoc plan (section 2.1) specified dropping exact duplicate
+`(essay_id_comp, discourse_id)` rows as a no-op safeguard ("none expected").
+On first execution this dropped 124,338 rows: `discourse_id` turns out to be
+Excel-mangled scientific notation (728 distinct values across 173,266 train
+rows), the same corruption `data/persuade/README.md` documents for
+`essay_id`. The safeguard key was corrected to
+`(essay_id_comp, discourse_start, discourse_end)`, which was verified to
+contain zero duplicates (and train/test essay sets are disjoint), so the
+corrected safeguard is the intended no-op. The correction was made before
+any join with ELL status or judge scores and before any feasibility or
+robustness statistic was computed; the resulting index matches the schema
+check recorded in the plan (100% coverage, median 9 elements/essay).
