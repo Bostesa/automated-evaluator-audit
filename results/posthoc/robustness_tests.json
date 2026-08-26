@@ -1,0 +1,178 @@
+{
+  "label": "POST-HOC robustness tests; frozen plan section 5.1; no confirmatory status attaches to these p-values",
+  "B": 999,
+  "permutation_seed": 427183,
+  "cells": {
+    "GPT-5.4-mini plain": {
+      "frozen_confirmatory_Delta_Z0": -0.3202,
+      "Z0": {
+        "N": 10893,
+        "ELL_N": 1000,
+        "informative_strata": 31,
+        "conditional_G2": 420.86,
+        "p_value": 0.001,
+        "conditional_mean_difference": -0.3202,
+        "cumulative_shift": {
+          "P(S>=2)": -0.0003,
+          "P(S>=3)": -0.0145,
+          "P(S>=4)": -0.2426,
+          "P(S>=5)": -0.0627,
+          "P(S>=6)": 0.0
+        }
+      },
+      "Z1": {
+        "N": 10893,
+        "ELL_N": 1000,
+        "informative_strata": 65,
+        "conditional_G2": 437.75,
+        "p_value": 0.001,
+        "conditional_mean_difference": -0.3068,
+        "cumulative_shift": {
+          "P(S>=2)": -0.0002,
+          "P(S>=3)": -0.0097,
+          "P(S>=4)": -0.2402,
+          "P(S>=5)": -0.0567,
+          "P(S>=6)": 0.0
+        }
+      },
+      "Z2": {
+        "N": 10893,
+        "ELL_N": 1000,
+        "informative_strata": 110,
+        "conditional_G2": 480.19,
+        "p_value": 0.001,
+        "conditional_mean_difference": -0.3063,
+        "cumulative_shift": {
+          "P(S>=2)": -0.0001,
+          "P(S>=3)": -0.0111,
+          "P(S>=4)": -0.2449,
+          "P(S>=5)": -0.0501,
+          "P(S>=6)": 0.0
+        }
+      },
+      "attenuation": {
+        "Delta_Z0_matched_full_valid_sample": -0.3202,
+        "Delta_Z1": -0.3068,
+        "Delta_Z2": -0.3063,
+        "attenuation_Z1_minus_Z0": 0.0134,
+        "attenuation_Z2_minus_Z0": 0.0139,
+        "pct_attenuation_Z1": 4.2,
+        "pct_attenuation_Z2": 4.3
+      }
+    },
+    "Claude Haiku 4.5 plain": {
+      "frozen_confirmatory_Delta_Z0": -0.5982,
+      "Z0": {
+        "N": 11360,
+        "ELL_N": 1039,
+        "informative_strata": 31,
+        "conditional_G2": 691.58,
+        "p_value": 0.001,
+        "conditional_mean_difference": -0.5982,
+        "cumulative_shift": {
+          "P(S>=2)": -0.0009,
+          "P(S>=3)": -0.2304,
+          "P(S>=4)": -0.3435,
+          "P(S>=5)": -0.0235,
+          "P(S>=6)": 0.0
+        }
+      },
+      "Z1": {
+        "N": 11360,
+        "ELL_N": 1039,
+        "informative_strata": 66,
+        "conditional_G2": 725.06,
+        "p_value": 0.001,
+        "conditional_mean_difference": -0.5743,
+        "cumulative_shift": {
+          "P(S>=2)": 0.0001,
+          "P(S>=3)": -0.21,
+          "P(S>=4)": -0.343,
+          "P(S>=5)": -0.0214,
+          "P(S>=6)": 0.0
+        }
+      },
+      "Z2": {
+        "N": 11360,
+        "ELL_N": 1039,
+        "informative_strata": 111,
+        "conditional_G2": 768.13,
+        "p_value": 0.001,
+        "conditional_mean_difference": -0.5509,
+        "cumulative_shift": {
+          "P(S>=2)": 0.0001,
+          "P(S>=3)": -0.2075,
+          "P(S>=4)": -0.3238,
+          "P(S>=5)": -0.0196,
+          "P(S>=6)": 0.0
+        }
+      },
+      "attenuation": {
+        "Delta_Z0_matched_full_valid_sample": -0.5982,
+        "Delta_Z1": -0.5743,
+        "Delta_Z2": -0.5509,
+        "attenuation_Z1_minus_Z0": 0.0239,
+        "attenuation_Z2_minus_Z0": 0.0473,
+        "pct_attenuation_Z1": 4.0,
+        "pct_attenuation_Z2": 7.9
+      }
+    },
+    "Gemini 3.7 Flash plain": {
+      "frozen_confirmatory_Delta_Z0": -0.444,
+      "Z0": {
+        "N": 10617,
+        "ELL_N": 958,
+        "informative_strata": 31,
+        "conditional_G2": 500.95,
+        "p_value": 0.001,
+        "conditional_mean_difference": -0.444,
+        "cumulative_shift": {
+          "P(S>=2)": -0.0002,
+          "P(S>=3)": -0.1347,
+          "P(S>=4)": -0.2151,
+          "P(S>=5)": -0.0904,
+          "P(S>=6)": -0.0036
+        }
+      },
+      "Z1": {
+        "N": 10617,
+        "ELL_N": 958,
+        "informative_strata": 66,
+        "conditional_G2": 526.63,
+        "p_value": 0.001,
+        "conditional_mean_difference": -0.4303,
+        "cumulative_shift": {
+          "P(S>=2)": 0.0005,
+          "P(S>=3)": -0.1179,
+          "P(S>=4)": -0.2211,
+          "P(S>=5)": -0.0888,
+          "P(S>=6)": -0.003
+        }
+      },
+      "Z2": {
+        "N": 10617,
+        "ELL_N": 958,
+        "informative_strata": 109,
+        "conditional_G2": 605.27,
+        "p_value": 0.001,
+        "conditional_mean_difference": -0.3958,
+        "cumulative_shift": {
+          "P(S>=2)": 0.0002,
+          "P(S>=3)": -0.1224,
+          "P(S>=4)": -0.2003,
+          "P(S>=5)": -0.0705,
+          "P(S>=6)": -0.0027
+        }
+      },
+      "attenuation": {
+        "Delta_Z0_matched_full_valid_sample": -0.444,
+        "Delta_Z1": -0.4303,
+        "Delta_Z2": -0.3958,
+        "attenuation_Z1_minus_Z0": 0.0137,
+        "attenuation_Z2_minus_Z0": 0.0482,
+        "pct_attenuation_Z1": 3.1,
+        "pct_attenuation_Z2": 10.9
+      }
+    }
+  }
+}
