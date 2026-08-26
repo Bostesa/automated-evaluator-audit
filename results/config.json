@@ -1,0 +1,36 @@
+{
+  "alpha": 0.05,
+  "baseline_nulls": {
+    "marginal_mean_ttest": "S _||_ A  (unconditional; NOT the audit null)",
+    "stratified_regression_ftest": "S _||_ A | Z  (audit null, asymptotic calibration)"
+  },
+  "baselines": [
+    "marginal_mean_ttest",
+    "stratified_regression_ftest"
+  ],
+  "binning": "global_quantile",
+  "chunk_size": 25,
+  "n_permutations": 999,
+  "n_replicates": 1000,
+  "n_score_bins": 8,
+  "n_workers": 0,
+  "root_seed": 20240817,
+  "sample_sizes": [
+    200,
+    500,
+    2000
+  ],
+  "scenarios": [
+    "conditional_null",
+    "mean_dependence",
+    "variance_only",
+    "shape_only",
+    "confounded_observed",
+    "confounded_proxy"
+  ],
+  "statistics": [
+    "conditional_g2",
+    "stratified_mean_disparity",
+    "stratified_regression_lrt"
+  ]
+}

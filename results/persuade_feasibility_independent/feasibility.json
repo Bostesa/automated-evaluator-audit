@@ -1,0 +1,45 @@
+{
+  "task_filter": "Independent",
+  "reason": "source passages for Text-dependent prompts are not in the canonical corpus; LLM judge cannot apply the source-based rubric the human raters applied",
+  "independent_prompts_total": 8,
+  "independent_prompts": [
+    "Cell phones at school",
+    "Community service",
+    "Distance learning",
+    "Grades for extracurricular activities",
+    "Mandatory extracurricular activities",
+    "Phones and driving",
+    "Seeking multiple opinions",
+    "Summer projects"
+  ],
+  "essays_independent_total": 13121,
+  "essays_complete_ell": 11953,
+  "ell_counts": {
+    "No": 10905,
+    "Yes": 1048
+  },
+  "ell_prevalence_complete": 0.0877,
+  "holistic_score_distribution": {
+    "1": 81,
+    "2": 1932,
+    "3": 3409,
+    "4": 3597,
+    "5": 2233,
+    "6": 701
+  },
+  "strata_total": 42,
+  "strata_usable": 31,
+  "strata_degenerate": 11,
+  "strata_thin_minority_lt5": 7,
+  "units_in_usable_strata": 11360,
+  "ell_in_usable_strata": 1039,
+  "units_lost_to_degenerate": 593,
+  "usable_size_min": 3,
+  "usable_size_median": 367,
+  "usable_size_mean": 366.5,
+  "usable_size_max": 783,
+  "minority_share_min": 0.0058,
+  "minority_share_median": 0.0764,
+  "minority_share_max": 0.5,
+  "prompts_with_usable_strata": 7
+}

@@ -1,0 +1,91 @@
+scenario,null_status,n,method,calibration,n_replicates,n_rejections,rejection_rate,ci_low,ci_high
+conditional_null,true,200,conditional_g2,stratified_permutation,1000,56,0.056,0.043374813385441996,0.07202334814973096
+conditional_null,true,200,stratified_mean_disparity,stratified_permutation,1000,53,0.053,0.04074650524859452,0.06867461683749176
+conditional_null,true,200,stratified_regression_lrt,stratified_permutation,1000,48,0.048,0.036393301020807914,0.06306608865013393
+conditional_null,true,200,marginal_mean_ttest,asymptotic,1000,995,0.995,0.9883490446266249,0.9978624644726756
+conditional_null,true,200,stratified_regression_ftest,asymptotic,1000,54,0.054,0.04162131372306272,0.06979215484605245
+conditional_null,true,500,conditional_g2,stratified_permutation,1000,49,0.049,0.03726103464736061,0.06419070150661013
+conditional_null,true,500,stratified_mean_disparity,stratified_permutation,1000,42,0.042,0.031220885546165443,0.05628442522660306
+conditional_null,true,500,stratified_regression_lrt,stratified_permutation,1000,41,0.041,0.030364971082098312,0.055147993207641306
+conditional_null,true,500,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+conditional_null,true,500,stratified_regression_ftest,asymptotic,1000,39,0.039,0.028658960904180478,0.05286931041950135
+conditional_null,true,2000,conditional_g2,stratified_permutation,1000,46,0.046,0.03466249276326498,0.06081220394161907
+conditional_null,true,2000,stratified_mean_disparity,stratified_permutation,1000,56,0.056,0.043374813385441996,0.07202334814973096
+conditional_null,true,2000,stratified_regression_lrt,stratified_permutation,1000,55,0.055,0.04249742737476844,0.07090838767737563
+conditional_null,true,2000,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+conditional_null,true,2000,stratified_regression_ftest,asymptotic,1000,55,0.055,0.04249742737476844,0.07090838767737563
+mean_dependence,false,200,conditional_g2,stratified_permutation,1000,142,0.142,0.12173404205455421,0.16500591702110326
+mean_dependence,false,200,stratified_mean_disparity,stratified_permutation,1000,224,0.224,0.1992434366609871,0.2508689340230394
+mean_dependence,false,200,stratified_regression_lrt,stratified_permutation,1000,230,0.23,0.20497969372023053,0.2570867558619693
+mean_dependence,false,200,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+mean_dependence,false,200,stratified_regression_ftest,asymptotic,1000,234,0.234,0.20880800256185078,0.2612278329524646
+mean_dependence,false,500,conditional_g2,stratified_permutation,1000,254,0.254,0.2279970750986118,0.2818856900762813
+mean_dependence,false,500,stratified_mean_disparity,stratified_permutation,1000,566,0.566,0.5350866438157509,0.5964082240641557
+mean_dependence,false,500,stratified_regression_lrt,stratified_permutation,1000,601,0.601,0.5703182462412869,0.6309087485446309
+mean_dependence,false,500,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+mean_dependence,false,500,stratified_regression_ftest,asymptotic,1000,593,0.593,0.5622513714741374,0.6230368514475494
+mean_dependence,false,2000,conditional_g2,stratified_permutation,1000,907,0.907,0.8874087442345036,0.9234762743582547
+mean_dependence,false,2000,stratified_mean_disparity,stratified_permutation,1000,998,0.998,0.9927371921365079,0.9994513564118793
+mean_dependence,false,2000,stratified_regression_lrt,stratified_permutation,1000,999,0.999,0.9943574414020421,0.9998234536293739
+mean_dependence,false,2000,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+mean_dependence,false,2000,stratified_regression_ftest,asymptotic,1000,999,0.999,0.9943574414020421,0.9998234536293739
+variance_only,false,200,conditional_g2,stratified_permutation,1000,285,0.285,0.25788577698507104,0.3137597291637176
+variance_only,false,200,stratified_mean_disparity,stratified_permutation,1000,50,0.05,0.03813026239274881,0.06531382024425081
+variance_only,false,200,stratified_regression_lrt,stratified_permutation,1000,47,0.047,0.0355271051063845,0.06193993808152845
+variance_only,false,200,marginal_mean_ttest,asymptotic,1000,972,0.972,0.9598298168024069,0.9805577231872291
+variance_only,false,200,stratified_regression_ftest,asymptotic,1000,50,0.05,0.03813026239274881,0.06531382024425081
+variance_only,false,500,conditional_g2,stratified_permutation,1000,788,0.788,0.7615898394196515,0.8122059476926687
+variance_only,false,500,stratified_mean_disparity,stratified_permutation,1000,48,0.048,0.036393301020807914,0.06306608865013393
+variance_only,false,500,stratified_regression_lrt,stratified_permutation,1000,45,0.045,0.03379951228563171,0.059682837936223455
+variance_only,false,500,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+variance_only,false,500,stratified_regression_ftest,asymptotic,1000,46,0.046,0.03466249276326498,0.06081220394161907
+variance_only,false,2000,conditional_g2,stratified_permutation,1000,1000,1.0,0.996173241514445,1.0
+variance_only,false,2000,stratified_mean_disparity,stratified_permutation,1000,48,0.048,0.036393301020807914,0.06306608865013393
+variance_only,false,2000,stratified_regression_lrt,stratified_permutation,1000,44,0.044,0.032938214588418495,0.05855178915040778
+variance_only,false,2000,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+variance_only,false,2000,stratified_regression_ftest,asymptotic,1000,45,0.045,0.03379951228563171,0.059682837936223455
+shape_only,false,200,conditional_g2,stratified_permutation,1000,95,0.095,0.07834523457904741,0.11475443979425223
+shape_only,false,200,stratified_mean_disparity,stratified_permutation,1000,47,0.047,0.0355271051063845,0.06193993808152845
+shape_only,false,200,stratified_regression_lrt,stratified_permutation,1000,54,0.054,0.04162131372306272,0.06979215484605245
+shape_only,false,200,marginal_mean_ttest,asymptotic,1000,997,0.997,0.9912169859464969,0.9989792161188614
+shape_only,false,200,stratified_regression_ftest,asymptotic,1000,56,0.056,0.043374813385441996,0.07202334814973096
+shape_only,false,500,conditional_g2,stratified_permutation,1000,162,0.162,0.1404641118483431,0.18612277688789222
+shape_only,false,500,stratified_mean_disparity,stratified_permutation,1000,46,0.046,0.03466249276326498,0.06081220394161907
+shape_only,false,500,stratified_regression_lrt,stratified_permutation,1000,47,0.047,0.0355271051063845,0.06193993808152845
+shape_only,false,500,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+shape_only,false,500,stratified_regression_ftest,asymptotic,1000,49,0.049,0.03726103464736061,0.06419070150661013
+shape_only,false,2000,conditional_g2,stratified_permutation,1000,705,0.705,0.6759934395775895,0.7324375894433328
+shape_only,false,2000,stratified_mean_disparity,stratified_permutation,1000,44,0.044,0.032938214588418495,0.05855178915040778
+shape_only,false,2000,stratified_regression_lrt,stratified_permutation,1000,51,0.051,0.039000942775266834,0.06643548634476167
+shape_only,false,2000,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+shape_only,false,2000,stratified_regression_ftest,asymptotic,1000,52,0.052,0.03987303628377741,0.06755573931927998
+confounded_observed,true,200,conditional_g2,stratified_permutation,1000,37,0.037,0.02696118087555473,0.050582397482069316
+confounded_observed,true,200,stratified_mean_disparity,stratified_permutation,1000,47,0.047,0.0355271051063845,0.06193993808152845
+confounded_observed,true,200,stratified_regression_lrt,stratified_permutation,1000,42,0.042,0.031220885546165443,0.05628442522660306
+confounded_observed,true,200,marginal_mean_ttest,asymptotic,1000,993,0.993,0.9856216845342334,0.9966051315990092
+confounded_observed,true,200,stratified_regression_ftest,asymptotic,1000,46,0.046,0.03466249276326498,0.06081220394161907
+confounded_observed,true,500,conditional_g2,stratified_permutation,1000,35,0.035,0.025272263017112946,0.04828662237445334
+confounded_observed,true,500,stratified_mean_disparity,stratified_permutation,1000,37,0.037,0.02696118087555473,0.050582397482069316
+confounded_observed,true,500,stratified_regression_lrt,stratified_permutation,1000,43,0.043,0.032078653411713356,0.05741900384408402
+confounded_observed,true,500,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+confounded_observed,true,500,stratified_regression_ftest,asymptotic,1000,43,0.043,0.032078653411713356,0.05741900384408402
+confounded_observed,true,2000,conditional_g2,stratified_permutation,1000,48,0.048,0.036393301020807914,0.06306608865013393
+confounded_observed,true,2000,stratified_mean_disparity,stratified_permutation,1000,51,0.051,0.039000942775266834,0.06643548634476167
+confounded_observed,true,2000,stratified_regression_lrt,stratified_permutation,1000,46,0.046,0.03466249276326498,0.06081220394161907
+confounded_observed,true,2000,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+confounded_observed,true,2000,stratified_regression_ftest,asymptotic,1000,44,0.044,0.032938214588418495,0.05855178915040778
+confounded_proxy,not guaranteed,200,conditional_g2,stratified_permutation,1000,189,0.189,0.1659418620747839,0.21443838170323143
+confounded_proxy,not guaranteed,200,stratified_mean_disparity,stratified_permutation,1000,393,0.393,0.3631928332405499,0.42362609307535887
+confounded_proxy,not guaranteed,200,stratified_regression_lrt,stratified_permutation,1000,394,0.394,0.3641755734830001,0.4246356993159376
+confounded_proxy,not guaranteed,200,marginal_mean_ttest,asymptotic,1000,996,0.996,0.9897604437227377,0.9984434118595916
+confounded_proxy,not guaranteed,200,stratified_regression_ftest,asymptotic,1000,386,0.386,0.356317362994859,0.4165551379398476
+confounded_proxy,not guaranteed,500,conditional_g2,stratified_permutation,1000,425,0.425,0.39470520710516793,0.4558688066676653
+confounded_proxy,not guaranteed,500,stratified_mean_disparity,stratified_permutation,1000,837,0.837,0.8128247624397997,0.858596002340936
+confounded_proxy,not guaranteed,500,stratified_regression_lrt,stratified_permutation,1000,842,0.842,0.8180901541085861,0.8632923430872941
+confounded_proxy,not guaranteed,500,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+confounded_proxy,not guaranteed,500,stratified_regression_ftest,asymptotic,1000,844,0.844,0.8201985055513945,0.8651686846105435
+confounded_proxy,not guaranteed,2000,conditional_g2,stratified_permutation,1000,991,0.991,0.982984183834662,0.9952579393325229
+confounded_proxy,not guaranteed,2000,stratified_mean_disparity,stratified_permutation,1000,1000,1.0,0.996173241514445,1.0
+confounded_proxy,not guaranteed,2000,stratified_regression_lrt,stratified_permutation,1000,1000,1.0,0.996173241514445,1.0
+confounded_proxy,not guaranteed,2000,marginal_mean_ttest,asymptotic,1000,1000,1.0,0.996173241514445,1.0
+confounded_proxy,not guaranteed,2000,stratified_regression_ftest,asymptotic,1000,1000,1.0,0.996173241514445,1.0

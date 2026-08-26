@@ -1,0 +1,74 @@
+prompt_name,holistic_score,ell_status,n
+Cell phones at school,1,No,10
+Cell phones at school,2,No,399
+Cell phones at school,2,Yes,33
+Cell phones at school,3,No,749
+Cell phones at school,3,Yes,34
+Cell phones at school,4,No,340
+Cell phones at school,4,Yes,2
+Cell phones at school,5,No,84
+Cell phones at school,6,No,5
+Community service,1,No,13
+Community service,1,Yes,4
+Community service,2,No,486
+Community service,2,Yes,47
+Community service,3,No,604
+Community service,3,Yes,9
+Community service,4,No,299
+Community service,4,Yes,5
+Community service,5,No,73
+Community service,6,No,2
+Distance learning,1,Yes,9
+Distance learning,2,No,14
+Distance learning,2,Yes,77
+Distance learning,3,No,131
+Distance learning,3,Yes,255
+Distance learning,4,No,443
+Distance learning,4,Yes,214
+Distance learning,5,No,635
+Distance learning,5,Yes,43
+Distance learning,6,No,333
+Distance learning,6,Yes,3
+Grades for extracurricular activities,1,No,22
+Grades for extracurricular activities,1,Yes,8
+Grades for extracurricular activities,2,No,505
+Grades for extracurricular activities,2,Yes,42
+Grades for extracurricular activities,3,No,624
+Grades for extracurricular activities,3,Yes,17
+Grades for extracurricular activities,4,No,349
+Grades for extracurricular activities,4,Yes,5
+Grades for extracurricular activities,5,No,52
+Grades for extracurricular activities,6,No,2
+Mandatory extracurricular activities,1,No,3
+Mandatory extracurricular activities,1,Yes,3
+Mandatory extracurricular activities,2,No,120
+Mandatory extracurricular activities,2,Yes,43
+Mandatory extracurricular activities,3,No,355
+Mandatory extracurricular activities,3,Yes,46
+Mandatory extracurricular activities,4,No,648
+Mandatory extracurricular activities,4,Yes,16
+Mandatory extracurricular activities,5,No,360
+Mandatory extracurricular activities,5,Yes,11
+Mandatory extracurricular activities,6,No,65
+Seeking multiple opinions,1,No,2
+Seeking multiple opinions,1,Yes,1
+Seeking multiple opinions,2,No,100
+Seeking multiple opinions,2,Yes,19
+Seeking multiple opinions,3,No,339
+Seeking multiple opinions,3,Yes,28
+Seeking multiple opinions,4,No,710
+Seeking multiple opinions,4,Yes,17
+Seeking multiple opinions,5,No,296
+Seeking multiple opinions,5,Yes,4
+Seeking multiple opinions,6,No,36
+Summer projects,1,No,2
+Summer projects,1,Yes,4
+Summer projects,2,No,37
+Summer projects,2,Yes,10
+Summer projects,3,No,200
+Summer projects,3,Yes,18
+Summer projects,4,No,533
+Summer projects,4,Yes,16
+Summer projects,5,No,670
+Summer projects,5,Yes,5
+Summer projects,6,No,255

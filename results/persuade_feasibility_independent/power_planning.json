@@ -1,0 +1,280 @@
+{
+  "planning_assumptions": {
+    "task_filter": "Independent",
+    "judge_noise": "S = clamp(Y+e,1,6), P(e=-1,0,+1) = (0.2, 0.6, 0.2)",
+    "alternative": "ELL essay downshifted one category w.p. pi",
+    "pi": {
+      "null": 0.0,
+      "weak": 0.05,
+      "moderate": 0.1,
+      "strong": 0.2
+    },
+    "root_seed": 20260826
+  },
+  "results": [
+    {
+      "n": 2000,
+      "alternative": "null",
+      "pi": 0.0,
+      "rejection_rate": 0.062,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 24.1,
+      "mean_n_ell_in_sample": 183.7
+    },
+    {
+      "n": 2000,
+      "alternative": "weak",
+      "pi": 0.05,
+      "rejection_rate": 0.102,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 24.1,
+      "mean_n_ell_in_sample": 182.1
+    },
+    {
+      "n": 2000,
+      "alternative": "moderate",
+      "pi": 0.1,
+      "rejection_rate": 0.318,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 24.1,
+      "mean_n_ell_in_sample": 183.8
+    },
+    {
+      "n": 2000,
+      "alternative": "strong",
+      "pi": 0.2,
+      "rejection_rate": 0.66,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 24.1,
+      "mean_n_ell_in_sample": 182.8
+    },
+    {
+      "n": 4000,
+      "alternative": "null",
+      "pi": 0.0,
+      "rejection_rate": 0.062,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 27.8,
+      "mean_n_ell_in_sample": 366.2
+    },
+    {
+      "n": 4000,
+      "alternative": "weak",
+      "pi": 0.05,
+      "rejection_rate": 0.218,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 27.8,
+      "mean_n_ell_in_sample": 365.7
+    },
+    {
+      "n": 4000,
+      "alternative": "moderate",
+      "pi": 0.1,
+      "rejection_rate": 0.54,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 27.7,
+      "mean_n_ell_in_sample": 365.7
+    },
+    {
+      "n": 4000,
+      "alternative": "strong",
+      "pi": 0.2,
+      "rejection_rate": 0.948,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 27.8,
+      "mean_n_ell_in_sample": 366.2
+    },
+    {
+      "n": 6000,
+      "alternative": "null",
+      "pi": 0.0,
+      "rejection_rate": 0.044,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 29.5,
+      "mean_n_ell_in_sample": 547.9
+    },
+    {
+      "n": 6000,
+      "alternative": "weak",
+      "pi": 0.05,
+      "rejection_rate": 0.306,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 29.4,
+      "mean_n_ell_in_sample": 548.4
+    },
+    {
+      "n": 6000,
+      "alternative": "moderate",
+      "pi": 0.1,
+      "rejection_rate": 0.726,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 29.5,
+      "mean_n_ell_in_sample": 548.9
+    },
+    {
+      "n": 6000,
+      "alternative": "strong",
+      "pi": 0.2,
+      "rejection_rate": 0.992,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 29.4,
+      "mean_n_ell_in_sample": 549.7
+    },
+    {
+      "n": 8000,
+      "alternative": "null",
+      "pi": 0.0,
+      "rejection_rate": 0.046,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 30.3,
+      "mean_n_ell_in_sample": 731.2
+    },
+    {
+      "n": 8000,
+      "alternative": "weak",
+      "pi": 0.05,
+      "rejection_rate": 0.39,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 30.4,
+      "mean_n_ell_in_sample": 730.6
+    },
+    {
+      "n": 8000,
+      "alternative": "moderate",
+      "pi": 0.1,
+      "rejection_rate": 0.892,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 30.4,
+      "mean_n_ell_in_sample": 731.9
+    },
+    {
+      "n": 8000,
+      "alternative": "strong",
+      "pi": 0.2,
+      "rejection_rate": 1.0,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 30.4,
+      "mean_n_ell_in_sample": 731.8
+    },
+    {
+      "n": 10000,
+      "alternative": "null",
+      "pi": 0.0,
+      "rejection_rate": 0.048,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 30.8,
+      "mean_n_ell_in_sample": 914.5
+    },
+    {
+      "n": 10000,
+      "alternative": "weak",
+      "pi": 0.05,
+      "rejection_rate": 0.526,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 30.8,
+      "mean_n_ell_in_sample": 915.0
+    },
+    {
+      "n": 10000,
+      "alternative": "moderate",
+      "pi": 0.1,
+      "rejection_rate": 0.946,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 30.9,
+      "mean_n_ell_in_sample": 914.0
+    },
+    {
+      "n": 10000,
+      "alternative": "strong",
+      "pi": 0.2,
+      "rejection_rate": 1.0,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 30.8,
+      "mean_n_ell_in_sample": 914.1
+    },
+    {
+      "n": 11360,
+      "alternative": "null",
+      "pi": 0.0,
+      "rejection_rate": 0.044,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 31.0,
+      "mean_n_ell_in_sample": 1039.0
+    },
+    {
+      "n": 11360,
+      "alternative": "weak",
+      "pi": 0.05,
+      "rejection_rate": 0.608,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 31.0,
+      "mean_n_ell_in_sample": 1039.0
+    },
+    {
+      "n": 11360,
+      "alternative": "moderate",
+      "pi": 0.1,
+      "rejection_rate": 0.97,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 31.0,
+      "mean_n_ell_in_sample": 1039.0
+    },
+    {
+      "n": 11360,
+      "alternative": "strong",
+      "pi": 0.2,
+      "rejection_rate": 1.0,
+      "n_replicates": 500,
+      "n_permutations": 999,
+      "alpha": 0.05,
+      "mean_usable_strata_in_sample": 31.0,
+      "mean_n_ell_in_sample": 1039.0
+    }
+  ]
+}

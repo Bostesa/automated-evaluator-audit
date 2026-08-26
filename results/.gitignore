@@ -1,14 +1,37 @@
-# Experiment outputs are reproducible from `offcriterion run`; keep the
-# publication tables in version control and leave the bulk data untracked.
+# Bulk experiment outputs are reproducible deterministically (`offcriterion run`
+# for the synthetic study; stage scripts for the real-data analyses). The
+# publication record — final tables, frozen analyses, and the configuration
+# that produced them — is tracked; only large regenerable intermediates and
+# disposable validation artifacts stay untracked.
 *.csv
 *.json
 !.gitignore
+
+# Synthetic-study record: configuration/seed, machine-readable rates and
+# diagnostics behind the tracked results.md / results.tex tables.
+# (replicates.csv, 8 MB of per-replicate p-values, is deterministic from
+# config.json and stays untracked.)
+!config.json
+!rejection_rates.json
+!rejection_rates.csv
+!diagnostics.json
+
+# Preregistered real-data record.
+!primary_analysis.json
+!negative_control.json
+
 # Feasibility and power-planning tables are part of the preregistration
-# record: small, frozen, and tracked.
+# record: small, frozen, and tracked. The *_independent variant is the
+# operative confirmatory design (pre-data revision v2); persuade_feasibility/
+# is the superseded v1 design-stage evidence.
 !persuade_feasibility/*.csv
 !persuade_feasibility/*.json
+!persuade_feasibility_independent/*.csv
+!persuade_feasibility_independent/*.json
+
 # Dry-run outputs are disposable pipeline-validation artifacts.
 dryrun/
+
 # Post-hoc robustness artifacts are part of the frozen post-hoc record.
 !posthoc/*.csv
 !posthoc/*.json

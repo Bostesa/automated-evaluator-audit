@@ -1,0 +1,602 @@
+{
+  "conditional_null": {
+    "conditional_moments": [
+      {
+        "a": 0.0,
+        "excess_kurtosis": 0.002374851350876117,
+        "mean": -1.2087036987661661,
+        "n": 66682.0,
+        "skewness": -0.0016414160977315795,
+        "variance": 0.9968279079135133,
+        "z": 0.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.06374390990599599,
+        "mean": -1.1885460244053443,
+        "n": 13438.0,
+        "skewness": 0.0074024975333043305,
+        "variance": 0.99636556031531,
+        "z": 0.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.026138069984824597,
+        "mean": -0.5934490741421516,
+        "n": 54940.0,
+        "skewness": 0.02151027135931689,
+        "variance": 0.996119826568859,
+        "z": 1.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": -0.012212544237944822,
+        "mean": -0.6074738927542886,
+        "n": 24837.0,
+        "skewness": -0.03971823305843498,
+        "variance": 1.013277982198127,
+        "z": 1.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.03798350469490375,
+        "mean": 0.007740487614269044,
+        "n": 40144.0,
+        "skewness": 0.0014192931169735806,
+        "variance": 1.002951318762011,
+        "z": 2.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.02165987651387402,
+        "mean": -0.0025501021739414865,
+        "n": 40142.0,
+        "skewness": -0.009507285670201216,
+        "variance": 1.008849287499367,
+        "z": 2.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.046151926664173004,
+        "mean": 0.5972020167721401,
+        "n": 24758.0,
+        "skewness": 0.011365001901340491,
+        "variance": 0.9924793630522522,
+        "z": 3.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.005251227727980812,
+        "mean": 0.607154048801816,
+        "n": 55011.0,
+        "skewness": 0.007220548990230916,
+        "variance": 1.0053600318045306,
+        "z": 3.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.02997620776280696,
+        "mean": 1.2018448656406355,
+        "n": 13272.0,
+        "skewness": 0.004083038528443533,
+        "variance": 0.9990626557026561,
+        "z": 4.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.006809190620733485,
+        "mean": 1.1929910656283187,
+        "n": 66776.0,
+        "skewness": -0.013288977014935473,
+        "variance": 0.9986839419449323,
+        "z": 4.0
+      }
+    ],
+    "description": "S independent of A given Q; A depends on Q, so S and A are dependent marginally.",
+    "detectable_at_this_binning": false,
+    "expectation": "Rejection rate should sit at or below alpha at every sample size.",
+    "null_status": "true",
+    "plug_in_bias_bound": 0.0001,
+    "population_conditional_mi": 7.454715511295945e-05
+  },
+  "confounded_observed": {
+    "conditional_moments": [
+      {
+        "a": 0.0,
+        "excess_kurtosis": 0.03108540119315384,
+        "mean": -1.2087945464582863,
+        "n": 36033.0,
+        "skewness": 0.0007459646137689457,
+        "variance": 1.005045302335219,
+        "z": 0.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.07283693661101998,
+        "mean": -1.2004671965964095,
+        "n": 2919.0,
+        "skewness": 0.01880694505690701,
+        "variance": 0.9820704103855041,
+        "z": 0.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.02044683112286405,
+        "mean": -0.5972787061899089,
+        "n": 76527.0,
+        "skewness": -0.004677951932116615,
+        "variance": 1.0068760521562108,
+        "z": 1.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": -0.010844263722213476,
+        "mean": -0.6080222475461737,
+        "n": 22176.0,
+        "skewness": 0.005788753125295722,
+        "variance": 1.0199299734004836,
+        "z": 1.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": 0.008243945691869037,
+        "mean": -0.0011139850302960433,
+        "n": 62038.0,
+        "skewness": -0.005343653367515282,
+        "variance": 0.9954400445618793,
+        "z": 2.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": -0.00941992865076191,
+        "mean": 0.0020348496933462108,
+        "n": 62370.0,
+        "skewness": -0.0014256017506782581,
+        "variance": 0.9987421789035583,
+        "z": 2.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": 0.046392267765813955,
+        "mean": 0.6009863325240352,
+        "n": 22352.0,
+        "skewness": -0.025151474144069635,
+        "variance": 0.9923660797719986,
+        "z": 3.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.01058814603571756,
+        "mean": 0.606975831043515,
+        "n": 76737.0,
+        "skewness": -0.001550924873407875,
+        "variance": 1.0105837876239354,
+        "z": 3.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.14425823720677444,
+        "mean": 1.188162820550604,
+        "n": 2999.0,
+        "skewness": -0.00992179527914687,
+        "variance": 1.037619189723246,
+        "z": 4.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.02450800289410804,
+        "mean": 1.2048515118261576,
+        "n": 35849.0,
+        "skewness": 0.008823386270051326,
+        "variance": 0.9955828575637635,
+        "z": 4.0
+      }
+    ],
+    "description": "A -> Q -> S with Q observed; conditioning on Q.",
+    "detectable_at_this_binning": false,
+    "expectation": "Nominal Type I error, despite very strong marginal dependence.",
+    "null_status": "true",
+    "plug_in_bias_bound": 0.0001,
+    "population_conditional_mi": 3.6523964795051145e-05
+  },
+  "confounded_proxy": {
+    "conditional_moments": [
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.02000194477598516,
+        "mean": -0.8337609742164064,
+        "n": 52975.0,
+        "skewness": 0.02066560318655973,
+        "variance": 1.1572090091025917,
+        "z": 0.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": -0.06379427431720419,
+        "mean": -0.47155305682379156,
+        "n": 13509.0,
+        "skewness": 0.0020839740312340324,
+        "variance": 1.2142356659564943,
+        "z": 0.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.008706971086546389,
+        "mean": -0.49928806885772564,
+        "n": 54370.0,
+        "skewness": 0.0051192567760472655,
+        "variance": 1.1877840789969787,
+        "z": 1.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": -0.008524641179178172,
+        "mean": -0.09360013739467973,
+        "n": 29281.0,
+        "skewness": 0.008188129315366858,
+        "variance": 1.2144964811008432,
+        "z": 1.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.003004143071035692,
+        "mean": -0.20712583063086476,
+        "n": 49840.0,
+        "skewness": -0.017372117574526138,
+        "variance": 1.1996338702998555,
+        "z": 2.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.015384833492174455,
+        "mean": 0.20378975152645054,
+        "n": 50104.0,
+        "skewness": 0.0018086342488979282,
+        "variance": 1.2016881279153826,
+        "z": 2.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.025556185365567252,
+        "mean": 0.1038916754277853,
+        "n": 29045.0,
+        "skewness": -0.0014613483600521874,
+        "variance": 1.197336364666352,
+        "z": 3.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": -0.01776534676941921,
+        "mean": 0.5083335358386151,
+        "n": 54560.0,
+        "skewness": -0.008313820444403128,
+        "variance": 1.1904457164106028,
+        "z": 3.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.01030568760783579,
+        "mean": 0.4580066737898786,
+        "n": 13719.0,
+        "skewness": 0.001264586729475098,
+        "variance": 1.196583491029658,
+        "z": 4.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.012793547428878949,
+        "mean": 0.8379761412821523,
+        "n": 52597.0,
+        "skewness": -0.0302625751639319,
+        "variance": 1.145216783655405,
+        "z": 4.0
+      }
+    ],
+    "description": "A -> Q -> S but conditioning on a discretised noisy proxy Y for Q.",
+    "detectable_at_this_binning": true,
+    "expectation": "Residual dependence from imperfect measurement; rejections here are correct, not Type I errors.",
+    "null_status": "not guaranteed",
+    "plug_in_bias_bound": 0.0001,
+    "population_conditional_mi": 0.013314975340357051
+  },
+  "mean_dependence": {
+    "conditional_moments": [
+      {
+        "a": 0.0,
+        "excess_kurtosis": 0.002374851350876117,
+        "mean": -1.2087036987661661,
+        "n": 66682.0,
+        "skewness": -0.0016414160977315795,
+        "variance": 0.9968279079135133,
+        "z": 0.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.06374390990599599,
+        "mean": -0.8885460244053441,
+        "n": 13438.0,
+        "skewness": 0.007402497533304265,
+        "variance": 0.9963655603153099,
+        "z": 0.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.026138069984824597,
+        "mean": -0.5934490741421516,
+        "n": 54940.0,
+        "skewness": 0.02151027135931689,
+        "variance": 0.996119826568859,
+        "z": 1.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": -0.012212544237944822,
+        "mean": -0.3074738927542886,
+        "n": 24837.0,
+        "skewness": -0.03971823305843506,
+        "variance": 1.013277982198127,
+        "z": 1.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.03798350469490375,
+        "mean": 0.007740487614269044,
+        "n": 40144.0,
+        "skewness": 0.0014192931169735806,
+        "variance": 1.002951318762011,
+        "z": 2.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.021659876513873133,
+        "mean": 0.29744989782605846,
+        "n": 40142.0,
+        "skewness": -0.009507285670201359,
+        "variance": 1.008849287499367,
+        "z": 2.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.046151926664173004,
+        "mean": 0.5972020167721401,
+        "n": 24758.0,
+        "skewness": 0.011365001901340491,
+        "variance": 0.9924793630522522,
+        "z": 3.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.005251227727980812,
+        "mean": 0.9071540488018159,
+        "n": 55011.0,
+        "skewness": 0.0072205489902306096,
+        "variance": 1.0053600318045306,
+        "z": 3.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.02997620776280696,
+        "mean": 1.2018448656406355,
+        "n": 13272.0,
+        "skewness": 0.004083038528443533,
+        "variance": 0.9990626557026561,
+        "z": 4.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.006809190620733485,
+        "mean": 1.4929910656283185,
+        "n": 66776.0,
+        "skewness": -0.01328897701493475,
+        "variance": 0.9986839419449323,
+        "z": 4.0
+      }
+    ],
+    "description": "Conditional means differ across A; variance and shape unchanged.",
+    "detectable_at_this_binning": true,
+    "expectation": "Power should rise with n for every statistic, including the mean baselines.",
+    "null_status": "false",
+    "plug_in_bias_bound": 0.0001,
+    "population_conditional_mi": 0.007964147062794073
+  },
+  "shape_only": {
+    "conditional_moments": [
+      {
+        "a": 0.0,
+        "excess_kurtosis": 0.002374851350876117,
+        "mean": -1.2087036987661661,
+        "n": 66682.0,
+        "skewness": -0.0016414160977315795,
+        "variance": 0.9968279079135133,
+        "z": 0.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 1.7964606211744405,
+        "mean": -1.1936365321052926,
+        "n": 13438.0,
+        "skewness": -0.03156228883467291,
+        "variance": 0.9944249543237652,
+        "z": 0.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.026138069984824597,
+        "mean": -0.5934490741421516,
+        "n": 54940.0,
+        "skewness": 0.02151027135931689,
+        "variance": 0.996119826568859,
+        "z": 1.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 1.755578611843422,
+        "mean": -0.6060920622434632,
+        "n": 24837.0,
+        "skewness": -0.0777894560126847,
+        "variance": 1.0138441741358881,
+        "z": 1.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.03798350469490375,
+        "mean": 0.007740487614269044,
+        "n": 40144.0,
+        "skewness": 0.0014192931169735806,
+        "variance": 1.002951318762011,
+        "z": 2.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 1.7180950508370438,
+        "mean": -0.0018829481472071928,
+        "n": 40142.0,
+        "skewness": 0.009312122452675537,
+        "variance": 1.0090205666181344,
+        "z": 2.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.046151926664173004,
+        "mean": 0.5972020167721401,
+        "n": 24758.0,
+        "skewness": 0.011365001901340491,
+        "variance": 0.9924793630522522,
+        "z": 3.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 1.6359404444016388,
+        "mean": 0.6071697382876986,
+        "n": 55011.0,
+        "skewness": 0.02039682224689086,
+        "variance": 1.0122300579647106,
+        "z": 3.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.02997620776280696,
+        "mean": 1.2018448656406355,
+        "n": 13272.0,
+        "skewness": 0.004083038528443533,
+        "variance": 0.9990626557026561,
+        "z": 4.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 1.6439563643314399,
+        "mean": 1.1925389525414685,
+        "n": 66776.0,
+        "skewness": -0.026572383375271815,
+        "variance": 1.006236647272225,
+        "z": 4.0
+      }
+    ],
+    "description": "Conditional mean, variance and skewness matched; tail shape differs.",
+    "detectable_at_this_binning": true,
+    "expectation": "Both mean baselines should stay near alpha; only the table statistic should detect it.",
+    "null_status": "false",
+    "plug_in_bias_bound": 0.0001,
+    "population_conditional_mi": 0.00563949621106498
+  },
+  "variance_only": {
+    "conditional_moments": [
+      {
+        "a": 0.0,
+        "excess_kurtosis": 0.002374851350876117,
+        "mean": -1.2087036987661661,
+        "n": 66682.0,
+        "skewness": -0.0016414160977315795,
+        "variance": 0.9968279079135133,
+        "z": 0.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.06374390990599732,
+        "mean": -1.181673639048551,
+        "n": 13438.0,
+        "skewness": 0.0074024975333044345,
+        "variance": 2.5506958344071933,
+        "z": 0.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.026138069984824597,
+        "mean": -0.5934490741421516,
+        "n": 54940.0,
+        "skewness": 0.02151027135931689,
+        "variance": 0.996119826568859,
+        "z": 1.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": -0.012212544237946155,
+        "mean": -0.6119582284068618,
+        "n": 24837.0,
+        "skewness": -0.039718233058434964,
+        "variance": 2.593991634427206,
+        "z": 1.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.03798350469490375,
+        "mean": 0.007740487614269044,
+        "n": 40144.0,
+        "skewness": 0.0014192931169735806,
+        "variance": 1.002951318762011,
+        "z": 2.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.021659876513872245,
+        "mean": -0.004080163478306379,
+        "n": 40142.0,
+        "skewness": -0.009507285670201272,
+        "variance": 2.58265417599838,
+        "z": 2.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.046151926664173004,
+        "mean": 0.5972020167721401,
+        "n": 24758.0,
+        "skewness": 0.011365001901340491,
+        "variance": 0.9924793630522522,
+        "z": 3.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.005251227727982144,
+        "mean": 0.6114464780829055,
+        "n": 55011.0,
+        "skewness": 0.007220548990230691,
+        "variance": 2.573721681419598,
+        "z": 3.0
+      },
+      {
+        "a": 0.0,
+        "excess_kurtosis": -0.02997620776280696,
+        "mean": 1.2018448656406355,
+        "n": 13272.0,
+        "skewness": 0.004083038528443533,
+        "variance": 0.9990626557026561,
+        "z": 4.0
+      },
+      {
+        "a": 1.0,
+        "excess_kurtosis": 0.006809190620732597,
+        "mean": 1.1887857050053094,
+        "n": 66776.0,
+        "skewness": -0.013288977014934384,
+        "variance": 2.556630891379027,
+        "z": 4.0
+      }
+    ],
+    "description": "Conditional means equal, conditional variances differ (1.0 vs 1.6).",
+    "detectable_at_this_binning": true,
+    "expectation": "Mean-oriented baselines should stay near alpha; the table statistic should gain power.",
+    "null_status": "false",
+    "plug_in_bias_bound": 0.0001,
+    "population_conditional_mi": 0.0279646181359957
+  }
+}

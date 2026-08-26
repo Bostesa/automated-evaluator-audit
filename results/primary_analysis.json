@@ -1,0 +1,1925 @@
+{
+  "condition": "plain",
+  "descriptive_diagnostics": {
+    "weighted_cumulative_shift": {
+      "P(S>=2)": -0.0003,
+      "P(S>=3)": -0.0145,
+      "P(S>=4)": -0.2426,
+      "P(S>=5)": -0.0627,
+      "P(S>=6)": 0.0
+    },
+    "weighted_mean_difference": -0.3202,
+    "weighted_variance_difference": -0.0753
+  },
+  "exclusions": [
+    {
+      "essay_id_comp": "04B6F07AC0EC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "04F17031683C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "06348D6E4080",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "06DDAA4EB60C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "06E490F2538D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "06E3595C94BF",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "07A88E52FC70",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "084B9E2AD4AC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "0886711ECD4E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "09770DECD26C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "0A66AD23400E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "0B64C3347CCA",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "0BB223A348F6",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "0C636C7DADB4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "0CDCC84B9EA9",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "0D3737E9F443",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "0E3AC9BFA07C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "10049349777A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "11A48AF9668D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "12BCA50767E9",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1313ADFE62C6",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "13C271A7BB26",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "14122B906E30",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "14409A305AB3",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "146818D2FAF1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "166AA098DBBB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "16BC80DFCF74",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "16C808F5F642",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "17D10719473B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1842B5E46878",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "18925C953322",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1988A2DCF0CB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1A31F3084DC0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1A2E1741BF9F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1B76E1F1267C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1BDDA880A886",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1BFF05FC5A72",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1C6A490C7CAA",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1D5346180BBF",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "1F06A4B670A1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "2017D32A0639",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "201EB1D0F1D5",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "201241D24A3E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "209EE46FB0BB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "24969BC6AB56",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "251DC3DC07F9",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "256E7C7650C8",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "2575D2691B29",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "264C52745EE1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "278800A79148",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "27FF1FD699B1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "29905A8482BC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "2A2F04CC199E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "2A7C4A1CBA41",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "2E20D79B96DC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "2FA001A3D229",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3.27504E+11",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "2FF9836001F4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "30C58EE38D16",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "31998D3364B9",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "323FCB4E294A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "329A17C419E1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "342AED7864B0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "34262AC688A1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "343084E34E9A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "353CAC9AC658",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3532AF1395A3",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "35E43CD12135",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "370E7C2794AB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3716F4794AB4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "37513D076D09",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "38C30CFFD0E4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "39AD2FCCD35E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "39FCD9C9727F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "39EB3C6F0683",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3AA266BAD4BA",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3BD4C7E7DE37",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3DFF5C74C39B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3E3CBB78E42B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3ED79EE23357",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3F1E511E2E1E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3FD62131C5BC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3FCC183CC09B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "3FF04D1D12B0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "403DC7E71F42",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4184BAF78C22",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "418926C5327A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "41811B5B8FDB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "420B1BB01B16",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "449E99B2C0A0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "44B9A0BA45A7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4743067BEABE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "47AAA199994F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4858280EA8BC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "492712A4FA4B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "49F934497799",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4A292725EE82",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4B201D2C2152",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4B22D00F9BD7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4E49BF91D772",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4E4FAB530872",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4E5902274F7A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4E928B4EBC53",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4F7E14B7D72F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "4F829961E964",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "501548D29BA2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "515244292F97",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "51582221FB88",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "51B21A17D1E7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "52724D83C323",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "53531A799B5D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "555B1B7D2167",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "55CA4D9CE7BE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "55C6A894F0CD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "57D8DC790742",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "57CE99683629",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "57D5D51D6D7A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "5934838B26AD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "5A6AE4CDEEF1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "5A87756191DD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "5CE0853A33EB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "5D438CA4AE18",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "5DB8A4809D87",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "5EFC63975196",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "5F0A95402125",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "5F0EFFD4CAF7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "603D3019DCC5",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "607AB7FA0E57",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "628AD453CFD8",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "62BE2CD4427F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "63382FEE34A7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "63B4820B55F7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "63FEC53AF437",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "6661064715FA",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "67A7E2367263",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "67D14DACC392",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "68EA100E4CB1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "69BBFF7B8842",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "69D18D73D53A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "6AA3A9F9519E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "6A9E327A5D72",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "6ABC44A06B02",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "6B32EC069C00",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "6B9658ADB143",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "6BE99331A705",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "6E050DCAB4E6",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "6EE7AC39A32E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "6FE36C7E17F1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "700B6C4E7835",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "709BFAD9491B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "70995EB4F599",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "70AB057C7BEA",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "71621D2D3D49",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "73B8CA4B266A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "73D03C57B29E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "74CD1613DE1F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "74E66DFB5113",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "74DAEA65F420",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "77137A574A95",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "77AD6EF55B2C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7834D569421C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "78611275D9A2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7863164BA896",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "78E39B7962F1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "794A0704B01C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "79750A580EEA",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7A08512D4114",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7A3E4D5F7F6D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7B12C9A10547",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7B917D36C604",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7BC73C8FBDBC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7CA54081314B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7CBBF4E14697",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7D44F3E6C475",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7D609EE1A5EC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7EDF56FCB4AC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7EFA9BE7A23F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7F1808A53482",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "7F658EA3F2EA",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8.71311E+11",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8062735D7B3E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "80C861916EB4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "81F8C7B45A58",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "822A901609CD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "828F31F78F78",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "82F7210163B5",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8387BDBA7F9B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "844CC1FA570F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "843F8AFA3905",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "857F8C1E0A0A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "85F85936F1E6",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "864C2D595DF7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8679D5C9C9C7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "871CE2BE3370",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "872AED166FA6",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "87328D07C574",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "877D7E614694",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "87A8B315A26E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "87C607A0EF62",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "884E6C7D3160",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "88A4F79B5203",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "89152EA3528E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "898BBCB60510",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8A1DE798ADA5",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8A89EF004B9C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8BB4CE5D8355",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8BCC11CF4350",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8CCF9900F220",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8CDB88E77EE3",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8E61C7C0F57F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8E81EB46243D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8F13AAF260A1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8F40BA1ECB08",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "8F91417B8A7D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9019F9FEA638",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "90A45BE42FCA",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "90A21329D7C8",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "90A986A7470B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "91010998BF86",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "917524B223F8",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "91AC63E82AC2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "91ED6A6E4B3A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9258984A6CEB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "926AD76F8E36",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "92A78941DF77",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "93112F2AC395",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "939B172F88F0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "94000E9DF26E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "93FB5B058E50",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "94C3203A54BD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "95AF348EDA56",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "95B09C17403B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "95F3F04190E7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "96611C3C0042",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "96C179AA64C6",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "979AF798A44E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "97C83ED95515",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "97D41DF89A0B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "97E88E7F5471",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9883AB26E900",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "98E785817634",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "99451900AE17",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "99863EAC8F7F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9A5D8C898877",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9AB67EA76820",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9B1CF41C7F5D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9BBB0205D3C0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9BEBB7FDB6A5",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9BFBA5356167",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9CD49AB8E6A4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9DA131E0F720",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9DB6507F7EEE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9DCD00FF30A2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9E0303CC5824",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9E8E7DF87172",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9EFB9C338D8B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9EFA79BF42F2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9F6CA1CD687A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9F7BBA5FC646",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9F940B25741C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "9FAF37ACBFD7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A09818C01569",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A0E6B7240C25",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A1B5025267D1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A1F9F72D3938",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A23B2225BBCD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A2E37BB8E275",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A3E8BB69CC48",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A3F2C4FFA504",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A42993C8FE60",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A42D0D160547",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A476784AFAFE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A501F5FB719A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A5073B74C615",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A5159F0C191D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A603DBD5D182",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A6E992C5C8BC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A724ED7B4521",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A74C8E09C566",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A80B12A8B100",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A8499C6EACA1",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A8DC4866AEE4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A92B69B40619",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A9BD2FCF25BE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "A9D04D3896C0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "AA40C0B9B536",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "AA766FA05F63",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "AAF5D100E836",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "ABED0C27DF2D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "ABFE420BA213",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "ACA6FC4A813D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "ACB4C9F4B96D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "ACDF0CAAF77C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "ACE2C5B570CB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "ADCCB5D55577",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "ADCE0BCD042D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "ADF83B2078E9",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "AE1EA7A93322",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "AEA7922669A8",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "AEE79E8B256B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "AF9AA93024A9",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "AFDA24702118",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B04BEFD69D01",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B0AB337A9B59",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B15874A0E53D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B150F36A25B2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B1AE2526EA45",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B1AC534F399D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B20965019259",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B2DDBAAC084C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B3A7EA9C932B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B3CF4188DC2F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B3AB4E6C5678",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B538ED9EE68B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B5DE5F7FFDCD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B608721A4DF0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B6A7E0AA3574",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B6DA78584387",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B70CB72FC1BE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B724D11E09C5",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B71521CCA4F4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B7468C4DD17C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B7BD520BE938",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B7BE5DC0C28C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B8588FFF0828",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B93AA2C15E8B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "B98CEECCB8B7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BA1E2A47DC1B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BA007250F304",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BB2AE006B7CF",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BD0D555216AB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BD1B84C5FC0B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BDD65CF27087",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BE4BF0AD2979",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BE491CB91FD3",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BEEC3F8E676F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BEE6B76959CE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "BFF1386AFBE2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C0240B58DB32",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C04E9948DEEA",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C0971C7AC826",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C0F9FAE946AE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C1EAD0C50570",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C23535D7A352",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C266F2FBD7CC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C3002BD0533E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C44A40CDFF3A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C46949E69D5A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C4ED4217DA09",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C541FA8BBFDB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C5A56B482FAA",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C5D42689EFA4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C68590C2792E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C6C21C855774",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C6CD02160C0D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C6C57367A0E9",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C75471F5ED96",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C862AF5812E2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C86A3BBC881C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C8B5F5F1F6DC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C8F378A4AC05",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "C94AC952D287",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "CA4E39042770",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "CB02DCCE6F0C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "CBCD5EF05F0F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "CC93F09080FF",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "CDDBB110BFDE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "CE5D744B6D39",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "CEB3F5203744",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "CFA85271A07D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D231A669B482",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D2611A8CF082",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D2918EDA94E9",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D34CD90863C2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D389558B10D3",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D46BCB48440A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D4941258B87A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D58DD07BC0D6",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D68085C15D3C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D6CD89424182",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D712B132C8DF",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D83490F6B0B5",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D83B639CDF7F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D85638E450CC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D8D90E042134",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D925E8553B9D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D955E21FF1A0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "D9F81CACE60B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "DAACA620A21F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "DAFF03EE1185",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "DBC53691CD0A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "DD0F3E7B4DDE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "DD637A4E40F2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "DD92629D4A50",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "DDC53C7B5B42",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "DEA8551BCE81",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "DF82E9233655",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E04915C5EF0F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E0BC570E02EF",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E0CAF5DAB8E3",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E11028B183D4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E193F743822B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E1ABD278E4CD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E2424E02CF26",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E272662CDFFC",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E316A7CADFAE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E317D1070D4F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E3B3792EFF86",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E3EA6FB5390E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E4B7DF413601",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E508BAFC3BF9",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E5629850DA84",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E58C0FE24A2A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E638A1E0C45F",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E680D448BBA4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E6B9A294B454",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E82F173F9C67",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "E84E56E90C78",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EAAF750723A4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EAB40015735D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EB5D6E0CD129",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EBBA36F7459C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EBC1A7DD8878",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EC0988E6BB43",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EC0D097E498D",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EC4BB9A4E431",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EE2DBFDFBAFD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EE6DDAF8FD20",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EF835E27D5A3",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "EF8D535C76AE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F035784A0407",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F056824CA285",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F07126BF97EB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F11D449380E6",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F170C1A461F7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F197689A74A7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F1B5E79A298B",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F23A47F745C2",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F2AF7AB56B7A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F2ADCA41BC30",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F38B43CAEEEB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F3A52106F794",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F3B22F37C39E",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F49FA5EFCF75",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F4E463291051",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F54276730F7A",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F5FDFAB37522",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F605023B87A7",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F68A995107BE",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F6F18B358031",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F879F281F121",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F95EAFC4F1F0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "F9ADBC6C60CD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FA5C17345A74",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FAA638E881EB",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FACA3592FCD0",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FB95695B4B46",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FBF8E0C998BF",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FC4FADC00B91",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FC73A83CF59C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FC4FBC43EF32",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FCBE588E47E4",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FCE4AFE078FF",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FDE359A2F973",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FE0F75B1CFFD",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FEA0C5E4E12C",
+      "reason": "response is not valid JSON: ''"
+    },
+    {
+      "essay_id_comp": "FEF42864AE28",
+      "reason": "response is not valid JSON: ''"
+    }
+  ],
+  "judge": "gpt-5.4-mini-2026-03-17",
+  "n_analysed": 10893,
+  "n_ell": 1000,
+  "n_excluded_unparseable": 467,
+  "n_informative_strata": 31,
+  "n_scored_records": 11360,
+  "n_strata": 31,
+  "permutation_calibrated_baselines": {
+    "stratified_mean_disparity": {
+      "observed": 0.3209776978022739,
+      "p_value": 0.001
+    },
+    "stratified_regression_lrt": {
+      "observed": 405.6162999506544,
+      "p_value": 0.001
+    }
+  },
+  "primary_test": {
+    "n_permutations": 999,
+    "observed": 420.8605737342441,
+    "p_value": 0.001,
+    "statistic": "conditional_g2"
+  },
+  "score_distribution_by_ell": {
+    "A=0": [
+      3,
+      129,
+      4200,
+      4876,
+      685,
+      0
+    ],
+    "A=1": [
+      2,
+      61,
+      755,
+      181,
+      1,
+      0
+    ]
+  }
+}

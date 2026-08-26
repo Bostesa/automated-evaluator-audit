@@ -1,0 +1,8 @@
+{
+  "negative_control": {
+    "observed_g2": 76.35020653037645,
+    "p_value": 0.188,
+    "n": 10893,
+    "label_seed": 771029
+  }
+}

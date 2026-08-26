@@ -1,0 +1,43 @@
+prompt_name,holistic_score,n_total,n_ell_No,n_ell_Yes,n_categories,usable,minority_share
+Cell phones at school,1,10,10,0,1,False,
+Cell phones at school,2,432,399,33,2,True,0.0764
+Cell phones at school,3,783,749,34,2,True,0.0434
+Cell phones at school,4,342,340,2,2,True,0.0058
+Cell phones at school,5,84,84,0,1,False,
+Cell phones at school,6,5,5,0,1,False,
+Community service,1,17,13,4,2,True,0.2353
+Community service,2,533,486,47,2,True,0.0882
+Community service,3,613,604,9,2,True,0.0147
+Community service,4,304,299,5,2,True,0.0164
+Community service,5,73,73,0,1,False,
+Community service,6,2,2,0,1,False,
+Distance learning,1,9,0,9,1,False,
+Distance learning,2,91,14,77,2,True,0.1538
+Distance learning,3,386,131,255,2,True,0.3394
+Distance learning,4,657,443,214,2,True,0.3257
+Distance learning,5,678,635,43,2,True,0.0634
+Distance learning,6,336,333,3,2,True,0.0089
+Grades for extracurricular activities,1,30,22,8,2,True,0.2667
+Grades for extracurricular activities,2,547,505,42,2,True,0.0768
+Grades for extracurricular activities,3,641,624,17,2,True,0.0265
+Grades for extracurricular activities,4,354,349,5,2,True,0.0141
+Grades for extracurricular activities,5,52,52,0,1,False,
+Grades for extracurricular activities,6,2,2,0,1,False,
+Mandatory extracurricular activities,1,6,3,3,2,True,0.5
+Mandatory extracurricular activities,2,163,120,43,2,True,0.2638
+Mandatory extracurricular activities,3,401,355,46,2,True,0.1147
+Mandatory extracurricular activities,4,664,648,16,2,True,0.0241
+Mandatory extracurricular activities,5,371,360,11,2,True,0.0296
+Mandatory extracurricular activities,6,65,65,0,1,False,
+Seeking multiple opinions,1,3,2,1,2,True,0.3333
+Seeking multiple opinions,2,119,100,19,2,True,0.1597
+Seeking multiple opinions,3,367,339,28,2,True,0.0763
+Seeking multiple opinions,4,727,710,17,2,True,0.0234
+Seeking multiple opinions,5,300,296,4,2,True,0.0133
+Seeking multiple opinions,6,36,36,0,1,False,
+Summer projects,1,6,2,4,2,True,0.3333
+Summer projects,2,47,37,10,2,True,0.2128
+Summer projects,3,218,200,18,2,True,0.0826
+Summer projects,4,549,533,16,2,True,0.0291
+Summer projects,5,675,670,5,2,True,0.0074
+Summer projects,6,255,255,0,1,False,
