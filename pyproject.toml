@@ -15,16 +15,16 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-# The post-hoc robustness and validity scripts (scripts/posthoc_*.py) use
-# pandas; the core package and the confirmatory pipeline do not.
+# The post hoc robustness and validity scripts (scripts/posthoc_*.py) use
+# pandas. The core package and the confirmatory pipeline do not.
 analysis = ["pandas>=2.0"]
 dev = ["pytest>=7.0"]
 
 [project.scripts]
 offcriterion = "offcriterion.cli:main"
-# Public alias for the renamed project ("Automated Evaluator Audit"); the
-# historical `offcriterion` entry point is kept for backward compatibility
-# with the frozen research record.
+# Public alias for the renamed project (Automated Evaluator Audit). The
+# historical `offcriterion` entry point is kept because the frozen
+# research record references it.
 evaluator-audit = "offcriterion.cli:main"
 
 [tool.setuptools.packages.find]
@@ -33,7 +33,7 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 markers = [
-    "slow: long-running Monte Carlo calibration tests (deselect with '-m \"not slow\"')",
+    "slow: long running Monte Carlo calibration tests (deselect with '-m \"not slow\"')",
 ]
 
 [tool.mypy]
