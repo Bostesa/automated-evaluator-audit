@@ -1,0 +1,173 @@
+{
+  "label": "POST-HOC paired analysis; frozen plan section 5.3; NEW post-hoc test, outside the Holm family; no equivalence claim from p alone",
+  "paired_N": 10353,
+  "paired_ELL_N": 942,
+  "Delta_plain_paired_sample": -0.3138,
+  "Delta_ignore_paired_sample": -0.3707,
+  "attenuation_Delta_ignore_minus_Delta_plain": -0.0568,
+  "permutation_p_two_sided": 0.022,
+  "bootstrap_95pct_interval": [
+    -0.0928,
+    -0.0144
+  ],
+  "bootstrap_reps": 2000,
+  "B": 999,
+  "mean_D_overall": 0.1585,
+  "mean_D_by_ELL": {
+    "ELL=0": 0.1618,
+    "ELL=1": 0.1253
+  },
+  "transition_matrix_rows_plain_cols_ignore_1to6": [
+    [
+      4,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      102,
+      82,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      20,
+      3483,
+      1225,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      53,
+      4318,
+      422,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      18,
+      623,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "transition_matrix_by_ELL": {
+    "ELL=0": [
+      [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        72,
+        56,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        13,
+        2882,
+        1120,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        46,
+        4156,
+        421,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        18,
+        622,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "ELL=1": [
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        30,
+        26,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        601,
+        105,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        162,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "fraction_score_unchanged": 0.8239
+}
