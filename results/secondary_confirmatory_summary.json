@@ -1,0 +1,210 @@
+{
+  "family": "preregistered secondary confirmatory family (m=3, Holm, alpha=0.05)",
+  "note": "the primary test is preregistered separately and is NOT a member of this Holm family; it appears in the table for comparison only",
+  "holm": {
+    "Claude Haiku 4.5, plain rubric": {
+      "raw_p": 0.001,
+      "holm_adjusted_p": 0.003,
+      "reject_at_familywise_alpha_0.05": true
+    },
+    "Gemini 3.7 Flash, plain rubric": {
+      "raw_p": 0.001,
+      "holm_adjusted_p": 0.003,
+      "reject_at_familywise_alpha_0.05": true
+    },
+    "GPT-5.4-mini, ignore-demographics rubric": {
+      "raw_p": 0.001,
+      "holm_adjusted_p": 0.003,
+      "reject_at_familywise_alpha_0.05": true
+    }
+  },
+  "comparison_table": {
+    "PRIMARY: GPT-5.4-mini, plain rubric": {
+      "N": 10893,
+      "ELL_N": 1000,
+      "informative_strata": 31,
+      "conditional_G2": 420.86,
+      "raw_p": 0.001,
+      "mean_disparity_stat": 0.321,
+      "mean_disparity_p": 0.001,
+      "regression_lrt_stat": 405.62,
+      "regression_lrt_p": 0.001,
+      "conditional_mean_difference": -0.3202,
+      "P(S>=4)_conditional_shift": -0.2426,
+      "cumulative_shift_profile": {
+        "P(S>=2)": -0.0003,
+        "P(S>=3)": -0.0145,
+        "P(S>=4)": -0.2426,
+        "P(S>=5)": -0.0627,
+        "P(S>=6)": 0.0
+      },
+      "variance_difference": -0.0753,
+      "score_distribution_by_ell": {
+        "A=0": [
+          3,
+          129,
+          4200,
+          4876,
+          685,
+          0
+        ],
+        "A=1": [
+          2,
+          61,
+          755,
+          181,
+          1,
+          0
+        ]
+      },
+      "technical_exclusions": 467,
+      "invalid_responses": 0,
+      "input_tokens": 15600605,
+      "output_tokens": 142680,
+      "thinking_tokens": 0,
+      "cost_usd": 12.34
+    },
+    "Claude Haiku 4.5, plain rubric": {
+      "N": 11360,
+      "ELL_N": 1039,
+      "informative_strata": 31,
+      "conditional_G2": 691.58,
+      "raw_p": 0.001,
+      "mean_disparity_stat": 0.599,
+      "mean_disparity_p": 0.001,
+      "regression_lrt_stat": 765.38,
+      "regression_lrt_p": 0.001,
+      "conditional_mean_difference": -0.5982,
+      "P(S>=4)_conditional_shift": -0.3435,
+      "cumulative_shift_profile": {
+        "P(S>=2)": -0.0009,
+        "P(S>=3)": -0.2304,
+        "P(S>=4)": -0.3435,
+        "P(S>=5)": -0.0235,
+        "P(S>=6)": 0.0
+      },
+      "variance_difference": -0.0227,
+      "score_distribution_by_ell": {
+        "A=0": [
+          30,
+          1236,
+          3487,
+          5277,
+          291,
+          0
+        ],
+        "A=1": [
+          20,
+          489,
+          421,
+          108,
+          1,
+          0
+        ]
+      },
+      "technical_exclusions": 0,
+      "invalid_responses": 0,
+      "input_tokens": 18770595,
+      "output_tokens": 102240,
+      "thinking_tokens": 0,
+      "cost_usd": 19.28,
+      "holm_adjusted_p": 0.003,
+      "reject_holm_0.05": true
+    },
+    "Gemini 3.7 Flash, plain rubric": {
+      "N": 10617,
+      "ELL_N": 958,
+      "informative_strata": 31,
+      "conditional_G2": 500.95,
+      "raw_p": 0.001,
+      "mean_disparity_stat": 0.452,
+      "mean_disparity_p": 0.001,
+      "regression_lrt_stat": 497.87,
+      "regression_lrt_p": 0.001,
+      "conditional_mean_difference": -0.444,
+      "P(S>=4)_conditional_shift": -0.2151,
+      "cumulative_shift_profile": {
+        "P(S>=2)": -0.0002,
+        "P(S>=3)": -0.1347,
+        "P(S>=4)": -0.2151,
+        "P(S>=5)": -0.0904,
+        "P(S>=6)": -0.0036
+      },
+      "variance_difference": -0.0603,
+      "score_distribution_by_ell": {
+        "A=0": [
+          12,
+          1367,
+          4316,
+          2859,
+          1036,
+          69
+        ],
+        "A=1": [
+          6,
+          339,
+          543,
+          67,
+          2,
+          1
+        ]
+      },
+      "technical_exclusions": 743,
+      "invalid_responses": 0,
+      "input_tokens": 15044642,
+      "output_tokens": 82262,
+      "thinking_tokens": 1779783,
+      "cost_usd": 18.27,
+      "holm_adjusted_p": 0.003,
+      "reject_holm_0.05": true
+    },
+    "GPT-5.4-mini, ignore-demographics rubric": {
+      "N": 10797,
+      "ELL_N": 977,
+      "informative_strata": 31,
+      "conditional_G2": 459.08,
+      "raw_p": 0.001,
+      "mean_disparity_stat": 0.363,
+      "mean_disparity_p": 0.001,
+      "regression_lrt_stat": 431.77,
+      "regression_lrt_p": 0.001,
+      "conditional_mean_difference": -0.3624,
+      "P(S>=4)_conditional_shift": -0.2607,
+      "cumulative_shift_profile": {
+        "P(S>=2)": -0.0006,
+        "P(S>=3)": -0.0086,
+        "P(S>=4)": -0.2607,
+        "P(S>=5)": -0.0924,
+        "P(S>=6)": -0.0002
+      },
+      "variance_difference": -0.074,
+      "score_distribution_by_ell": {
+        "A=0": [
+          2,
+          88,
+          3082,
+          5531,
+          1115,
+          2
+        ],
+        "A=1": [
+          2,
+          38,
+          656,
+          277,
+          4,
+          0
+        ]
+      },
+      "technical_exclusions": 563,
+      "invalid_responses": 0,
+      "input_tokens": 15933623,
+      "output_tokens": 143822,
+      "thinking_tokens": 0,
+      "cost_usd": 12.6,
+      "holm_adjusted_p": 0.003,
+      "reject_holm_0.05": true
+    }
+  },
+  "additional_api_cost_usd_secondary_total": 50.15
+}

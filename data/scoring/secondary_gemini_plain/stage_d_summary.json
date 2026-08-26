@@ -1,0 +1,27 @@
+{
+  "stage": "D-secondary",
+  "cell": "gemini_plain",
+  "model": "gemini-3.7-flash",
+  "condition": "plain",
+  "n_manifest": 11360,
+  "n_records": 11360,
+  "n_valid_scores": 10617,
+  "n_invalid_responses": 0,
+  "n_technical_failures": 743,
+  "retries_total": 2299,
+  "records_with_retries": 783,
+  "provider_model_strings": [
+    "",
+    "gemini-3.7-flash"
+  ],
+  "input_tokens": 15044642,
+  "output_tokens": 82262,
+  "thinking_tokens": 1779783,
+  "thinking_billed_as_output": true,
+  "actual_cost_usd": 18.27,
+  "sha256": {
+    "scores__gemini-3.7-flash__plain.jsonl": "dd37958ad753f3b75fde4fc26c5e1194e4898ac8925010dc0892f36fd408c738",
+    "scores_only.csv": "00090d346f2fd05e71b966dc486f3833b7e592e44abd3f2a2a5c32f09fca729e",
+    "FROZEN.json": "03c10056d9e0fe47cc617bd603ac3cc000398c4f54e154fd0e4c6e87c578edf0"
+  }
+}

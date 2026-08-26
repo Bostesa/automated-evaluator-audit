@@ -47,3 +47,19 @@ under the preregistered Holm family is retained, with this deviation
 reported alongside it. The one valid score in the aborted store was
 discarded with the store (not merged), keeping the analysed Gemini scores a
 single-provenance, single-quota-regime run.
+
+## Operational notes (non-deviations)
+
+- **Gemini daily-cap interruption (2026-08-25).** The restarted Gemini run
+  hit the paid tier's `generate_requests_per_model_per_day` limit (10,000)
+  after 9,981 valid scores; 743 calls failed as HTTP-429 after the frozen
+  3-retry policy and are **final technical exclusions under preregistered
+  exclusion rule 2** — the same rule that produced the primary's 467. The
+  run was then resumed for the 636 essays with no record, using an API key
+  from a second paid-tier Google project. Key rotation is purely
+  operational: endpoint, pinned model ID, request parameters, prompt, and
+  policy are identical, and keys never enter the scored records. No
+  excluded or scored essay was ever re-called.
+- **Post-exclusion thresholds:** all cells satisfy the preregistered
+  minimums (analysed ELL >= 900, informative strata >= 28): primary 1,000 /
+  31; Haiku 1,039 / 31; Gemini 958 / 31; GPT-ignore 977 / 31.
