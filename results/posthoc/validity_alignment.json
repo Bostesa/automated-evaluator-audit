@@ -1,0 +1,474 @@
+{
+  "label": "POST-HOC descriptive alignment; frozen plan section 5.2; human score is a benchmark reference, not ground truth",
+  "complete_case_intersection_N": 9679,
+  "version_A_all_own_valid": {
+    "GPT-5.4-mini plain": {
+      "N": 10893,
+      "exact_agreement": 0.4538,
+      "within_one": 0.9596,
+      "MAE": 0.5869,
+      "RMSE": 0.8178,
+      "spearman": 0.6403,
+      "pearson": 0.6481,
+      "QWK": 0.5702,
+      "judge_distribution_1to6": [
+        5,
+        190,
+        4955,
+        5057,
+        686,
+        0
+      ],
+      "human_distribution_1to6": [
+        59,
+        1882,
+        3286,
+        3447,
+        1900,
+        319
+      ],
+      "compression": {
+        "entropy_bits": 1.3891,
+        "effective_categories_2^H": 2.62,
+        "fraction_in_top2_categories": 0.9191,
+        "min_awarded": 1,
+        "max_awarded": 5
+      }
+    },
+    "Claude Haiku 4.5 plain": {
+      "N": 11360,
+      "exact_agreement": 0.448,
+      "within_one": 0.9296,
+      "MAE": 0.6247,
+      "RMSE": 0.8802,
+      "spearman": 0.6173,
+      "pearson": 0.6164,
+      "QWK": 0.572,
+      "judge_distribution_1to6": [
+        50,
+        1725,
+        3908,
+        5385,
+        292,
+        0
+      ],
+      "human_distribution_1to6": [
+        62,
+        1932,
+        3409,
+        3597,
+        2024,
+        336
+      ],
+      "compression": {
+        "entropy_bits": 1.6232,
+        "effective_categories_2^H": 3.08,
+        "fraction_in_top2_categories": 0.818,
+        "min_awarded": 1,
+        "max_awarded": 5
+      }
+    },
+    "Gemini 3.7 Flash plain": {
+      "N": 10617,
+      "exact_agreement": 0.5569,
+      "within_one": 0.9758,
+      "MAE": 0.4676,
+      "RMSE": 0.7191,
+      "spearman": 0.782,
+      "pearson": 0.7805,
+      "QWK": 0.7416,
+      "judge_distribution_1to6": [
+        18,
+        1706,
+        4859,
+        2926,
+        1038,
+        70
+      ],
+      "human_distribution_1to6": [
+        60,
+        1795,
+        3187,
+        3358,
+        1908,
+        309
+      ],
+      "compression": {
+        "entropy_bits": 1.8437,
+        "effective_categories_2^H": 3.59,
+        "fraction_in_top2_categories": 0.7333,
+        "min_awarded": 1,
+        "max_awarded": 6
+      }
+    },
+    "GPT-5.4-mini ignore-demographics": {
+      "N": 10797,
+      "exact_agreement": 0.4523,
+      "within_one": 0.9504,
+      "MAE": 0.5973,
+      "RMSE": 0.8347,
+      "spearman": 0.6366,
+      "pearson": 0.6464,
+      "QWK": 0.5654,
+      "judge_distribution_1to6": [
+        4,
+        126,
+        3738,
+        5808,
+        1119,
+        2
+      ],
+      "human_distribution_1to6": [
+        60,
+        1883,
+        3259,
+        3406,
+        1889,
+        300
+      ],
+      "compression": {
+        "entropy_bits": 1.4314,
+        "effective_categories_2^H": 2.7,
+        "fraction_in_top2_categories": 0.8841,
+        "min_awarded": 1,
+        "max_awarded": 6
+      }
+    }
+  },
+  "version_B_intersection": {
+    "GPT-5.4-mini plain": {
+      "N": 9679,
+      "exact_agreement": 0.4542,
+      "within_one": 0.9607,
+      "MAE": 0.5854,
+      "RMSE": 0.8156,
+      "spearman": 0.641,
+      "pearson": 0.648,
+      "QWK": 0.5707,
+      "judge_distribution_1to6": [
+        5,
+        173,
+        4420,
+        4482,
+        599,
+        0
+      ],
+      "human_distribution_1to6": [
+        55,
+        1708,
+        2936,
+        3052,
+        1665,
+        263
+      ],
+      "compression": {
+        "entropy_bits": 1.3886,
+        "effective_categories_2^H": 2.62,
+        "fraction_in_top2_categories": 0.9197,
+        "min_awarded": 1,
+        "max_awarded": 5
+      }
+    },
+    "Claude Haiku 4.5 plain": {
+      "N": 9679,
+      "exact_agreement": 0.4535,
+      "within_one": 0.9327,
+      "MAE": 0.616,
+      "RMSE": 0.8713,
+      "spearman": 0.6198,
+      "pearson": 0.6184,
+      "QWK": 0.5768,
+      "judge_distribution_1to6": [
+        42,
+        1494,
+        3373,
+        4531,
+        239,
+        0
+      ],
+      "human_distribution_1to6": [
+        55,
+        1708,
+        2936,
+        3052,
+        1665,
+        263
+      ],
+      "compression": {
+        "entropy_bits": 1.6246,
+        "effective_categories_2^H": 3.08,
+        "fraction_in_top2_categories": 0.8166,
+        "min_awarded": 1,
+        "max_awarded": 5
+      }
+    },
+    "Gemini 3.7 Flash plain": {
+      "N": 9679,
+      "exact_agreement": 0.5608,
+      "within_one": 0.9773,
+      "MAE": 0.4622,
+      "RMSE": 0.7134,
+      "spearman": 0.7811,
+      "pearson": 0.7807,
+      "QWK": 0.7428,
+      "judge_distribution_1to6": [
+        17,
+        1610,
+        4456,
+        2642,
+        897,
+        57
+      ],
+      "human_distribution_1to6": [
+        55,
+        1708,
+        2936,
+        3052,
+        1665,
+        263
+      ],
+      "compression": {
+        "entropy_bits": 1.8347,
+        "effective_categories_2^H": 3.57,
+        "fraction_in_top2_categories": 0.7333,
+        "min_awarded": 1,
+        "max_awarded": 6
+      }
+    },
+    "GPT-5.4-mini ignore-demographics": {
+      "N": 9679,
+      "exact_agreement": 0.4517,
+      "within_one": 0.9503,
+      "MAE": 0.5981,
+      "RMSE": 0.8354,
+      "spearman": 0.6359,
+      "pearson": 0.6455,
+      "QWK": 0.564,
+      "judge_distribution_1to6": [
+        4,
+        114,
+        3372,
+        5202,
+        985,
+        2
+      ],
+      "human_distribution_1to6": [
+        55,
+        1708,
+        2936,
+        3052,
+        1665,
+        263
+      ],
+      "compression": {
+        "entropy_bits": 1.4296,
+        "effective_categories_2^H": 2.69,
+        "fraction_in_top2_categories": 0.8858,
+        "min_awarded": 1,
+        "max_awarded": 6
+      }
+    }
+  },
+  "confusion_matrices_version_A_rows_human_1to6_cols_judge_1to6": {
+    "GPT-5.4-mini plain": [
+      [
+        3,
+        36,
+        20,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        117,
+        1592,
+        171,
+        0,
+        0
+      ],
+      [
+        0,
+        33,
+        2169,
+        1072,
+        12,
+        0
+      ],
+      [
+        0,
+        3,
+        1061,
+        2280,
+        103,
+        0
+      ],
+      [
+        0,
+        1,
+        111,
+        1414,
+        374,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        120,
+        197,
+        0
+      ]
+    ],
+    "Claude Haiku 4.5 plain": [
+      [
+        20,
+        40,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        23,
+        895,
+        854,
+        160,
+        0,
+        0
+      ],
+      [
+        7,
+        628,
+        1701,
+        1072,
+        1,
+        0
+      ],
+      [
+        0,
+        147,
+        1123,
+        2297,
+        30,
+        0
+      ],
+      [
+        0,
+        15,
+        217,
+        1616,
+        176,
+        0
+      ],
+      [
+        0,
+        0,
+        11,
+        240,
+        85,
+        0
+      ]
+    ],
+    "Gemini 3.7 Flash plain": [
+      [
+        13,
+        47,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        1159,
+        629,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        471,
+        2461,
+        253,
+        2,
+        0
+      ],
+      [
+        0,
+        29,
+        1607,
+        1564,
+        158,
+        0
+      ],
+      [
+        0,
+        0,
+        159,
+        1045,
+        675,
+        29
+      ],
+      [
+        0,
+        0,
+        3,
+        62,
+        203,
+        41
+      ]
+    ],
+    "GPT-5.4-mini ignore-demographics": [
+      [
+        3,
+        29,
+        28,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        79,
+        1437,
+        366,
+        0,
+        0
+      ],
+      [
+        0,
+        16,
+        1620,
+        1597,
+        26,
+        0
+      ],
+      [
+        0,
+        2,
+        606,
+        2559,
+        239,
+        0
+      ],
+      [
+        0,
+        0,
+        46,
+        1220,
+        622,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        66,
+        232,
+        1
+      ]
+    ]
+  }
+}
