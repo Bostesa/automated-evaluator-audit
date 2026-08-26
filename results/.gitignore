@@ -9,3 +9,7 @@
 !persuade_feasibility/*.json
 # Dry-run outputs are disposable pipeline-validation artifacts.
 dryrun/
+# Post-hoc robustness artifacts are part of the frozen post-hoc record.
+!posthoc/*.csv
+!posthoc/*.json
+!posthoc/*.md

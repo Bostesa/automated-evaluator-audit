@@ -1,0 +1,47 @@
+{
+  "label": "POST-HOC descriptive; frozen plan section 2.1",
+  "duplicate_discourse_rows_dropped": 0,
+  "n_manifest": 11360,
+  "n_with_usable_annotations": 11360,
+  "fraction_usable": 1.0,
+  "n_missing_quality_index": 0,
+  "elements_per_essay": {
+    "min": 1,
+    "p25": 8.0,
+    "median": 9.0,
+    "p75": 12.0,
+    "max": 26,
+    "mean": 9.71
+  },
+  "quality_index_distribution": {
+    "min": 0.0,
+    "p10": 0.9167,
+    "p25": 1.0,
+    "median": 1.0,
+    "p75": 1.2857,
+    "p90": 1.5455,
+    "max": 2.0,
+    "mean": 1.1453,
+    "sd": 0.2649,
+    "n_distinct_values": 190
+  },
+  "element_effectiveness_marginal": {
+    "Adequate": 87126,
+    "Effective": 20622,
+    "Ineffective": 2558
+  },
+  "relationship_with_holistic_score": {
+    "spearman_rho": 0.5658,
+    "pearson_r": 0.5416,
+    "mean_Q_by_Y": {
+      "1": 0.6003,
+      "2": 0.983,
+      "3": 1.0574,
+      "4": 1.1586,
+      "5": 1.382,
+      "6": 1.5035
+    },
+    "sd_Q_within_Y_mean": 0.2431
+  },
+  "sha256_quality_index_csv": "509c16133c8096e2d90c54a49e0127ef4a087e7e4266463610e59f3ba8677bf8"
+}
