@@ -1,0 +1,51 @@
+{
+  "label": "POST-HOC feasibility; frozen plan section 4; manifest + ELL only, no judge scores",
+  "Z0": {
+    "total_strata": 31,
+    "informative_strata": 31,
+    "degenerate_strata_size1": 0,
+    "thin_strata_size_lt10": 3,
+    "effective_N": 11360,
+    "ELL_N": 1039,
+    "fraction_ELL_retained": 1.0,
+    "fraction_N_retained": 1.0,
+    "stratum_size_min": 3,
+    "stratum_size_median": 367.0,
+    "stratum_size_max": 783,
+    "gate_70pct_ELL": true,
+    "gate_20_informative": true,
+    "PASS": true
+  },
+  "Z1": {
+    "total_strata": 82,
+    "informative_strata": 66,
+    "degenerate_strata_size1": 3,
+    "thin_strata_size_lt10": 15,
+    "effective_N": 11095,
+    "ELL_N": 1029,
+    "fraction_ELL_retained": 0.9904,
+    "fraction_N_retained": 0.9767,
+    "stratum_size_min": 1,
+    "stratum_size_median": 109.0,
+    "stratum_size_max": 712,
+    "gate_70pct_ELL": true,
+    "gate_20_informative": true,
+    "PASS": true
+  },
+  "Z2": {
+    "total_strata": 161,
+    "informative_strata": 111,
+    "degenerate_strata_size1": 16,
+    "thin_strata_size_lt10": 33,
+    "effective_N": 9937,
+    "ELL_N": 1013,
+    "fraction_ELL_retained": 0.975,
+    "fraction_N_retained": 0.8747,
+    "stratum_size_min": 1,
+    "stratum_size_median": 55.0,
+    "stratum_size_max": 358,
+    "gate_70pct_ELL": true,
+    "gate_20_informative": true,
+    "PASS": true
+  }
+}

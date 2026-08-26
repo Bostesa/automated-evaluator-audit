@@ -1,0 +1,5 @@
+{
+  "file": "strata_bins.csv",
+  "sha256": "c6dc7aa1375ed34a02ad93a559984c55b1051b3e065670e3e1c20c0a95ab6640",
+  "rule": "qbin: within-(prompt,Y) tertile value-cut of quality_index; lbin: within-(prompt,Y,qbin) median value-cut of essay_word_count"
+}
