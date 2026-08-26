@@ -15,10 +15,17 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# The post-hoc robustness and validity scripts (scripts/posthoc_*.py) use
+# pandas; the core package and the confirmatory pipeline do not.
+analysis = ["pandas>=2.0"]
 dev = ["pytest>=7.0"]
 
 [project.scripts]
 offcriterion = "offcriterion.cli:main"
+# Public alias for the renamed project ("Automated Evaluator Audit"); the
+# historical `offcriterion` entry point is kept for backward compatibility
+# with the frozen research record.
+evaluator-audit = "offcriterion.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
