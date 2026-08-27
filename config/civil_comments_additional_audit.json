@@ -1,0 +1,175 @@
+{
+  "plan": "docs/civil_comments_additional_audit_plan.md",
+  "frozen_date": "2026-08-27",
+  "status": "FROZEN before any evaluator scoring; no Detoxify output exists for any dataset comment",
+  "study_status": "additional analysis whose specification was frozen before evaluator scores were analyzed with respect to the external attributes; designed after the PERSUADE confirmatory study and NOT part of the original PERSUADE preregistration; the public timestamp is this repository's pushed freeze commit, not a registry entry, so the study is not described as preregistered",
+  "hypothesis": "H0: S independent of A given Z, for each of eight identity-mention attributes A, where S is the discretized Detoxify-original toxicity score and Z is the exact seven-dimensional human toxicity annotation vector",
+  "dataset": {
+    "name": "Civil Comments / Jigsaw Unintended Bias identity-annotated subset (WILDS CivilComments source table)",
+    "file": "data/civil_comments/all_data_with_identities.csv",
+    "sha256": "403e638c83a225d738a937ff98b61fd0631e30f710d57928c7766d413526b77f",
+    "size_bytes": 272542670,
+    "n_rows": 448000,
+    "n_unique_comment_ids": 448000,
+    "source_url": "https://huggingface.co/datasets/shlomihod/civil-comments-wilds/resolve/main/all_data_with_identities.csv",
+    "source_revision": "3fbfeca80bad0f3aec37e72fa07eff222b6e752f",
+    "reconstruction": "hf_hub_download(repo_id='shlomihod/civil-comments-wilds', repo_type='dataset', filename='all_data_with_identities.csv', revision='3fbfeca80bad0f3aec37e72fa07eff222b6e752f'); verify SHA-256 above; this is the WILDS CivilComments source table (Koh et al. 2021), identical content to the official WILDS CodaLab bundle, which was unreachable (HTTP 500) at feasibility time",
+    "license": "CC0 1.0 (Civil Comments release; Jigsaw Unintended Bias in Toxicity Classification)",
+    "no_silent_substitution": "no other mirror or version may be substituted after this freeze"
+  },
+  "primary_sample": {
+    "rule": "exactly one comment per article_id, chosen by the frozen hash rule; deterministic and independent of A, Z, S, comment text, row order, and article size",
+    "selection_seed_string": "civil-comments-additional-audit-v1",
+    "selection_key": "SHA256(utf8('civil-comments-additional-audit-v1' + ':' + comment_id_as_string)), lowercase hex; within each article_id retain the comment with the lexicographically smallest key",
+    "missing_article_id": "a row with empty article_id forms its own singleton pseudo-article and is retained (zero such rows exist in the frozen source)",
+    "manifest": "results/civil_comments/primary_manifest.csv",
+    "manifest_sha256": "892245a7899401c1041f3cf7bc17528d80d9812efacefe994dbfd16fec97469e",
+    "n": 69573
+  },
+  "dependence_sensitivity": {
+    "sample": "full 448,000-comment identity-annotated census, identical A, Z, evaluator, discretization, statistic, multiplicity correction, and permutation procedure",
+    "interpretation": "answers whether the conclusion changes when all comments are used despite within-article dependence; a stronger census p-value never replaces a weaker primary result; the article-deduplicated analysis remains primary"
+  },
+  "attributes": {
+    "family": "WILDS CivilComments eight-identity family (externally defined, symmetric; no privileged primary identity)",
+    "identity_order": ["male", "female", "LGBTQ", "christian", "muslim", "other_religions", "black", "white"],
+    "rule": "A = 1 iff the stored column value is >= 1/2 under exact rational comparison of the decimal string; A = 0 otherwise",
+    "column_mapping": {
+      "male": "male (identity annotation fraction)",
+      "female": "female (identity annotation fraction)",
+      "LGBTQ": "LGBTQ (binary column in the frozen source; verified equal to 1{max(homosexual_gay_or_lesbian, bisexual, other_sexual_orientation, transgender, other_gender) >= 0.5} on all 448,000 rows, and the unique such construction among subsets of the candidate columns)",
+      "christian": "christian (identity annotation fraction)",
+      "muslim": "muslim (identity annotation fraction)",
+      "other_religions": "other_religions (binary column in the frozen source; verified equal to 1{max(jewish, hindu, buddhist, atheist, other_religion) >= 0.5} on all 448,000 rows, and the unique such construction)",
+      "black": "black (identity annotation fraction)",
+      "white": "white (identity annotation fraction)"
+    },
+    "multiplicity": "all eight tests form one confirmatory family; Holm correction across the eight permutation p-values"
+  },
+  "conditioning": {
+    "z_columns": ["toxicity", "severe_toxicity", "identity_attack", "insult", "threat", "obscene", "sexual_explicit"],
+    "primary_z": "exact observed seven-label fraction vector; two comments share a stratum iff all seven canonical values are equal",
+    "canonical_representation": "each stored decimal string is parsed exactly with Python fractions.Fraction (finite-decimal to reduced rational, no float round-trip); the stratum key is the '|'-joined 'numerator/denominator' tuple in the frozen column order; implemented in scripts/civil_comments_freeze.py (z_key_exact)",
+    "no_binning_primary": true,
+    "uninformative_strata": "pure-A and singleton strata contribute no information and are omitted, per the existing conditional-audit implementation (Strata.n_usable)",
+    "z_sensitivity": {
+      "overall_toxicity_bins": "{0}, (0, 1/4], (1/4, 1/2), [1/2, 3/4), [3/4, 1]",
+      "subtype_bins": "{0}, (0, 1/2), [1/2, 1] for each of the six subtypes",
+      "boundary_behavior": "exact rational comparisons as written; implemented in scripts/civil_comments_freeze.py (bin_overall_toxicity, bin_subtype); no alternative bin definitions may be tested",
+      "purpose": "addresses the varying-annotator-count lattice implicit in exact fractions"
+    }
+  },
+  "evaluator": {
+    "name": "Detoxify-original",
+    "checkpoint": "toxic_original-c1212f89.ckpt",
+    "checkpoint_sha256": "c1212f89ac23307ab33932ce29dc446a6e030fb3f384a500890bbe662b7b544a",
+    "checkpoint_size_bytes": 438021897,
+    "checkpoint_url": "https://github.com/unitaryai/detoxify/releases/download/v0.1-alpha/toxic_original-c1212f89.ckpt",
+    "checkpoint_local_path": "data/civil_comments/checkpoints/toxic_original-c1212f89.ckpt (hash-verified copy; untracked)",
+    "architecture": "bert-base-uncased, BertForSequenceClassification with 6 sigmoid heads (Detoxify original)",
+    "training_corpus": "Jigsaw 2018 Toxic Comment Classification Challenge (Wikipedia talk-page comments); explicitly DISTINCT from the Civil Comments / Jigsaw 2019 unintended-bias corpus being evaluated",
+    "why_not_unbiased": "Detoxify-unbiased was trained on the Civil Comments lineage and is therefore excluded as primary evaluator",
+    "target_head": "toxicity",
+    "scoring_path": "Detoxify(model_type='original', checkpoint=<local ckpt>, device='cpu').predict(batch) -- the package's intended sigmoid scoring path (torch.sigmoid over logits inside detoxify.detoxify.Detoxify.predict); no generic Hugging Face pipeline",
+    "environment": {
+      "venv": ".venv-cc (uv-created, untracked)",
+      "python": "3.12.11 (CPython, macOS arm64, Darwin 24.6.0)",
+      "detoxify": "0.5.2 (PyPI)",
+      "torch": "2.13.0",
+      "transformers": "5.16.1",
+      "tokenizers": "0.23.1",
+      "sentencepiece": "0.2.2",
+      "safetensors": "0.8.0",
+      "huggingface_hub": "1.28.0",
+      "numpy": "2.5.2",
+      "device": "cpu",
+      "precision": "float32 (torch default; no autocast, no half precision)",
+      "load_verified": "2026-08-27: Detoxify instantiation from the pinned local checkpoint succeeded under these versions; no comment was scored"
+    },
+    "tokenizer": {
+      "class": "transformers.BertTokenizer (as selected by the checkpoint config)",
+      "pretrained": "bert-base-uncased",
+      "hf_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+      "local_cache": "data/civil_comments/hf_cache (HF_HOME; untracked)",
+      "file_sha256": {
+        "config.json": "7160e1553ad2ca51d8c1cb066be533db31826e12d173824c1bb0cb1a4f187d20",
+        "tokenizer_config.json": "a025160ef0431f1a392f6f050c1310f4c5d9fb6f275932dbccba73c4d214bf10",
+        "tokenizer.json": "ce64fce797c24f68df90b40a3f74f579b336a493db14bd583fd520ea0d8c9a98",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      },
+      "settings": "Detoxify.predict defaults: truncation=True, padding=True (longest-in-batch), model_max_length=512",
+      "truncation_policy": "truncation at 512 tokens is normal evaluator behavior, disclosed as a limitation; it is NOT an exclusion"
+    },
+    "deterministic_scoring": {
+      "preprocessing": "comment_text passed verbatim (A-free; no cleaning, no normalization); the 2 comments with empty text are scored as the empty string",
+      "input_ordering": "ascending integer comment id over the full 448,000-comment census",
+      "batching": "fixed partition of that ordering into consecutive batches of 32; batch composition is therefore frozen and independent of A, Z, text length, and article",
+      "score_store": "raw continuous toxicity probabilities keyed ONLY by comment id, written and hash-frozen BEFORE any identity attribute is joined to evaluator outputs"
+    }
+  },
+  "score_discretization": {
+    "rule": "A-blind pooled decile rule, frozen before any score exists",
+    "steps": [
+      "1. score the full 448,000-comment census",
+      "2. before joining identity attributes, compute pooled empirical deciles of S",
+      "3. nine boundaries at k/10, k = 1..9, via numpy.quantile(method='linear') (Hyndman-Fan type 7)",
+      "4. exact-duplicate boundaries collapse deterministically via np.unique (empty category removed; no replacement boundaries)",
+      "5. category(s) = #{boundaries <= s} = np.searchsorted(boundaries, s, side='right'); identical S values are never split",
+      "6. no other number of bins may be tested"
+    ],
+    "implementation": "scripts/civil_comments_freeze.py (discretize_scores), unit-tested before freeze",
+    "artifacts_to_store": "raw continuous scores, frozen decile boundaries, resulting discrete scores, and SHA-256 hashes of each"
+  },
+  "analysis": {
+    "statistic": "conditional_g2 (identical implementation to the PERSUADE audit: offcriterion.statistics.ConditionalG2 over the full discrete distribution of S conditional on Z)",
+    "descriptive_gap": "stratum-size-weighted conditional mean difference of the RAW Detoxify toxicity probability (not the decile index), sign = mean(S | A=1) - mean(S | A=0), aggregated over informative strata with weights n_z / sum(n_z), the same conditional weighting rule as the existing paper's weighted_mean_difference; descriptive companion only, the G2 test remains primary",
+    "n_permutations": 999,
+    "p_value": "(1 + #{T_b >= T_obs}) / (B + 1)",
+    "multiplicity": "Holm across the eight identity p-values",
+    "alpha": 0.05,
+    "seeds": {
+      "base_entropy": 20260827,
+      "scheme": "numpy.random.SeedSequence(entropy=20260827, spawn_key=(analysis_slot, identity_index)) with identity_index from the frozen identity_order",
+      "analysis_slots": {
+        "1": "primary: one-per-article sample, exact Z",
+        "2": "dependence sensitivity: full census, exact Z",
+        "3": "Z sensitivity: one-per-article sample, binned Z",
+        "4": "optional high-confidence attribute robustness check",
+        "5": "permutation test on the frozen negative-control labels",
+        "9": "generation of the frozen negative-control labels (already consumed; results/civil_comments/negative_control_labels.csv)"
+      }
+    }
+  },
+  "negative_control": {
+    "rule": "one frozen random relabeling of each A within its exact-Z stratum of the primary sample, preserving stratum-level A counts, generated before any evaluator score existed and never regenerated",
+    "labels": "results/civil_comments/negative_control_labels.csv",
+    "labels_sha256": "c2215e561b71b41f4018d0a8ad500b30971b61a8d7a5b98ccbbed2341220f73c",
+    "status": "calibration sanity check, not part of the confirmatory family"
+  },
+  "high_confidence_check": {
+    "status": "optional prespecified robustness check, not headline analysis, not confirmatory evidence",
+    "rule": "A = 1 if identity fraction >= 4/5; A = 0 if identity fraction == 0; comments with intermediate fractions excluded; exact rational comparisons"
+  },
+  "exclusions": {
+    "missing_text": "rows with empty comment_text are retained and scored as the empty string (2 such rows)",
+    "missing_article_id": "singleton pseudo-article rule above (0 such rows)",
+    "missing_identity_or_toxicity_fields": "a row missing any of the 7 Z fields or 8 A columns would be excluded and logged (0 such rows in the frozen source)",
+    "tokenizer_or_scoring_failure": "true technical failure is excluded and logged per comment id; no other post-scoring exclusion is permitted",
+    "truncation": "512-token truncation is normal evaluator behavior, not an exclusion",
+    "extreme_scores": "evaluator scores are never excluded for being extreme"
+  },
+  "feasibility": "results/civil_comments/feasibility.json (support counts per identity under exact and binned Z, for the primary sample and the census; clustering diagnostics motivating the one-per-article primary)",
+  "interpretation_limitations": [
+    "human annotation fractions are observed proxies for the intended toxicity construct, not ground truth",
+    "exact conditioning cannot guarantee that all construct-relevant variation has been measured",
+    "identity mention may correlate with linguistic properties not captured by the seven human toxicity labels",
+    "a rejection establishes residual conditional dependence, not causation, discrimination, or unfairness",
+    "the full-census sensitivity contains article-level dependence, which is why the one-comment-per-article analysis is primary",
+    "Detoxify's 512-token input limit may truncate long comments"
+  ],
+  "artifact_sha256": {
+    "data/civil_comments/all_data_with_identities.csv": "403e638c83a225d738a937ff98b61fd0631e30f710d57928c7766d413526b77f",
+    "results/civil_comments/primary_manifest.csv": "892245a7899401c1041f3cf7bc17528d80d9812efacefe994dbfd16fec97469e",
+    "results/civil_comments/negative_control_labels.csv": "c2215e561b71b41f4018d0a8ad500b30971b61a8d7a5b98ccbbed2341220f73c"
+  }
+}

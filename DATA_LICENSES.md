@@ -27,6 +27,24 @@ to CC BY-NC-SA 4.0 (attribution to The Learning Agency Lab / Crossley et
 al., non-commercial use, share-alike) rather than this repository's MIT
 license.
 
+## Civil Comments / Jigsaw Unintended Bias subset (CC0 1.0, not redistributed)
+
+The Civil Comments additional audit uses the WILDS CivilComments source
+table `all_data_with_identities.csv` (the 448,000-comment
+identity-annotated subset of the Jigsaw *Unintended Bias in Toxicity
+Classification* release). The underlying data is released under
+**CC0 1.0** by Jigsaw/Conversation AI (Borkan et al., 2019); the WILDS
+derived table follows Koh et al. (2021). The raw CSV is not tracked;
+`data/civil_comments/README.md` records the canonical source, revision,
+and SHA-256. Tracked derived artifacts (`results/civil_comments/`)
+contain comment and article identifiers, stratum-permuted synthetic
+identity labels, and aggregate counts — never comment text.
+
+The pinned Detoxify checkpoint (`toxic_original-c1212f89.ckpt`, Apache
+2.0, unitaryai/detoxify) is likewise not tracked; its URL and SHA-256
+are recorded in `data/civil_comments/README.md` and
+`config/civil_comments_additional_audit.json`.
+
 ## Evaluator (model API) outputs (research evidence, not relicensed)
 
 `data/scoring/` contains verbatim raw responses from OpenAI, Anthropic,

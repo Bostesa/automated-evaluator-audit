@@ -49,3 +49,10 @@ No scripts here. The synthetic study is the `offcriterion` /
 - `posthoc_validity.py`: Stage 5, evaluator vs human alignment metrics.
 - `posthoc_paired.py`: Stage 6, paired analysis of the standard and
   modified prompt cells.
+
+## Civil Comments additional audit (design stage)
+- `civil_comments_freeze.py`: pre-scoring freeze — builds the frozen
+  one-comment-per-article primary manifest, the frozen negative-control
+  labels, and the feasibility/support record, and carries the frozen
+  selection, canonical-Z, binning, and score-discretization rules
+  (`docs/civil_comments_additional_audit_plan.md`). Local, no evaluator.

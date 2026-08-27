@@ -36,3 +36,7 @@ dryrun/
 !posthoc/*.csv
 !posthoc/*.json
 !posthoc/*.md
+
+# Civil Comments additional-audit record (frozen design-stage artifacts).
+!civil_comments/*.csv
+!civil_comments/*.json

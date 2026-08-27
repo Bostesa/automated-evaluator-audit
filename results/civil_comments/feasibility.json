@@ -1,0 +1,231 @@
+{
+  "study": "civil_comments_additional_audit",
+  "frozen_design": {
+    "selection_seed_string": "civil-comments-additional-audit-v1",
+    "base_entropy": 20260827,
+    "identity_order": [
+      "male",
+      "female",
+      "LGBTQ",
+      "christian",
+      "muslim",
+      "other_religions",
+      "black",
+      "white"
+    ],
+    "z_columns": [
+      "toxicity",
+      "severe_toxicity",
+      "identity_attack",
+      "insult",
+      "threat",
+      "obscene",
+      "sexual_explicit"
+    ]
+  },
+  "dataset": {
+    "file": "data/civil_comments/all_data_with_identities.csv",
+    "sha256": "403e638c83a225d738a937ff98b61fd0631e30f710d57928c7766d413526b77f",
+    "n_rows": 448000,
+    "n_unique_comment_ids": 448000,
+    "n_empty_comment_text": 2,
+    "n_missing_article_id": 0
+  },
+  "clustering": {
+    "n_articles": 69573,
+    "comments_per_article": {
+      "median": 2.0,
+      "mean": 6.439,
+      "q90": 14,
+      "max": 472
+    },
+    "pct_comments_sharing_article": 94.3
+  },
+  "primary_sample": {
+    "n": 69573,
+    "n_exact_z_strata": 6847,
+    "n_binned_z_strata": 588,
+    "support_exact_z": {
+      "male": {
+        "n": 69573,
+        "n_a1": 6101,
+        "n_informative_strata": 542,
+        "n_retained": 61706,
+        "n_retained_a1": 5310
+      },
+      "female": {
+        "n": 69573,
+        "n_a1": 6668,
+        "n_informative_strata": 548,
+        "n_retained": 61781,
+        "n_retained_a1": 5695
+      },
+      "LGBTQ": {
+        "n": 69573,
+        "n_a1": 1055,
+        "n_informative_strata": 242,
+        "n_retained": 57272,
+        "n_retained_a1": 776
+      },
+      "christian": {
+        "n": 69573,
+        "n_a1": 2837,
+        "n_informative_strata": 342,
+        "n_retained": 59864,
+        "n_retained_a1": 2590
+      },
+      "muslim": {
+        "n": 69573,
+        "n_a1": 1872,
+        "n_informative_strata": 321,
+        "n_retained": 59164,
+        "n_retained_a1": 1480
+      },
+      "other_religions": {
+        "n": 69573,
+        "n_a1": 851,
+        "n_informative_strata": 176,
+        "n_retained": 56930,
+        "n_retained_a1": 725
+      },
+      "black": {
+        "n": 69573,
+        "n_a1": 1952,
+        "n_informative_strata": 329,
+        "n_retained": 58417,
+        "n_retained_a1": 1482
+      },
+      "white": {
+        "n": 69573,
+        "n_a1": 2994,
+        "n_informative_strata": 418,
+        "n_retained": 59850,
+        "n_retained_a1": 2350
+      }
+    },
+    "support_binned_z": {
+      "male": {
+        "n": 69573,
+        "n_a1": 6101,
+        "n_informative_strata": 303,
+        "n_retained": 68791,
+        "n_retained_a1": 6072
+      },
+      "female": {
+        "n": 69573,
+        "n_a1": 6668,
+        "n_informative_strata": 301,
+        "n_retained": 68624,
+        "n_retained_a1": 6615
+      },
+      "LGBTQ": {
+        "n": 69573,
+        "n_a1": 1055,
+        "n_informative_strata": 156,
+        "n_retained": 64963,
+        "n_retained_a1": 1037
+      },
+      "christian": {
+        "n": 69573,
+        "n_a1": 2837,
+        "n_informative_strata": 183,
+        "n_retained": 66716,
+        "n_retained_a1": 2829
+      },
+      "muslim": {
+        "n": 69573,
+        "n_a1": 1872,
+        "n_informative_strata": 184,
+        "n_retained": 66106,
+        "n_retained_a1": 1857
+      },
+      "other_religions": {
+        "n": 69573,
+        "n_a1": 851,
+        "n_informative_strata": 122,
+        "n_retained": 64358,
+        "n_retained_a1": 848
+      },
+      "black": {
+        "n": 69573,
+        "n_a1": 1952,
+        "n_informative_strata": 177,
+        "n_retained": 65805,
+        "n_retained_a1": 1931
+      },
+      "white": {
+        "n": 69573,
+        "n_a1": 2994,
+        "n_informative_strata": 195,
+        "n_retained": 66884,
+        "n_retained_a1": 2968
+      }
+    }
+  },
+  "census": {
+    "n": 448000,
+    "n_exact_z_strata": 36015,
+    "support_exact_z": {
+      "male": {
+        "n": 448000,
+        "n_a1": 48870,
+        "n_informative_strata": 2953,
+        "n_retained": 409373,
+        "n_retained_a1": 44129
+      },
+      "female": {
+        "n": 448000,
+        "n_a1": 58584,
+        "n_informative_strata": 3098,
+        "n_retained": 410041,
+        "n_retained_a1": 52936
+      },
+      "LGBTQ": {
+        "n": 448000,
+        "n_a1": 14303,
+        "n_informative_strata": 1725,
+        "n_retained": 392947,
+        "n_retained_a1": 12029
+      },
+      "christian": {
+        "n": 448000,
+        "n_a1": 44649,
+        "n_informative_strata": 2371,
+        "n_retained": 405268,
+        "n_retained_a1": 42628
+      },
+      "muslim": {
+        "n": 448000,
+        "n_a1": 23046,
+        "n_informative_strata": 1933,
+        "n_retained": 398519,
+        "n_retained_a1": 20657
+      },
+      "other_religions": {
+        "n": 448000,
+        "n_a1": 11030,
+        "n_informative_strata": 1198,
+        "n_retained": 390379,
+        "n_retained_a1": 10105
+      },
+      "black": {
+        "n": 448000,
+        "n_a1": 16420,
+        "n_informative_strata": 1662,
+        "n_retained": 394507,
+        "n_retained_a1": 13814
+      },
+      "white": {
+        "n": 448000,
+        "n_a1": 27534,
+        "n_informative_strata": 2118,
+        "n_retained": 400002,
+        "n_retained_a1": 23507
+      }
+    }
+  },
+  "artifact_sha256": {
+    "primary_manifest.csv": "892245a7899401c1041f3cf7bc17528d80d9812efacefe994dbfd16fec97469e",
+    "negative_control_labels.csv": "c2215e561b71b41f4018d0a8ad500b30971b61a8d7a5b98ccbbed2341220f73c"
+  }
+}

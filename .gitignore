@@ -22,3 +22,4 @@ env/
 
 # Local agent/tool state
 .claude/
+.venv-cc/
