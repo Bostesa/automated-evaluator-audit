@@ -1,0 +1,25 @@
+{
+  "stage": "Detoxify Stages 5-10: frozen confirmatory analysis, executed and frozen",
+  "executed_utc": "2026-08-27T15:32:46.309292+00:00",
+  "reveal_gate": "run only after the LLM-evaluator addendum freeze was committed and pushed publicly (4bd147b5ebc026c4db7b6a99957ac50d996d54e9)",
+  "provenance": {
+    "civil_comments_specification_commit": "861804b25f1afd8c81eb26d3e5bb35e2d4bec5a6",
+    "score_store_freeze_commit": "510ece882ff119bdd459b8ab3df7a51353a2d67c",
+    "llm_addendum_freeze_commit": "4bd147b5ebc026c4db7b6a99957ac50d996d54e9",
+    "dataset_sha256": "403e638c83a225d738a937ff98b61fd0631e30f710d57928c7766d413526b77f",
+    "primary_manifest_sha256": "892245a7899401c1041f3cf7bc17528d80d9812efacefe994dbfd16fec97469e",
+    "scores_raw_sha256": "89bd878b029a3a826855cface2885932c4d37435c9bd9087cfbd4df5661e58ea",
+    "score_decile_boundaries_sha256": "66780381911dba266d3c3ca44239cfe0c24afcf13580f56b093b65a65d319e4a",
+    "scores_discrete_sha256": "4e3589477f1d4030db2a02e6179076210c2f118f1ad2de70de069716fc24c34a",
+    "negative_control_labels_sha256": "c2215e561b71b41f4018d0a8ad500b30971b61a8d7a5b98ccbbed2341220f73c",
+    "evaluator": "Detoxify-original, checkpoint toxic_original-c1212f89.ckpt",
+    "statistic": "ConditionalG2",
+    "n_permutations": 999,
+    "seed_scheme": "SeedSequence(entropy=20260827, spawn_key=(slot, identity_index)); slots 1-5",
+    "software": "python 3.14.3, numpy 2.5.2"
+  },
+  "artifact_sha256": {
+    "audit_results.json": "b9a7c993f0cb9e0c3e0ccbd42e7e12587781907eb4c5ebbf00230f3bb661cdaf",
+    "analysis_run.log": "1caf7a13ce19707b102a5d9f89111820ae2f06fcb16b58ecc05ea79f148a8b10"
+  }
+}

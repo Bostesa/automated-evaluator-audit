@@ -1,0 +1,46 @@
+Stage 6: primary confirmatory family
+  primary: one-per-article, exact Z / male: G2=2783.722 p=0.001
+  primary: one-per-article, exact Z / female: G2=3169.066 p=0.001
+  primary: one-per-article, exact Z / LGBTQ: G2=1316.127 p=0.001
+  primary: one-per-article, exact Z / christian: G2=1695.389 p=0.001
+  primary: one-per-article, exact Z / muslim: G2=1632.486 p=0.001
+  primary: one-per-article, exact Z / other_religions: G2=929.143 p=0.001
+  primary: one-per-article, exact Z / black: G2=1747.011 p=0.001
+  primary: one-per-article, exact Z / white: G2=2328.831 p=0.001
+Stage 7: negative control
+  negative control: frozen synthetic labels / male: G2=2358.033 p=0.763
+  negative control: frozen synthetic labels / female: G2=2456.210 p=0.847
+  negative control: frozen synthetic labels / LGBTQ: G2=1058.503 p=0.416
+  negative control: frozen synthetic labels / christian: G2=1628.856 p=0.050
+  negative control: frozen synthetic labels / muslim: G2=1421.543 p=0.901
+  negative control: frozen synthetic labels / other_religions: G2=816.343 p=0.291
+  negative control: frozen synthetic labels / black: G2=1380.861 p=0.945
+  negative control: frozen synthetic labels / white: G2=1891.212 p=0.104
+Stage 8A: binned-Z sensitivity
+  sensitivity: one-per-article, binned Z / male: G2=1744.143 p=0.001
+  sensitivity: one-per-article, binned Z / female: G2=2166.791 p=0.001
+  sensitivity: one-per-article, binned Z / LGBTQ: G2=944.768 p=0.001
+  sensitivity: one-per-article, binned Z / christian: G2=1022.074 p=0.001
+  sensitivity: one-per-article, binned Z / muslim: G2=1031.211 p=0.001
+  sensitivity: one-per-article, binned Z / other_religions: G2=686.657 p=0.001
+  sensitivity: one-per-article, binned Z / black: G2=1143.657 p=0.001
+  sensitivity: one-per-article, binned Z / white: G2=1415.923 p=0.001
+Stage 8C: high-confidence robustness (optional, prespecified)
+  robustness: A>=4/5 vs A=0, exact Z / male: G2=2125.301 p=0.001
+  robustness: A>=4/5 vs A=0, exact Z / female: G2=2723.241 p=0.001
+  robustness: A>=4/5 vs A=0, exact Z / LGBTQ: G2=1316.127 p=0.001
+  robustness: A>=4/5 vs A=0, exact Z / christian: G2=1408.286 p=0.001
+  robustness: A>=4/5 vs A=0, exact Z / muslim: G2=1402.868 p=0.001
+  robustness: A>=4/5 vs A=0, exact Z / other_religions: G2=929.143 p=0.001
+  robustness: A>=4/5 vs A=0, exact Z / black: G2=1411.120 p=0.001
+  robustness: A>=4/5 vs A=0, exact Z / white: G2=2082.401 p=0.001
+Stage 8B: full-census dependence sensitivity
+  sensitivity: full census, exact Z / male: G2=16631.932 p=0.001
+  sensitivity: full census, exact Z / female: G2=21270.107 p=0.001
+  sensitivity: full census, exact Z / LGBTQ: G2=11440.804 p=0.001
+  sensitivity: full census, exact Z / christian: G2=12516.435 p=0.001
+  sensitivity: full census, exact Z / muslim: G2=10418.755 p=0.001
+  sensitivity: full census, exact Z / other_religions: G2=6554.290 p=0.001
+  sensitivity: full census, exact Z / black: G2=10414.358 p=0.001
+  sensitivity: full census, exact Z / white: G2=13183.676 p=0.001
+written: results/civil_comments/audit_results.json
