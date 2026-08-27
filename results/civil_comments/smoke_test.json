@@ -1,0 +1,93 @@
+{
+  "stage": "1 (non-dataset smoke test)",
+  "purpose": "software-path verification only; outputs NEVER used scientifically",
+  "environment": {
+    "python": "3.12.11 (main, Jun  3 2025, 15:41:47) [Clang 17.0.0 (clang-1700.0.13.3)]",
+    "platform": "macOS-15.6-arm64-arm-64bit",
+    "machine": "arm64",
+    "packages": {
+      "detoxify": "0.5.2",
+      "torch": "2.13.0",
+      "transformers": "5.16.1",
+      "tokenizers": "0.23.1",
+      "sentencepiece": "0.2.2",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.28.0",
+      "numpy": "2.5.2"
+    },
+    "env_vars": {
+      "HF_HOME": "data/civil_comments/hf_cache",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1"
+    }
+  },
+  "checkpoint_sha256": "c1212f89ac23307ab33932ce29dc446a6e030fb3f384a500890bbe662b7b544a",
+  "tokenizer_sha256": {
+    "config.json": "7160e1553ad2ca51d8c1cb066be533db31826e12d173824c1bb0cb1a4f187d20",
+    "tokenizer_config.json": "a025160ef0431f1a392f6f050c1310f4c5d9fb6f275932dbccba73c4d214bf10",
+    "tokenizer.json": "ce64fce797c24f68df90b40a3f74f579b336a493db14bd583fd520ea0d8c9a98",
+    "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+  },
+  "scoring_path": "detoxify.detoxify.Detoxify.predict",
+  "model_class": "BertForSequenceClassification",
+  "tokenizer_class": "BertTokenizer",
+  "class_names": [
+    "toxicity",
+    "severe_toxicity",
+    "obscene",
+    "threat",
+    "insult",
+    "identity_attack"
+  ],
+  "model_max_length": 512,
+  "torch_default_dtype": "torch.float32",
+  "model_param_dtype": "torch.float32",
+  "device": "cpu",
+  "tokenized_lengths_padded": [
+    512,
+    512,
+    512,
+    512
+  ],
+  "outputs_run1": {
+    "toxicity": [
+      "0.0019954454619437456",
+      "0.0006554739084094763",
+      "0.9686249494552612",
+      "0.016099467873573303"
+    ],
+    "severe_toxicity": [
+      "0.00010936509352177382",
+      "0.00011732195707736537",
+      "0.007795484736561775",
+      "0.00014799911878071725"
+    ],
+    "obscene": [
+      "0.00023779210459906608",
+      "0.0001792621478671208",
+      "0.1898244321346283",
+      "0.0010803522309288383"
+    ],
+    "threat": [
+      "0.00011330231063766405",
+      "0.00011742368951672688",
+      "0.0011518658138811588",
+      "0.000398983305785805"
+    ],
+    "insult": [
+      "0.0002450730244163424",
+      "0.00017671682871878147",
+      "0.8587896227836609",
+      "0.0005478598177433014"
+    ],
+    "identity_attack": [
+      "0.0001826662919484079",
+      "0.00013810110976919532",
+      "0.008289148099720478",
+      "0.00025703536812216043"
+    ]
+  },
+  "outputs_run2_identical_bitwise": true,
+  "failures": [],
+  "passed": true
+}
