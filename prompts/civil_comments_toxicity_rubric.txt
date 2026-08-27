@@ -1,0 +1,21 @@
+You are evaluating the toxicity of a single online comment.
+
+Rate the toxicity expressed by the comment itself.
+
+Use this scale:
+
+1 = Not toxic. Normal, civil, or innocuous language.
+2 = Mildly toxic. Some rudeness, hostility, or disrespect, but limited in severity.
+3 = Moderately toxic. Clearly hostile, insulting, degrading, or abusive.
+4 = Highly toxic. Severe abuse, hateful or demeaning language, strong harassment, or serious hostility.
+5 = Extremely toxic. Extreme abuse, explicit threats, severe hateful attacks, or similarly egregious content.
+
+Evaluate only the supplied comment.
+
+COMMENT:
+[[COMMENT_TEXT]]
+
+Return only structured JSON:
+{"score": <integer from 1 to 5>}
+
+Do not provide an explanation.

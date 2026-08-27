@@ -1,0 +1,157 @@
+{
+  "addendum": "Civil Comments LLM-evaluator extension",
+  "plan": "docs/civil_comments_llm_evaluator_addendum.md",
+  "frozen_date": "2026-08-27",
+  "status": "FROZEN before any Civil Comments evaluator score has been analyzed with respect to the identity attributes A, and before any Civil Comments LLM API call",
+  "study_status": {
+    "persuade": "original preregistered/confirmatory case study per its existing provenance (config/preregistered.json); NOT modified by this addendum",
+    "civil_comments_detoxify": "additional audit separately frozen at commit 861804b25f1afd8c81eb26d3e5bb35e2d4bec5a6; score store frozen A-blind at commit 510ece882ff119bdd459b8ab3df7a51353a2d67c; its eight-test confirmatory family and Holm correction are NOT modified by this addendum",
+    "llm_extension": "secondary cross-evaluator replication family, designed and frozen BEFORE any Civil Comments evaluator score (Detoxify or LLM) was joined to A or Z; not part of the original PERSUADE preregistration and not part of the original Civil Comments primary confirmatory family"
+  },
+  "parent_freezes": {
+    "civil_comments_specification_commit": "861804b25f1afd8c81eb26d3e5bb35e2d4bec5a6",
+    "civil_comments_score_store_commit": "510ece882ff119bdd459b8ab3df7a51353a2d67c",
+    "dataset_sha256": "403e638c83a225d738a937ff98b61fd0631e30f710d57928c7766d413526b77f",
+    "primary_manifest": "results/civil_comments/primary_manifest.csv",
+    "primary_manifest_sha256": "892245a7899401c1041f3cf7bc17528d80d9812efacefe994dbfd16fec97469e",
+    "negative_control_labels_sha256": "c2215e561b71b41f4018d0a8ad500b30971b61a8d7a5b98ccbbed2341220f73c",
+    "detoxify_scores_raw_sha256": "89bd878b029a3a826855cface2885932c4d37435c9bd9087cfbd4df5661e58ea",
+    "detoxify_score_decile_boundaries_sha256": "66780381911dba266d3c3ca44239cfe0c24afcf13580f56b093b65a65d319e4a",
+    "detoxify_scores_discrete_sha256": "4e3589477f1d4030db2a02e6179076210c2f118f1ad2de70de069716fc24c34a"
+  },
+  "evaluators": {
+    "note": "exact frozen model IDs reused verbatim from the PERSUADE preregistration (config/preregistered.json, judge.primary and judge.secondary); no substitution permitted -- if any exact model is uncallable at scoring time, STOP for a documented public amendment",
+    "gpt": {
+      "provider": "OpenAI",
+      "model_id": "gpt-5.4-mini-2026-03-17",
+      "adapter": "offcriterion.pipeline.cc_toxicity_judges.CCOpenAIJudge",
+      "endpoint": "POST https://api.openai.com/v1/chat/completions",
+      "settings": {
+        "temperature": "0 attempted; omitted once and recorded if the API rejects the parameter (frozen PERSUADE fallback)",
+        "reasoning_effort": "none",
+        "seed": 427183,
+        "max_completion_tokens": 100,
+        "n": 1,
+        "tools": "none",
+        "response_format": "strict json_schema {\"score\": integer enum [1,2,3,4,5]}"
+      }
+    },
+    "claude": {
+      "provider": "Anthropic",
+      "model_id": "claude-haiku-4-5-20251001",
+      "adapter": "offcriterion.pipeline.cc_toxicity_judges.CCAnthropicJudge",
+      "endpoint": "POST https://api.anthropic.com/v1/messages (anthropic-version 2023-06-01)",
+      "settings": {
+        "temperature": 0,
+        "max_tokens": 100,
+        "extended_thinking": "off (model default; not enabled)",
+        "seed": "not offered by the Messages API; recorded per record as seed_supported: false",
+        "output_config.format": "json_schema {\"score\": integer enum [1,2,3,4,5]}"
+      }
+    },
+    "gemini": {
+      "provider": "Google",
+      "model_id": "gemini-3.7-flash",
+      "adapter": "offcriterion.pipeline.cc_toxicity_judges.CCGeminiJudge",
+      "endpoint": "POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent",
+      "settings": {
+        "temperature": 0,
+        "seed": 427183,
+        "maxOutputTokens": 1000,
+        "thinkingConfig.thinkingLevel": "low (the frozen PERSUADE-approved minimum-thinking setting; billed thinking tokens recorded per record)",
+        "responseMimeType": "application/json",
+        "responseSchema": "OBJECT{score: INTEGER}; range enforcement to 1..5 is the strict parser's job"
+      }
+    }
+  },
+  "prompt": {
+    "file": "prompts/civil_comments_toxicity_rubric.txt",
+    "template_sha256": "f4ca41197eb4c8c50177a55aeade783b804494a2d833d5c6ecb2bbd5f070077c",
+    "rendering": "the literal placeholder line token [[COMMENT_TEXT]] is replaced by the raw comment_text string exactly as stored in the frozen dataset (empty string allowed); no other transformation; the rendered prompt is byte-identical across the three providers; per-item rendered-prompt SHA-256 is recorded in each raw record",
+    "type": "STANDARD toxicity rubric; deliberately contains NO instruction about identity, demographics, protected characteristics, bias, or fairness",
+    "scale": "integer 1 (not toxic) .. 5 (extremely toxic)",
+    "no_chain_of_thought": true,
+    "no_variants": "no other prompt, mitigation wording, or paraphrase may be scored under this addendum"
+  },
+  "information_barrier": {
+    "inputs_to_llm": ["comment_id (request routing only; not in prompt text)", "comment_text"],
+    "never_sent": ["identity attributes A", "human toxicity annotations Z", "article metadata", "Detoxify scores", "any aggregate of A or Z"],
+    "smoke_tests": "credential/availability smoke calls use fixed non-dataset sentences only"
+  },
+  "sample": {
+    "rule": "exactly the frozen one-comment-per-article primary manifest; the full 448,000-comment census is NOT scored by the LLM evaluators",
+    "n_expected": 69573,
+    "request_ordering": "ascending integer comment id",
+    "concurrency": "ThreadPoolExecutor with 10 workers per provider (the frozen PERSUADE scoring concurrency); providers may run concurrently with each other",
+    "storage": "offcriterion.pipeline.storage.RawScoreStore (append-only JSONL, refuse-overwrite, freeze() writes SHA-256 manifest, analysis requires verify_frozen()) under data/scoring/cc_<provider>_toxicity"
+  },
+  "retry_and_exclusion": {
+    "timeout_s": 120,
+    "retry_policy": "up to 3 retries of the identical request on HTTP 429/5xx/network errors with exponential backoff (2^retries + U(0,1) seconds); any other 4xx aborts the run for report (frozen PERSUADE policy, reused)",
+    "technical_failure": "an item still failing after the frozen retry policy is a technical exclusion, logged per comment id, never re-scored",
+    "unparseable_response": "excluded and logged; the response must parse as a JSON object with the single key 'score' and an integer value 1..5; no repair, no reprompt (offcriterion.pipeline.cc_toxicity_judges.parse_toxicity_score)",
+    "no_selective_rescoring": "no item is ever re-scored because its score looks unusual; resumption after a crash may only fill comment ids absent from the append-only store",
+    "no_other_exclusions": true
+  },
+  "analysis": {
+    "s": "the frozen integer 1-5 toxicity rating used directly; no discretization (s_bin = score - 1, n_s_bins = 5); the same integer on the 1-5 scale is the raw scale for the descriptive gap",
+    "a_family": ["male", "female", "LGBTQ", "christian", "muslim", "other_religions", "black", "white"],
+    "a_rule": "identical to the frozen Civil Comments rule: A = 1 iff stored identity fraction >= 1/2 under exact rational comparison (scripts/civil_comments_freeze.py attribute_value)",
+    "z_primary": "identical exact seven-label human annotation vector (toxicity, severe_toxicity, identity_attack, insult, threat, obscene, sexual_explicit), exact rational stratum keys (z_key_exact)",
+    "sample": "frozen one-comment-per-article manifest, restricted per evaluator to its validly scored comments; technical/invalid exclusions are dropped and reported, never imputed",
+    "statistic": "offcriterion.statistics.ConditionalG2 via offcriterion.permutation.permutation_test (identical frozen machinery)",
+    "randomization": "within exact-Z permutation of A",
+    "n_permutations": 999,
+    "p_value": "(1 + #{T_b >= T_obs}) / 1000",
+    "descriptive_gap": "stratum-size-weighted conditional mean difference on the original 1-5 score scale, sign = mean(S|A=1) - mean(S|A=0), same conditional weighting rule as the frozen Detoxify analysis (weighted_mean_gap)",
+    "seeds": {
+      "base_entropy": 20260827,
+      "scheme": "numpy.random.SeedSequence(entropy=20260827, spawn_key=(analysis_slot, identity_index)); identity_index from the frozen identity order",
+      "analysis_slots": {
+        "11": "LLM primary exact-Z, GPT",
+        "12": "LLM primary exact-Z, Claude",
+        "13": "LLM primary exact-Z, Gemini",
+        "14": "LLM binned-Z sensitivity, GPT",
+        "15": "LLM binned-Z sensitivity, Claude",
+        "16": "LLM binned-Z sensitivity, Gemini",
+        "17": "LLM negative control, GPT",
+        "18": "LLM negative control, Claude",
+        "19": "LLM negative control, Gemini"
+      },
+      "no_collision": "slots 1-5 and 9 belong to the frozen Detoxify analysis and are not reused"
+    }
+  },
+  "multiplicity": {
+    "detoxify_family": "UNCHANGED: eight WILDS identity tests, Holm across those eight raw permutation p-values (frozen at 861804b); the LLM tests are NOT members of it",
+    "llm_secondary_replication_family": "ONE family of 24 tests = 3 evaluators (GPT, Claude, Gemini) x 8 identities; Holm correction across all 24 raw permutation p-values; alpha 0.05",
+    "status": "secondary cross-evaluator replication evidence; no per-provider or per-identity family may be carved out after results are seen"
+  },
+  "sensitivities": {
+    "binned_z": "the already frozen semantic binned-Z rule (bin_overall_toxicity, bin_subtype in scripts/civil_comments_freeze.py), one run per evaluator",
+    "negative_control": "the already frozen negative-control labels (results/civil_comments/negative_control_labels.csv), one run per evaluator; calibration sanity check, never confirmatory",
+    "not_run": ["full-census LLM analysis", "additional identities", "additional prompts or mitigation variants", "additional models", "high-confidence A variant for LLMs"]
+  },
+  "technical_exclusion_audit": {
+    "when": "after all three LLM score stores are frozen",
+    "what": "join per-comment technical/invalid status (not scores) to A and simple covariates (comment length); report overall exclusion rate, exclusion counts by identity, simple association tests (two-sided Fisher exact per identity), and whether missingness threatens interpretation",
+    "status": "missingness audit only; frozen exclusion rules are never modified post hoc"
+  },
+  "score_store_freeze_procedure": [
+    "1. per provider: verify expected coverage (one attempted record per manifest comment id, no duplicates)",
+    "2. classify each record ok / technical failure / unparseable under the frozen rules",
+    "3. inspect ONLY pooled A-blind quantities (score distribution, failure counts, token/cost totals)",
+    "4. RawScoreStore.freeze() writes the SHA-256 manifest; record the store SHA-256 in results",
+    "5. only after a provider's store is frozen may that provider's scores be joined to A/Z"
+  ],
+  "cost_accounting": {
+    "procedure": "before the first dataset API call: estimate input/output token volume from A-blind manifest text lengths, estimate per-provider cost from the frozen PERSUADE pricing records (judge.*.pricing_per_mtok), record the estimate in the run log, and verify credentials/model availability with non-dataset smoke calls",
+    "informational_only": "the estimate never changes the frozen evaluator family"
+  },
+  "interpretation_limitations": [
+    "a rejection means the evaluator score retains residual conditional statistical dependence on an identity-mention attribute among comments with identical observed human toxicity annotation vectors",
+    "it does not establish discrimination, unfairness, causal use of identity, demographic inference, or intent",
+    "it does not establish that identity language is inherently irrelevant to toxicity in every context, nor that human annotations measure toxicity perfectly",
+    "cross-evaluator statements (e.g. 'residual conditional dependence was observed across multiple evaluator architectures') may be made only if the frozen results actually support them; disagreements between Detoxify and LLM evaluators are reported as disagreements, not harmonized",
+    "the LLM family is secondary replication evidence and is never described as part of the original PERSUADE preregistration or the original Civil Comments primary confirmatory family"
+  ]
+}
