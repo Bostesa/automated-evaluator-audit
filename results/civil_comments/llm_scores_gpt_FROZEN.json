@@ -1,0 +1,25 @@
+{
+  "stage": "LLM score-store freeze (pooled A-blind quantities only)",
+  "provider": "gpt",
+  "model_id": "gpt-5.4-mini-2026-03-17",
+  "n_expected": 69573,
+  "n_records": 69573,
+  "n_ok": 69573,
+  "n_technical_failures": 0,
+  "n_invalid_responses": 0,
+  "exclusion_rate": 0.0,
+  "pooled_score_distribution": {
+    "1": 37971,
+    "2": 20143,
+    "3": 6638,
+    "4": 4466,
+    "5": 355
+  },
+  "input_tokens": 18433208,
+  "output_tokens": 916869,
+  "thinking_tokens": 0,
+  "actual_cost_usd": 17.95,
+  "note_gemini_billing": "thinking tokens are billed as output; both included in cost",
+  "score_store_sha256": "0d3a82be930d7084c99fd430fa6775ab4581f287fdaf5db1defefec24086c509",
+  "store_frozen_manifest": "data/scoring/cc_gpt_toxicity/FROZEN.json"
+}
