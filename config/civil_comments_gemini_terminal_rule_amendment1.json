@@ -1,0 +1,24 @@
+{
+  "frozen_utc": "2026-08-28T04:55:00+00:00",
+  "amends_commit": "9175211",
+  "amendment_commit_sha": "RECORDED-IN-PROVENANCE-LEDGER-AFTER-COMMIT",
+  "supersedes": "ONLY the hard wall-clock cutoff 2026-08-31T07:00:00+00:00 in config/civil_comments_gemini_terminal_rule.json",
+  "reason": "latest user clarification and submission logistics; the August 31 date must not act as a scientific stopping rule",
+  "outcome_blindness": "no Civil Comments LLM S-versus-A result (GPT, Claude, or Gemini) computed or inspected before this amendment; no LLM score joined to A or Z",
+  "unchanged": ["model", "prompt", "manifest", "A", "Z", "statistic", "B", "permutation seeds", "multiplicity", "frozen exclusions", "negative controls", "all scientific analysis rules"],
+  "policy": {
+    "preserve_all_valid_scores_and_frozen_exclusions": true,
+    "never_rescore_successful_rows": true,
+    "never_rescore_2339_frozen_quota_technical_exclusions": true,
+    "continue_only_unresolved_rows": true,
+    "rotate_verified_projects_as_quota_permits": true,
+    "rotations_infrastructure_only_and_outcome_blind": true,
+    "no_august_31_scientific_stopping_rule": true,
+    "practical_objective": "finish Gemini early enough for the current paper submission and verification workflow",
+    "if_capacity_insufficient": "stop and report exact remaining unresolved count so the user can supply additional authorized credentials",
+    "no_new_accounts_without_explicit_user_action": true,
+    "new_credential_requirements": ["secure storage outside the repo", "non-dataset smoke verification", "exact gemini-3.7-flash model echo", "identical frozen prompt/settings", "addition to the provenance ledger"],
+    "credential_changes_never_create_new_evaluator_condition": true
+  },
+  "document": "docs/civil_comments_gemini_terminal_rule_amendment1.md"
+}

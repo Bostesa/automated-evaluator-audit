@@ -105,3 +105,19 @@ prescribed incomplete-at-cutoff procedure (stop, preserve the partial store,
 report coverage as a provider-level incomplete-scoring deviation, and leave
 any consequence for the prespecified 24-test family to a user decision made
 with the deviation visible — never a silent redefinition).
+
+### D3 addendum — cutoff superseded by Amendment 1 (2026-08-28)
+
+The 2026-08-31T07:00:00Z hard cutoff frozen in commit `9175211` was an
+assistant-chosen date that did not reflect the user's latest instruction and
+submission timeline. Before any Civil Comments LLM S-versus-A result had
+been computed or inspected, it was superseded by a prospective,
+infrastructure-only amendment
+(`docs/civil_comments_gemini_terminal_rule_amendment1.md`): no
+August-31 wait as a scientific stopping rule; continue scoring unresolved
+rows with verified-project rotation as quota permits; if existing projects
+lack capacity in time, stop and report the exact unresolved count so the
+user can supply additional authorized credentials under the frozen
+verification procedure. Commit `9175211` is preserved in history unmodified;
+no scientific rule (model, prompt, manifest, A, Z, statistic, B, seeds,
+multiplicity, frozen exclusions, negative controls) was touched.

@@ -26,5 +26,10 @@
     "no_model_substitution": true,
     "no_new_provider_accounts_without_user_authorization": true,
     "if_incomplete_do_not_redefine_24_test_family": "stop before computing the family and report coverage/deviation to the user"
+  },
+  "amended_by": {
+    "amendment": "config/civil_comments_gemini_terminal_rule_amendment1.json",
+    "scope": "supersedes ONLY hard_cutoff_utc; all other rules remain in force",
+    "amended_utc": "2026-08-28T04:55:00+00:00"
   }
 }

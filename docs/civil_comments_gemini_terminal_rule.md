@@ -1,5 +1,12 @@
 # Civil Comments Gemini Terminal Execution Rule — Frozen
 
+> **AMENDED 2026-08-28:** the hard wall-clock cutoff
+> 2026-08-31T07:00:00Z below is SUPERSEDED by
+> `docs/civil_comments_gemini_terminal_rule_amendment1.md`
+> (prospective, infrastructure-only; made before any LLM S-versus-A
+> result existed). Every other provision remains in force. The
+> original text is preserved unchanged below.
+
 Frozen: 2026-08-28T04:41Z, BEFORE any Civil Comments LLM S-versus-A result
 (GPT, Claude, or Gemini) has been computed or inspected. The GPT and Claude
 stores are frozen but unanalyzed; the Gemini store is partial and unanalyzed;
