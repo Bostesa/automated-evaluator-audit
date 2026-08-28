@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-08-28T04:41:00+00:00",
+  "frozen_before": "any Civil Comments LLM S-versus-A result (GPT, Claude, or Gemini); no LLM score joined to A or Z",
+  "document": "docs/civil_comments_gemini_terminal_rule.md",
+  "hard_cutoff_utc": "2026-08-31T07:00:00+00:00",
+  "cutoff_basis": "logistics only: 44,462 unresolved rows vs ~29,100/day observed capacity across three authorized projects; three further daily quota windows = ~2x requirement; remaining schedule reserved for freeze, 24-test analysis, sensitivities, negative controls, verification, paper integration, and two-page compile",
+  "cutoff_immutable": "may not be chosen again or moved after any LLM S-versus-A result is visible",
+  "ledger_verified_utc": "2026-08-28T04:40:00+00:00",
+  "ledger": {
+    "valid": 22769,
+    "invalid_response_exclusions": 3,
+    "quota_technical_exclusions_frozen": 2339,
+    "unresolved_never_attempted": 44462,
+    "manifest_total": 69573,
+    "store_records": 25111,
+    "store_unique_ids": 25111
+  },
+  "rules": {
+    "rotation": "frozen policy in results/civil_comments/gemini_credential_provenance.json only",
+    "preserve": "all successful scores, all frozen invalid-response exclusions, all frozen quota technical exclusions",
+    "never_rescore_frozen_technical_exclusions": true,
+    "score_only_unresolved_manifest_rows": true,
+    "infrastructure_decisions_outcome_blind": "blind to A, Z, Detoxify, GPT, Claude, and Gemini score values",
+    "at_cutoff_if_incomplete": "stop inference; preserve partial store; record valid/invalid/technical/unresolved N, request-order ranges, credential segments, stop reason; provider-level incomplete-scoring deviation; never convert never-attempted rows to item-level technical exclusions",
+    "no_manifest_shrinkage": true,
+    "no_model_substitution": true,
+    "no_new_provider_accounts_without_user_authorization": true,
+    "if_incomplete_do_not_redefine_24_test_family": "stop before computing the family and report coverage/deviation to the user"
+  }
+}

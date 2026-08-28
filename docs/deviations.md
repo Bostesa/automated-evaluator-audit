@@ -78,3 +78,30 @@ corrected safeguard is the intended no-op. The correction was made before
 any join with ELL status or judge scores and before any feasibility or
 robustness statistic was computed; the resulting index matches the schema
 check recorded in the plan (100% coverage, median 9 elements/essay).
+
+## D3 — Civil Comments Gemini quota-recovery execution history and frozen terminal rule (2026-08-28)
+
+The Civil Comments Gemini scoring branch (secondary LLM-evaluator extension,
+`docs/civil_comments_llm_evaluator_addendum.md`) repeatedly hit per-project
+daily request quotas. The frozen scientific specification (model ID, prompt,
+schema, settings, 3-retry/exclusion policy, manifest, ordering, append-only
+store) never changed. The operational monitoring around it was refined
+during execution — original >50 failure guard, segment-2 guard threshold
+error, proactive watchdog, stale-log false trigger, burst-verified 15-call
+prober, store-level 10-failure watchdog — each on quota/log evidence alone.
+These refinements are **technical execution history**, not part of the
+frozen specification; they are itemized in
+`docs/civil_comments_gemini_terminal_rule.md` and
+`results/civil_comments/gemini_credential_provenance.json`.
+
+On 2026-08-28T04:41Z — before any Civil Comments LLM S-versus-A result had
+been computed or inspected — a final outcome-blind terminal execution rule
+was frozen for this branch (`docs/civil_comments_gemini_terminal_rule.md`,
+machine-readable `config/civil_comments_gemini_terminal_rule.json`): a hard
+logistics-based wall-clock cutoff of **2026-08-31T07:00:00Z**, permanent
+preservation of all successes and frozen exclusions, no rescoring of frozen
+technical exclusions, scoring of genuinely unresolved rows only, and a
+prescribed incomplete-at-cutoff procedure (stop, preserve the partial store,
+report coverage as a provider-level incomplete-scoring deviation, and leave
+any consequence for the prespecified 24-test family to a user decision made
+with the deviation visible — never a silent redefinition).
