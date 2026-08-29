@@ -1,0 +1,25 @@
+{
+  "stage": "LLM score-store freeze (pooled A-blind quantities only)",
+  "provider": "gemini",
+  "model_id": "gemini-3.7-flash",
+  "n_expected": 69573,
+  "n_records": 69573,
+  "n_ok": 67183,
+  "n_technical_failures": 2384,
+  "n_invalid_responses": 6,
+  "exclusion_rate": 0.034352,
+  "pooled_score_distribution": {
+    "1": 46486,
+    "2": 15958,
+    "3": 3780,
+    "4": 802,
+    "5": 157
+  },
+  "input_tokens": 15601066,
+  "output_tokens": 504979,
+  "thinking_tokens": 6027001,
+  "actual_cost_usd": 36.2,
+  "note_gemini_billing": "thinking tokens are billed as output; both included in cost",
+  "score_store_sha256": "3ef469677c9ae7f0a89924af3476fc0b92c352376b464d8b888efa454a4f58f1",
+  "store_frozen_manifest": "data/scoring/cc_gemini_toxicity/FROZEN.json"
+}
