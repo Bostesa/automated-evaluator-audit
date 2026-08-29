@@ -51,7 +51,7 @@ def _codes(keys):
 
 def main() -> None:
     verify(MANIFEST, MANIFEST_SHA256, "primary manifest")
-    if sha256_file(str(GEM_STORE)) != GEM_STORE_SHA:
+    if sha256_file(GEM_STORE) != GEM_STORE_SHA:
         raise SystemExit("STOP: Gemini store hash mismatch")
 
     rows_all = read_rows()

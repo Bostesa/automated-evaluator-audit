@@ -1,0 +1,123 @@
+{
+  "study": "civil_comments_gemini_missing_score_bound",
+  "status": "descriptive missing-outcome sensitivity; no p-values, no multiplicity; frozen results unaltered",
+  "spec": "config/civil_comments_gemini_missing_bound_spec.json",
+  "frozen_inputs": {
+    "manifest_sha256": "892245a7899401c1041f3cf7bc17528d80d9812efacefe994dbfd16fec97469e",
+    "gemini_store_sha256": "3ef469677c9ae7f0a89924af3476fc0b92c352376b464d8b888efa454a4f58f1",
+    "gemini_valid": 67183,
+    "gemini_missing_total": 2390
+  },
+  "bounds": {
+    "male": {
+      "observed_primary_gemini_gap": 0.060589216338367204,
+      "total_missing": 2390,
+      "missing_a1": 213,
+      "missing_a0": 2177,
+      "worst_case_lower_bound_gap": -0.08082432847116419,
+      "worst_case_upper_bound_gap": 0.1976325096447256,
+      "interval_width": 0.2784568381158898,
+      "zero_in_interval": true,
+      "positive_sign_guaranteed": false
+    },
+    "female": {
+      "observed_primary_gemini_gap": 0.07798294685365899,
+      "total_missing": 2390,
+      "missing_a1": 253,
+      "missing_a0": 2137,
+      "worst_case_lower_bound_gap": -0.06356943243991316,
+      "worst_case_upper_bound_gap": 0.2170929529558163,
+      "interval_width": 0.28066238539572946,
+      "zero_in_interval": true,
+      "positive_sign_guaranteed": false
+    },
+    "LGBTQ": {
+      "observed_primary_gemini_gap": 0.11552285218108935,
+      "total_missing": 2390,
+      "missing_a1": 37,
+      "missing_a0": 2353,
+      "worst_case_lower_bound_gap": -0.02608357146501982,
+      "worst_case_upper_bound_gap": 0.20138735509995212,
+      "interval_width": 0.22747092656497195,
+      "zero_in_interval": true,
+      "positive_sign_guaranteed": false
+    },
+    "christian": {
+      "observed_primary_gemini_gap": 0.0032556251202791233,
+      "total_missing": 2390,
+      "missing_a1": 133,
+      "missing_a0": 2257,
+      "worst_case_lower_bound_gap": -0.13669970976586474,
+      "worst_case_upper_bound_gap": 0.1962108389461641,
+      "interval_width": 0.33291054871202885,
+      "zero_in_interval": true,
+      "positive_sign_guaranteed": false
+    },
+    "muslim": {
+      "observed_primary_gemini_gap": 0.25431448752053354,
+      "total_missing": 2390,
+      "missing_a1": 70,
+      "missing_a0": 2320,
+      "worst_case_lower_bound_gap": 0.10515980963451498,
+      "worst_case_upper_bound_gap": 0.41314463271029334,
+      "interval_width": 0.30798482307577835,
+      "zero_in_interval": false,
+      "positive_sign_guaranteed": true
+    },
+    "other_religions": {
+      "observed_primary_gemini_gap": 0.13825562857755314,
+      "total_missing": 2390,
+      "missing_a1": 35,
+      "missing_a0": 2355,
+      "worst_case_lower_bound_gap": -0.007068198139437962,
+      "worst_case_upper_bound_gap": 0.28148187923401613,
+      "interval_width": 0.2885500773734541,
+      "zero_in_interval": true,
+      "positive_sign_guaranteed": false
+    },
+    "black": {
+      "observed_primary_gemini_gap": 0.16349397864273524,
+      "total_missing": 2390,
+      "missing_a1": 59,
+      "missing_a0": 2331,
+      "worst_case_lower_bound_gap": 0.020272894699134514,
+      "worst_case_upper_bound_gap": 0.2917515877220129,
+      "interval_width": 0.27147869302287836,
+      "zero_in_interval": false,
+      "positive_sign_guaranteed": true
+    },
+    "white": {
+      "observed_primary_gemini_gap": 0.2763438033869054,
+      "total_missing": 2390,
+      "missing_a1": 119,
+      "missing_a0": 2271,
+      "worst_case_lower_bound_gap": 0.12121819424553751,
+      "worst_case_upper_bound_gap": 0.44357852770770806,
+      "interval_width": 0.3223603334621705,
+      "zero_in_interval": false,
+      "positive_sign_guaranteed": true
+    }
+  },
+  "summary": {
+    "narrowest_interval": {
+      "identity": "LGBTQ",
+      "width": 0.22747092656497195
+    },
+    "widest_interval": {
+      "identity": "christian",
+      "width": 0.33291054871202885
+    },
+    "sign_identified": [
+      "muslim",
+      "black",
+      "white"
+    ],
+    "sign_not_identified": [
+      "male",
+      "female",
+      "LGBTQ",
+      "christian",
+      "other_religions"
+    ]
+  }
+}
