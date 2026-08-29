@@ -1,0 +1,61 @@
+{
+  "study": "civil_comments_augmented_z_robustness",
+  "status": "secondary robustness; NOT confirmatory, NOT the primary 24-cell replication family",
+  "frozen_utc": "2026-08-29T00:00:00+00:00",
+  "frozen_before": "any augmented-Z evaluator result (ConditionalG2, gap, or decomposition quantity)",
+  "document": "docs/civil_comments_augmented_z_spec.md",
+  "parent_commit_primary_results": "cc6d9dd",
+  "augmented_z": {
+    "z_primary": "z_key_exact (exact seven-label human-annotation vector, frozen order)",
+    "length_measure": "len(comment_text) character count of the raw stored comment text",
+    "length_threshold_M": 225,
+    "length_threshold_rule": "median character length over the frozen 69,573-row primary manifest, A-blind and evaluator-independent; analysis recomputes and asserts M==225",
+    "L_rule": "L = 1 iff length > M else 0 (ties at M -> 0)",
+    "L_split_frozen": {"L1_len_gt_M": 34712, "L0_len_le_M": 34861},
+    "z_aug_key": "z_key_exact(row) + '|L=' + str(L)",
+    "outcome_blind": "L uses only comment character length; never A, Z human labels, evaluator scores, or identity attributes"
+  },
+  "inferential_test": {
+    "statistic": "ConditionalG2 over the 1-5 score distribution",
+    "permutation": "within-exact-Z_aug permutation of A",
+    "B": 999,
+    "seed_scheme": "SeedSequence(entropy=20260827, spawn_key=(slot, identity_index))",
+    "slots": {"gpt": 20, "claude": 21, "gemini": 22},
+    "multiplicity": "Holm across all 24 augmented-Z raw permutation p-values, alpha 0.05",
+    "informative_stratum_rule": "size>=2 and both A present; single-A/degenerate strata dropped, as in primary",
+    "family_note": "separate robustness family from the primary 24; no post-hoc subfamilies"
+  },
+  "common_support_decomposition": {
+    "type": "descriptive only; NO p-values, permutation tests, confidence intervals, or new multiplicity",
+    "gap_definition": "stratum-size-weighted conditional mean difference mean(S|A=1)-mean(S|A=0) over informative strata (weighted_mean_gap), 1-5 scale",
+    "primary_gap": "already-frozen primary-Z gap from results/civil_comments/llm_audit_results.json weighted_mean_gap_1to5; analysis asserts recomputation equals frozen value",
+    "augmented_gap": "augmented-Z gap on rows retained by augmented-Z (informative Z_aug strata)",
+    "primary_common_support_gap": "primary-Z gap computed on EXACTLY the augmented-Z common-support rows",
+    "common_support_row_set": "evaluator valid rows intersect informative Z_aug strata for that identity; no other set; no restored rows; never chosen using score values",
+    "composition_change": "primary_common_support_gap - primary_gap",
+    "conditioning_change": "augmented_gap - primary_common_support_gap",
+    "total_change": "augmented_gap - primary_gap",
+    "additive_identity": "total_change == composition_change + conditioning_change, verified for all 24 cells to 1e-9",
+    "also_report": ["composition_abs_change = abs(composition_change)", "conditioning_abs_change = abs(conditioning_change)"],
+    "empty_common_support": "augmented_gap and primary_common_support_gap null, identity check skipped, cell flagged; never imputed"
+  },
+  "interpretation_commitment": {
+    "composition_dominates": "describe as primarily due to altered retained support/composition, NOT as length conditioning explaining the association",
+    "conditioning_dominates": "describe as primarily associated with additional conditioning on length",
+    "both_contribute": "report both",
+    "gap_increase": "use same decomposition to distinguish composition-driven vs conditioning-driven amplification",
+    "no_causal_language": "no 'length causes' or 'length mediates'; strongest wording: additional conditioning on length changes/attenuates/amplifies the residual association on the common support"
+  },
+  "prediction": {
+    "text": "Adding a binary comment-length stratum to the exact seven-label human annotation vector will leave the Civil Comments LLM conditional gaps largely intact. Among cells with primary |D| >= 0.05, we predict the median absolute relative change in D will be below 15%. Absolute gap changes will be reported for all 24 cells regardless of primary effect size.",
+    "relative_change": "total_change / primary_gap",
+    "evaluated_on": "median absolute relative change among cells with primary |gap| >= 0.05, on total change",
+    "decomposition_role": "diagnoses WHY total change occurred; NOT used to redefine whether the prediction passed"
+  },
+  "outputs": {
+    "results": "results/civil_comments/augmented_z_results.json",
+    "per_cell_columns": ["evaluator","identity","augmented support counts","primary retained counts","observed_conditional_g2","p_raw","p_holm","reject_holm_at_0.05","relative_change","primary_gap","primary_common_support_gap","augmented_gap","composition_change","conditioning_change","total_change","composition_abs_change","conditioning_abs_change"],
+    "summary": ["prediction evaluation","median abs composition change /24","median abs conditioning change /24","cell largest abs composition change","cell largest abs conditioning change","full decomposition of largest abs total change cell","additive identity verified for all 24"]
+  },
+  "execution_order": "commit+push this spec and the analysis script BEFORE computing; then run analysis; freeze/hash/commit results; STOP before manuscript editing or any Gemini missingness bound"
+}
