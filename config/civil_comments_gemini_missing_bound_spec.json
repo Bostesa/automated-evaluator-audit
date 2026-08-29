@@ -1,0 +1,45 @@
+{
+  "study": "civil_comments_gemini_missing_score_bound",
+  "status": "descriptive missing-outcome sensitivity; NOT confirmatory; no new p-values or multiplicity; does not alter any frozen result",
+  "frozen_utc": "2026-08-29T00:00:00+00:00",
+  "frozen_before": "any bound value computed",
+  "last_authorized_analysis": true,
+  "document": "docs/civil_comments_gemini_missing_bound_spec.md",
+  "pinned_inputs": {
+    "manifest": "results/civil_comments/primary_manifest.csv",
+    "manifest_sha256": "892245a7899401c1041f3cf7bc17528d80d9812efacefe994dbfd16fec97469e",
+    "manifest_N": 69573,
+    "gemini_store": "data/scoring/cc_gemini_toxicity/scores__gemini-3.7-flash__cc_toxicity.jsonl",
+    "gemini_store_sha256": "3ef469677c9ae7f0a89924af3476fc0b92c352376b464d8b888efa454a4f58f1",
+    "gemini_valid": 67183,
+    "gemini_technical": 2384,
+    "gemini_invalid": 6,
+    "gemini_missing_total": 2390,
+    "identities": ["black","white","LGBTQ","muslim","christian","other_religions","male","female"],
+    "identity_rule": "A=1 iff stored identity fraction >= 1/2 (attribute_value)",
+    "Z": "z_key_exact (primary exact seven-label human-annotation vector)",
+    "gap_definition": "weighted_mean_gap: stratum-size-weighted mean(S|A=1)-mean(S|A=0) over informative strata, 1-5 scale"
+  },
+  "bound_rule": {
+    "missing_rows": "the 2,390 frozen Gemini rows with error_status or null parsed_score; A and Z known, score missing",
+    "observed_gap": "frozen weighted conditional-gap over the 67,183 valid rows; analysis asserts equality to frozen primary Gemini gap",
+    "lower_bound": "missing A=1 -> score 1; missing A=0 -> score 5",
+    "upper_bound": "missing A=1 -> score 5; missing A=0 -> score 1",
+    "scale": "[1,5]",
+    "support": "intended primary support (informative primary-Z strata) after bounded scores are supplied (full 69,573 rows)",
+    "prohibited": ["assume missing-at-random","alter Z","alter A","change weighting","optimize a different support","permutation p-values from imputed data"]
+  },
+  "report": {
+    "per_identity": ["observed_gap","total_missing","missing_a1","missing_a0","lower_bound_gap","upper_bound_gap","zero_in_interval","positive_sign_guaranteed"],
+    "summary": ["narrowest_interval","widest_interval","sign_identified","sign_not_identified"]
+  },
+  "interpretation": {
+    "lower_gt_0": "Even adversarial assignment of all missing Gemini scores within the 1-5 range cannot reverse the positive conditional mean gap.",
+    "interval_contains_0": "The sign of the Gemini conditional mean gap is not identified without assumptions about the missing scores.",
+    "christian_note": "christian exclusion is A-associated; if its interval contains zero, describe the Gemini-christian estimate as especially uncertain",
+    "no_g2_inference": "do not infer G2 significance from mean-gap bounds",
+    "no_causal_language": true
+  },
+  "outputs": {"results": "results/civil_comments/gemini_missing_bound.json"},
+  "execution_order": "commit+push spec+config+script BEFORE computing; then compute 8-row bound; freeze/hash/commit; STOP (empirical phase permanently closed)"
+}
