@@ -1,0 +1,575 @@
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=0 prior_technical_failures=0 todo=69573
+progress 500/69573 {'ok': 500, 'invalid': 0, 'tech_fail': 0}
+progress 1000/69573 {'ok': 1000, 'invalid': 0, 'tech_fail': 0}
+progress 1500/69573 {'ok': 1500, 'invalid': 0, 'tech_fail': 0}
+progress 2000/69573 {'ok': 2000, 'invalid': 0, 'tech_fail': 0}
+progress 2500/69573 {'ok': 2499, 'invalid': 1, 'tech_fail': 0}
+progress 3000/69573 {'ok': 2999, 'invalid': 1, 'tech_fail': 0}
+progress 3500/69573 {'ok': 3499, 'invalid': 1, 'tech_fail': 0}
+progress 4000/69573 {'ok': 3999, 'invalid': 1, 'tech_fail': 0}
+progress 4500/69573 {'ok': 4499, 'invalid': 1, 'tech_fail': 0}
+progress 5000/69573 {'ok': 4999, 'invalid': 1, 'tech_fail': 0}
+progress 5500/69573 {'ok': 5499, 'invalid': 1, 'tech_fail': 0}
+progress 6000/69573 {'ok': 5999, 'invalid': 1, 'tech_fail': 0}
+progress 6500/69573 {'ok': 6499, 'invalid': 1, 'tech_fail': 0}
+progress 7000/69573 {'ok': 6999, 'invalid': 1, 'tech_fail': 0}
+progress 7500/69573 {'ok': 7498, 'invalid': 2, 'tech_fail': 0}
+progress 8000/69573 {'ok': 7998, 'invalid': 2, 'tech_fail': 0}
+progress 8500/69573 {'ok': 8498, 'invalid': 2, 'tech_fail': 0}
+progress 9000/69573 {'ok': 8998, 'invalid': 2, 'tech_fail': 0}
+progress 9500/69573 {'ok': 9498, 'invalid': 2, 'tech_fail': 0}
+progress 10000/69573 {'ok': 9972, 'invalid': 2, 'tech_fail': 26}
+progress 10500/69573 {'ok': 10000, 'invalid': 2, 'tech_fail': 498}
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=10561 prior_technical_failures=559 todo=59012
+progress 500/59012 {'ok': 500, 'invalid': 0, 'tech_fail': 0}
+progress 1000/59012 {'ok': 1000, 'invalid': 0, 'tech_fail': 0}
+progress 1500/59012 {'ok': 1500, 'invalid': 0, 'tech_fail': 0}
+progress 2000/59012 {'ok': 2000, 'invalid': 0, 'tech_fail': 0}
+progress 2500/59012 {'ok': 2500, 'invalid': 0, 'tech_fail': 0}
+progress 3000/59012 {'ok': 3000, 'invalid': 0, 'tech_fail': 0}
+progress 3500/59012 {'ok': 3500, 'invalid': 0, 'tech_fail': 0}
+progress 4000/59012 {'ok': 4000, 'invalid': 0, 'tech_fail': 0}
+progress 4500/59012 {'ok': 4500, 'invalid': 0, 'tech_fail': 0}
+progress 5000/59012 {'ok': 5000, 'invalid': 0, 'tech_fail': 0}
+progress 5500/59012 {'ok': 5500, 'invalid': 0, 'tech_fail': 0}
+progress 6000/59012 {'ok': 6000, 'invalid': 0, 'tech_fail': 0}
+progress 6500/59012 {'ok': 6500, 'invalid': 0, 'tech_fail': 0}
+progress 7000/59012 {'ok': 7000, 'invalid': 0, 'tech_fail': 0}
+progress 7500/59012 {'ok': 7500, 'invalid': 0, 'tech_fail': 0}
+progress 8000/59012 {'ok': 8000, 'invalid': 0, 'tech_fail': 0}
+progress 8500/59012 {'ok': 8500, 'invalid': 0, 'tech_fail': 0}
+progress 9000/59012 {'ok': 9000, 'invalid': 0, 'tech_fail': 0}
+progress 9500/59012 {'ok': 9500, 'invalid': 0, 'tech_fail': 0}
+progress 10000/59012 {'ok': 9956, 'invalid': 0, 'tech_fail': 44}
+progress 10500/59012 {'ok': 9970, 'invalid': 0, 'tech_fail': 530}
+progress 11000/59012 {'ok': 9971, 'invalid': 0, 'tech_fail': 1029}
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=21573 prior_technical_failures=1600 todo=48000
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=21591 prior_technical_failures=1600 todo=47982
+progress 500/47982 {'ok': 500, 'invalid': 0, 'tech_fail': 0}
+progress 1000/47982 {'ok': 999, 'invalid': 1, 'tech_fail': 0}
+progress 1500/47982 {'ok': 1499, 'invalid': 1, 'tech_fail': 0}
+progress 2000/47982 {'ok': 1999, 'invalid': 1, 'tech_fail': 0}
+progress 2500/47982 {'ok': 2499, 'invalid': 1, 'tech_fail': 0}
+progress 3000/47982 {'ok': 2773, 'invalid': 1, 'tech_fail': 226}
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=24597 prior_technical_failures=1832 todo=44976
+progress 500/44976 {'ok': 7, 'invalid': 0, 'tech_fail': 493}
+[supervisor 2026-08-28T04:43:29Z] supervisor started; hard cutoff 2026-08-31T07:00:00+00:00
+[supervisor 2026-08-28T04:43:30Z] probe: rc=1 'gemini_primary: 429-EXHAUSTED at call 0\ngemini_backup1: 429-EXHAUSTED at call 0\ngemini_backup2: 429-EXHAUSTED at call 0'
+[supervisor 2026-08-28T04:43:30Z] no credential usable; unresolved=44462; next probe in 5399s
+[supervisor 2026-08-28T04:50:05Z] supervisor v2 started under Amendment 1 (commit 0db4f2d): no wall-clock cutoff; rotate verified projects as quota permits; capacity reports when all exhausted
+[supervisor 2026-08-28T04:50:05Z] probe gemini_primary: 429-EXHAUSTED at call 0
+[supervisor 2026-08-28T04:50:08Z] probe gemini_backup1: 429-EXHAUSTED at call 1
+[supervisor 2026-08-28T04:50:08Z] probe gemini_backup2: 429-EXHAUSTED at call 0
+[supervisor 2026-08-28T04:50:08Z] CAPACITY REPORT: unresolved=44462 rows remain; ALL verified Gemini projects are quota-exhausted right now (rows=25111 ok=22769 fail=2339). Additional authorized credentials (dropped as gemini*.key in the secure credential dir) would be burst-verified and used automatically. Next probe in 5400s.
+[supervisor 2026-08-28T05:18:01Z] supervisor v2 started under Amendment 1 (commit 0db4f2d): no wall-clock cutoff; rotate verified projects as quota permits; capacity reports when all exhausted
+[supervisor 2026-08-28T05:18:01Z] probe gemini_primary: exception FatalAPIError at call 0
+[supervisor 2026-08-28T05:18:02Z] probe gemini_backup1: 429-EXHAUSTED at call 0
+[supervisor 2026-08-28T05:18:02Z] probe gemini_backup2: exception FatalAPIError at call 0
+[supervisor 2026-08-28T05:18:02Z] CAPACITY REPORT: unresolved=44462 rows remain; ALL verified Gemini projects are quota-exhausted right now (rows=25111 ok=22769 fail=2339). Additional authorized credentials (dropped as gemini*.key in the secure credential dir) would be burst-verified and used automatically. Next probe in 5400s.
+[supervisor 2026-08-28T06:22:02Z] supervisor v2 started under Amendment 1 (commit 0db4f2d): no wall-clock cutoff; rotate verified projects as quota permits; capacity reports when all exhausted
+[supervisor 2026-08-28T06:22:02Z] probe gemini_primary: exception FatalAPIError at call 0
+[supervisor 2026-08-28T06:22:05Z] probe gemini_backup1: 429-EXHAUSTED at call 1
+[supervisor 2026-08-28T06:22:05Z] probe gemini_backup2: exception FatalAPIError at call 0
+[supervisor 2026-08-28T06:23:05Z] probe gemini_extra1: OK (15/15 burst, model echo gemini-3.7-flash)
+[supervisor 2026-08-28T06:23:05Z] NEW CREDENTIAL gemini_extra1: first dataset use; verified by 15/15 burst + model echo; MUST be added to results/civil_comments/gemini_credential_provenance.json
+[supervisor 2026-08-28T06:23:05Z] segment start: cred=gemini_extra1 baseline rows=25111 ok=22769 fail=2339
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=25111 prior_technical_failures=2339 todo=44462
+progress 500/44462 {'ok': 499, 'invalid': 1, 'tech_fail': 0}
+progress 1000/44462 {'ok': 999, 'invalid': 1, 'tech_fail': 0}
+progress 1500/44462 {'ok': 1499, 'invalid': 1, 'tech_fail': 0}
+progress 2000/44462 {'ok': 1999, 'invalid': 1, 'tech_fail': 0}
+progress 2500/44462 {'ok': 2499, 'invalid': 1, 'tech_fail': 0}
+progress 3000/44462 {'ok': 2999, 'invalid': 1, 'tech_fail': 0}
+progress 3500/44462 {'ok': 3499, 'invalid': 1, 'tech_fail': 0}
+progress 4000/44462 {'ok': 3999, 'invalid': 1, 'tech_fail': 0}
+progress 4500/44462 {'ok': 4499, 'invalid': 1, 'tech_fail': 0}
+progress 5000/44462 {'ok': 4999, 'invalid': 1, 'tech_fail': 0}
+progress 5500/44462 {'ok': 5499, 'invalid': 1, 'tech_fail': 0}
+progress 6000/44462 {'ok': 5999, 'invalid': 1, 'tech_fail': 0}
+progress 6500/44462 {'ok': 6499, 'invalid': 1, 'tech_fail': 0}
+progress 7000/44462 {'ok': 6999, 'invalid': 1, 'tech_fail': 0}
+progress 7500/44462 {'ok': 7499, 'invalid': 1, 'tech_fail': 0}
+progress 8000/44462 {'ok': 7999, 'invalid': 1, 'tech_fail': 0}
+FATAL: HTTP 403: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[supervisor 2026-08-28T07:20:04Z] segment end: cred=gemini_extra1 reason='scorer exited on its own' rows=33294 ok=30951 fail=2339 segment_new_ok=8182 segment_new_fail=0
+[orchestrator 2026-08-28T07:21:50Z] ===== overnight orchestrator started =====
+[orchestrator 2026-08-28T07:21:50Z] PHASE 1 scoring: continuous rotation; inactive/dead originals excluded: gemini,gemini_backup2
+[orchestrator 2026-08-28T07:24:22Z] probe gemini_backup1: OK (15/15)
+[orchestrator 2026-08-28T07:24:22Z] MILESTONE segment start: cred=gemini_backup1 rows=33294 ok=30951 tech=2339 unresolved=36279
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=33294 prior_technical_failures=2339 todo=36279
+progress 500/36279 {'ok': 500, 'invalid': 0, 'tech_fail': 0}
+progress 1000/36279 {'ok': 1000, 'invalid': 0, 'tech_fail': 0}
+progress 1500/36279 {'ok': 1500, 'invalid': 0, 'tech_fail': 0}
+progress 2000/36279 {'ok': 2000, 'invalid': 0, 'tech_fail': 0}
+progress 2500/36279 {'ok': 2500, 'invalid': 0, 'tech_fail': 0}
+progress 3000/36279 {'ok': 3000, 'invalid': 0, 'tech_fail': 0}
+progress 3500/36279 {'ok': 3500, 'invalid': 0, 'tech_fail': 0}
+progress 4000/36279 {'ok': 4000, 'invalid': 0, 'tech_fail': 0}
+progress 4500/36279 {'ok': 4500, 'invalid': 0, 'tech_fail': 0}
+progress 5000/36279 {'ok': 5000, 'invalid': 0, 'tech_fail': 0}
+progress 5500/36279 {'ok': 5500, 'invalid': 0, 'tech_fail': 0}
+progress 6000/36279 {'ok': 6000, 'invalid': 0, 'tech_fail': 0}
+progress 6500/36279 {'ok': 6500, 'invalid': 0, 'tech_fail': 0}
+progress 7000/36279 {'ok': 7000, 'invalid': 0, 'tech_fail': 0}
+progress 7500/36279 {'ok': 7500, 'invalid': 0, 'tech_fail': 0}
+progress 8000/36279 {'ok': 8000, 'invalid': 0, 'tech_fail': 0}
+progress 8500/36279 {'ok': 8500, 'invalid': 0, 'tech_fail': 0}
+progress 9000/36279 {'ok': 9000, 'invalid': 0, 'tech_fail': 0}
+progress 9500/36279 {'ok': 9500, 'invalid': 0, 'tech_fail': 0}
+[orchestrator 2026-08-28T09:43:22Z] MILESTONE segment end: cred=gemini_backup1 reason='watchdog proactive (9702 new ok, 0 new failures)' ok=40653 tech=2339 unresolved=26577 (+9702 ok, +0 tech)
+[orchestrator 2026-08-28T09:43:22Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T09:43:23Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T09:43:23Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T09:43:23Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T09:43:23Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T09:45:55Z] probe gemini_backup1: OK (15/15)
+[orchestrator 2026-08-28T09:45:55Z] MILESTONE segment start: cred=gemini_backup1 rows=42996 ok=40653 tech=2339 unresolved=26577
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=42996 prior_technical_failures=2339 todo=26577
+[orchestrator 2026-08-28T09:50:27Z] MILESTONE segment end: cred=gemini_backup1 reason='watchdog flood (10 new failures, 236 new ok)' ok=40889 tech=2349 unresolved=26331 (+236 ok, +10 tech)
+[orchestrator 2026-08-28T09:50:27Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T09:50:27Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T09:50:28Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T09:50:28Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T09:50:28Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T09:50:29Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T09:50:29Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T09:50:29Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T09:50:29Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T09:50:30Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T09:50:30Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T09:50:30Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T10:10:31Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T10:10:31Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T10:10:31Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T10:10:31Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T10:10:32Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T10:10:32Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T10:10:32Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T10:30:33Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T10:30:33Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T10:30:33Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T10:30:34Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T10:30:34Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T10:30:34Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T10:30:34Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T10:50:35Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T10:50:35Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T10:50:35Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T10:50:36Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T10:50:36Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T10:50:36Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T10:50:36Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T11:11:26Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T11:11:26Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T11:11:27Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T11:11:27Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T11:11:27Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T11:11:27Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T11:11:28Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T11:31:51Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T11:31:52Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T11:31:52Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T11:31:52Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T11:31:52Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T11:31:53Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T11:31:53Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T11:51:54Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T11:51:54Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T11:51:54Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T11:51:54Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T11:51:55Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T11:51:55Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T11:51:55Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T12:11:56Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T12:11:56Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T12:11:56Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T12:11:56Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T12:11:57Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T12:11:57Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T12:11:57Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T12:31:58Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T12:31:58Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T12:31:58Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T12:31:58Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T12:31:59Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T12:31:59Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T12:31:59Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T12:52:00Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T12:52:00Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T12:52:00Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T12:52:01Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T12:52:01Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T12:52:01Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T12:52:01Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T13:12:02Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T13:12:02Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T13:12:02Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T13:12:03Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T13:12:03Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T13:12:03Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T13:12:03Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T13:32:21Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T13:32:21Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T13:32:22Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T13:32:22Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T13:32:22Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T13:32:22Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T13:32:23Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T13:53:05Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T13:53:05Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T13:53:06Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T13:53:06Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T13:53:06Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T13:53:06Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T13:53:07Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T14:13:07Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T14:13:07Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T14:13:08Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T14:13:08Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T14:13:08Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T14:13:08Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T14:13:09Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T14:33:09Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T14:33:09Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T14:33:10Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T14:33:10Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T14:33:10Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T14:33:10Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T14:33:11Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T14:53:11Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T14:53:12Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T14:53:12Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T14:53:12Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T14:53:12Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T14:53:13Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T14:53:13Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T15:13:13Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T15:13:14Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T15:13:14Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T15:13:14Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T15:13:14Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T15:13:15Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T15:13:15Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T15:33:15Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T15:33:16Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T15:33:16Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T15:33:16Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T15:33:16Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T15:33:17Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T15:33:17Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T15:53:52Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T15:53:52Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T15:53:52Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T15:53:53Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T15:53:53Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T15:53:53Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T15:53:53Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T16:13:54Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T16:13:54Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T16:13:54Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T16:13:55Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T16:13:55Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T16:13:55Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T16:13:55Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T16:33:56Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T16:33:56Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T16:33:56Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T16:33:57Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T16:33:57Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T16:33:57Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T16:33:57Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T16:56:29Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T16:56:29Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T16:56:29Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T16:56:30Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T16:56:30Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T16:56:30Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T16:56:30Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T17:16:31Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T17:16:31Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T17:16:32Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T17:16:32Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T17:16:32Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T17:16:32Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T17:16:33Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=26331; retry in 1200s
+[orchestrator 2026-08-28T17:29:33Z] new credential file detected; retrying immediately
+[orchestrator 2026-08-28T17:29:33Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T17:29:33Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T17:29:34Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T17:29:34Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T17:29:34Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T17:29:34Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T17:30:58Z] probe gemini_extra6: OK (15/15)
+[orchestrator 2026-08-28T17:30:58Z] MILESTONE segment start: cred=gemini_extra6 rows=43242 ok=40889 tech=2349 unresolved=26331
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=43242 prior_technical_failures=2349 todo=26331
+progress 500/26331 {'ok': 500, 'invalid': 0, 'tech_fail': 0}
+progress 1000/26331 {'ok': 1000, 'invalid': 0, 'tech_fail': 0}
+progress 1500/26331 {'ok': 1500, 'invalid': 0, 'tech_fail': 0}
+progress 2000/26331 {'ok': 2000, 'invalid': 0, 'tech_fail': 0}
+progress 2500/26331 {'ok': 2500, 'invalid': 0, 'tech_fail': 0}
+progress 3000/26331 {'ok': 3000, 'invalid': 0, 'tech_fail': 0}
+progress 3500/26331 {'ok': 3500, 'invalid': 0, 'tech_fail': 0}
+progress 4000/26331 {'ok': 4000, 'invalid': 0, 'tech_fail': 0}
+progress 4500/26331 {'ok': 4500, 'invalid': 0, 'tech_fail': 0}
+progress 5000/26331 {'ok': 5000, 'invalid': 0, 'tech_fail': 0}
+progress 5500/26331 {'ok': 5500, 'invalid': 0, 'tech_fail': 0}
+progress 6000/26331 {'ok': 5999, 'invalid': 1, 'tech_fail': 0}
+progress 6500/26331 {'ok': 6499, 'invalid': 1, 'tech_fail': 0}
+progress 7000/26331 {'ok': 6999, 'invalid': 1, 'tech_fail': 0}
+progress 7500/26331 {'ok': 7498, 'invalid': 2, 'tech_fail': 0}
+progress 8000/26331 {'ok': 7998, 'invalid': 2, 'tech_fail': 0}
+progress 8500/26331 {'ok': 8498, 'invalid': 2, 'tech_fail': 0}
+progress 9000/26331 {'ok': 8998, 'invalid': 2, 'tech_fail': 0}
+progress 9500/26331 {'ok': 9498, 'invalid': 2, 'tech_fail': 0}
+[orchestrator 2026-08-28T18:19:31Z] MILESTONE segment end: cred=gemini_extra6 reason='watchdog proactive (9714 new ok, 0 new failures)' ok=50603 tech=2349 unresolved=16615 (+9714 ok, +0 tech)
+[orchestrator 2026-08-28T18:19:31Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T18:19:32Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T18:19:32Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T18:19:32Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T18:19:33Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T18:19:33Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T18:20:22Z] probe gemini_extra6: OK (15/15)
+[orchestrator 2026-08-28T18:20:22Z] MILESTONE segment start: cred=gemini_extra6 rows=52958 ok=50603 tech=2349 unresolved=16615
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=52958 prior_technical_failures=2349 todo=16615
+[orchestrator 2026-08-28T18:21:55Z] MILESTONE segment end: cred=gemini_extra6 reason='watchdog flood (13 new failures, 190 new ok)' ok=50793 tech=2362 unresolved=16412 (+190 ok, +13 tech)
+[orchestrator 2026-08-28T18:21:56Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T18:21:56Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T18:21:56Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T18:21:56Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T18:21:57Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T18:21:57Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T18:21:57Z] probe gemini_extra6: unavailable (429)
+[orchestrator 2026-08-28T18:21:57Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=16412; retry in 1200s
+[orchestrator 2026-08-28T18:42:04Z] probe gemini_backup1: unavailable (429)
+[orchestrator 2026-08-28T18:42:04Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T18:42:05Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T18:42:05Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T18:42:05Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T18:42:05Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T18:42:06Z] probe gemini_extra6: unavailable (429)
+[orchestrator 2026-08-28T18:42:06Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=16412; retry in 1200s
+[orchestrator 2026-08-28T18:57:06Z] new credential file detected; retrying immediately
+[orchestrator 2026-08-28T18:57:06Z] probe gemini_backup1: unavailable (dead-401)
+[orchestrator 2026-08-28T18:57:07Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T18:57:07Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T18:57:07Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T18:57:08Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T18:57:08Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T18:57:08Z] probe gemini_extra6: unavailable (dead-401)
+[orchestrator 2026-08-28T18:58:11Z] probe gemini_extra7: OK (15/15)
+[orchestrator 2026-08-28T18:58:11Z] MILESTONE segment start: cred=gemini_extra7 rows=53161 ok=50793 tech=2362 unresolved=16412
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=53161 prior_technical_failures=2362 todo=16412
+progress 500/16412 {'ok': 500, 'invalid': 0, 'tech_fail': 0}
+progress 1000/16412 {'ok': 1000, 'invalid': 0, 'tech_fail': 0}
+progress 1500/16412 {'ok': 1500, 'invalid': 0, 'tech_fail': 0}
+progress 2000/16412 {'ok': 2000, 'invalid': 0, 'tech_fail': 0}
+progress 2500/16412 {'ok': 2500, 'invalid': 0, 'tech_fail': 0}
+progress 3000/16412 {'ok': 3000, 'invalid': 0, 'tech_fail': 0}
+progress 3500/16412 {'ok': 3500, 'invalid': 0, 'tech_fail': 0}
+progress 4000/16412 {'ok': 4000, 'invalid': 0, 'tech_fail': 0}
+progress 4500/16412 {'ok': 4500, 'invalid': 0, 'tech_fail': 0}
+progress 5000/16412 {'ok': 5000, 'invalid': 0, 'tech_fail': 0}
+progress 5500/16412 {'ok': 5500, 'invalid': 0, 'tech_fail': 0}
+progress 6000/16412 {'ok': 6000, 'invalid': 0, 'tech_fail': 0}
+progress 6500/16412 {'ok': 6500, 'invalid': 0, 'tech_fail': 0}
+progress 7000/16412 {'ok': 7000, 'invalid': 0, 'tech_fail': 0}
+progress 7500/16412 {'ok': 7500, 'invalid': 0, 'tech_fail': 0}
+progress 8000/16412 {'ok': 8000, 'invalid': 0, 'tech_fail': 0}
+progress 8500/16412 {'ok': 8500, 'invalid': 0, 'tech_fail': 0}
+progress 9000/16412 {'ok': 9000, 'invalid': 0, 'tech_fail': 0}
+progress 9500/16412 {'ok': 9500, 'invalid': 0, 'tech_fail': 0}
+[orchestrator 2026-08-28T19:56:52Z] MILESTONE segment end: cred=gemini_extra7 reason='watchdog proactive (9720 new ok, 0 new failures)' ok=60513 tech=2362 unresolved=6692 (+9720 ok, +0 tech)
+[orchestrator 2026-08-28T19:56:53Z] probe gemini_backup1: unavailable (dead-401)
+[orchestrator 2026-08-28T19:56:53Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-28T19:56:53Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-28T19:56:53Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-28T19:56:54Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-28T19:56:54Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-28T19:56:54Z] probe gemini_extra6: unavailable (dead-401)
+[orchestrator 2026-08-28T19:57:35Z] probe gemini_extra7: OK (15/15)
+[orchestrator 2026-08-28T19:57:35Z] MILESTONE segment start: cred=gemini_extra7 rows=62881 ok=60513 tech=2362 unresolved=6692
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=62881 prior_technical_failures=2362 todo=6692
+[orchestrator 2026-08-28T20:49:07Z] MILESTONE segment end: cred=gemini_extra7 reason='watchdog flood (11 new failures, 159 new ok)' ok=60672 tech=2373 unresolved=6522 (+159 ok, +11 tech)
+[orchestrator 2026-08-28T20:49:08Z] probe gemini_extra8: unavailable (network error af)
+[orchestrator 2026-08-28T20:49:08Z] probe gemini_backup1: unavailable (network error af)
+[orchestrator 2026-08-28T20:49:08Z] probe gemini_extra1: unavailable (network error af)
+[orchestrator 2026-08-28T20:49:08Z] probe gemini_extra2: unavailable (network error af)
+[orchestrator 2026-08-28T20:49:08Z] probe gemini_extra3: unavailable (network error af)
+[orchestrator 2026-08-28T20:49:08Z] probe gemini_extra4: unavailable (network error af)
+[orchestrator 2026-08-28T20:49:09Z] probe gemini_extra5: unavailable (network error af)
+[orchestrator 2026-08-28T20:49:09Z] probe gemini_extra6: unavailable (network error af)
+[orchestrator 2026-08-28T20:49:09Z] probe gemini_extra7: unavailable (network error af)
+[orchestrator 2026-08-28T20:49:09Z] probe gemini_extra8: unavailable (network error af)
+[orchestrator 2026-08-28T20:49:09Z] CAPACITY WAIT: all credentials momentarily unavailable; unresolved=6522; retry in 1200s
+[orchestrator 2026-08-29T01:47:47Z] new credential file detected; retrying immediately
+[orchestrator 2026-08-29T01:47:48Z] probe gemini_backup1: unavailable (dead-401)
+[orchestrator 2026-08-29T01:47:48Z] probe gemini_extra1: unavailable (dead-401)
+[orchestrator 2026-08-29T01:47:48Z] probe gemini_extra2: unavailable (dead-401)
+[orchestrator 2026-08-29T01:47:48Z] probe gemini_extra3: unavailable (dead-401)
+[orchestrator 2026-08-29T01:47:49Z] probe gemini_extra4: unavailable (dead-401)
+[orchestrator 2026-08-29T01:47:49Z] probe gemini_extra5: unavailable (dead-401)
+[orchestrator 2026-08-29T01:47:49Z] probe gemini_extra6: unavailable (dead-401)
+[orchestrator 2026-08-29T01:48:27Z] probe gemini_extra7: OK (15/15)
+[orchestrator 2026-08-29T01:48:27Z] MILESTONE segment start: cred=gemini_extra7 rows=63051 ok=60672 tech=2373 unresolved=6522
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=63051 prior_technical_failures=2373 todo=6522
+[orchestrator 2026-08-29T01:49:03Z] MILESTONE segment end: cred=gemini_extra7 reason='watchdog flood (11 new failures, 22 new ok)' ok=60694 tech=2384 unresolved=6489 (+22 ok, +11 tech)
+[orchestrator 2026-08-29T01:49:43Z] probe gemini_extra8: OK (15/15)
+[orchestrator 2026-08-29T01:49:43Z] MILESTONE segment start: cred=gemini_extra8 rows=63084 ok=60694 tech=2384 unresolved=6489
+provider=gemini model=gemini-3.7-flash
+targets=69573 done=63084 prior_technical_failures=2384 todo=6489
+progress 500/6489 {'ok': 500, 'invalid': 0, 'tech_fail': 0}
+progress 1000/6489 {'ok': 1000, 'invalid': 0, 'tech_fail': 0}
+progress 1500/6489 {'ok': 1500, 'invalid': 0, 'tech_fail': 0}
+progress 2000/6489 {'ok': 2000, 'invalid': 0, 'tech_fail': 0}
+progress 2500/6489 {'ok': 2500, 'invalid': 0, 'tech_fail': 0}
+progress 3000/6489 {'ok': 3000, 'invalid': 0, 'tech_fail': 0}
+progress 3500/6489 {'ok': 3500, 'invalid': 0, 'tech_fail': 0}
+progress 4000/6489 {'ok': 4000, 'invalid': 0, 'tech_fail': 0}
+progress 4500/6489 {'ok': 4500, 'invalid': 0, 'tech_fail': 0}
+progress 5000/6489 {'ok': 5000, 'invalid': 0, 'tech_fail': 0}
+progress 5500/6489 {'ok': 5500, 'invalid': 0, 'tech_fail': 0}
+progress 6000/6489 {'ok': 6000, 'invalid': 0, 'tech_fail': 0}
+finished: {'ok': 6489, 'invalid': 0, 'tech_fail': 0}
+[orchestrator 2026-08-29T02:07:56Z] MILESTONE segment end: cred=gemini_extra8 reason='coverage complete' ok=67183 tech=2384 unresolved=0 (+6489 ok, +0 tech)
+[orchestrator 2026-08-29T02:07:57Z] MILESTONE COVERAGE COMPLETE: rows=69573 ok=67183 invalid=6 tech=2384
+[orchestrator 2026-08-29T02:07:57Z] PHASE 2 downstream analysis starting
+[orchestrator 2026-08-29T02:07:57Z] RUN /Users/nathansamson/offcriterion/.venv/bin/python scripts/civil_comments_llm_score.py --provider gemini --freeze
+[orchestrator 2026-08-29T02:09:07Z]   stdout: {
+  "stage": "LLM score-store freeze (pooled A-blind quantities only)",
+  "provider": "gemini",
+  "model_id": "gemini-3.7-flash",
+  "n_expected": 69573,
+  "n_records": 69573,
+  "n_ok": 67183,
+  "n_technical_failures": 2384,
+  "n_invalid_responses": 6,
+  "exclusion_rate": 0.034352,
+  "pooled_score_distribution": {
+    "1": 46486,
+    "2": 15958,
+    "3": 3780,
+    "4": 802,
+    "5": 157
+  },
+  "input_tokens": 15601066,
+  "output_tokens": 504979,
+  "thinking_tokens": 6027001,
+  "actual_cost_usd": 36.2,
+  "note_gemini_billing": "thinking tokens are billed as output; both included in cost",
+  "score_store_sha256": "3ef469677c9ae7f0a89924af3476fc0b92c352376b464d8b888efa454a4f58f1",
+  "store_frozen_manifest": "data/scoring/cc_gemini_toxicity/FROZEN.json"
+}
+[orchestrator 2026-08-29T02:09:07Z] MILESTONE FREEZE OK
+[orchestrator 2026-08-29T02:09:07Z] RUN git add data/scoring/cc_gemini_toxicity/ results/civil_comments/llm_scores_gemini_FROZEN.json results/civil_comments/gemini_credential_provenance.json
+[orchestrator 2026-08-29T02:09:07Z] RUN git commit -m Freeze and hash the completed Civil Comments Gemini score store
+
+Full manifest coverage reached (all 69,573 rows recorded). Store frozen and SHA-256-hashed under the frozen addendum; provenance finalized. No scientific specification changed.
+[orchestrator 2026-08-29T02:09:07Z]   stdout: [main 3ce29c0] Freeze and hash the completed Civil Comments Gemini score store
+ 3 files changed, 69603 insertions(+)
+ create mode 100644 data/scoring/cc_gemini_toxicity/FROZEN.json
+ create mode 100644 data/scoring/cc_gemini_toxicity/scores__gemini-3.7-flash__cc_toxicity.jsonl
+ create mode 100644 results/civil_comments/llm_scores_gemini_FROZEN.json
+[orchestrator 2026-08-29T02:09:19Z]   pushed origin/main
+[orchestrator 2026-08-29T02:09:19Z] RUN /Users/nathansamson/offcriterion/.venv/bin/python scripts/civil_comments_llm_exclusion_audit.py
+[orchestrator 2026-08-29T02:09:25Z]   stdout: {
+  "gpt": {
+    "n_excluded": 0,
+    "n_technical": 0,
+    "n_invalid_response": 0,
+    "exclusion_rate": 0.0
+  },
+  "claude": {
+    "n_excluded": 0,
+    "n_technical": 0,
+    "n_invalid_response": 0,
+    "exclusion_rate": 0.0
+  },
+  "gemini": {
+    "n_excluded": 2390,
+    "n_technical": 2384,
+    "n_invalid_response": 6,
+    "exclusion_rate": 0.03435240682448651
+  }
+}
+written: results/civil_comments/llm_exclusion_audit.json
+[orchestrator 2026-08-29T02:09:25Z] MILESTONE MISSINGNESS AUDIT OK
+[orchestrator 2026-08-29T02:09:25Z] RUN /Users/nathansamson/offcriterion/.venv/bin/python scripts/civil_comments_llm_analysis.py
+[orchestrator 2026-08-29T02:11:36Z]   stdout: ol gpt/black: p=0.808
+  negative_control gpt/white: p=0.416
+  negative_control claude/male: p=0.477
+  negative_control claude/female: p=0.562
+  negative_control claude/LGBTQ: p=0.540
+  negative_control claude/christian: p=0.106
+  negative_control claude/muslim: p=0.284
+  negative_control claude/other_religions: p=0.713
+  negative_control claude/black: p=0.650
+  negative_control claude/white: p=0.733
+  negative_control gemini/male: p=0.550
+  negative_control gemini/female: p=0.717
+  negative_control gemini/LGBTQ: p=0.343
+  negative_control gemini/christian: p=0.033
+  negative_control gemini/muslim: p=0.156
+  negative_control gemini/other_religions: p=0.933
+  negative_control gemini/black: p=0.629
+  negative_control gemini/white: p=0.906
+written: results/civil_comments/llm_audit_results.json
+[orchestrator 2026-08-29T02:11:36Z] MILESTONE 24-TEST ANALYSIS OK
+[orchestrator 2026-08-29T02:11:36Z] RUN /Users/nathansamson/offcriterion/.venv/bin/python scripts/civil_comments_cross_evaluator.py
+[orchestrator 2026-08-29T02:11:36Z]   stdout: detoxify Holm rejections: 8 /8; LLM Holm rejections: 21 /24
+written: results/civil_comments/cross_evaluator_summary.json
+[orchestrator 2026-08-29T02:11:36Z] MILESTONE CROSS-EVALUATOR OK
+[orchestrator 2026-08-29T02:11:36Z] RUN /Users/nathansamson/offcriterion/.venv/bin/python -m pytest tests/ -q
+[orchestrator 2026-08-29T02:12:04Z]   stdout: ........................................................................ [ 35%]
+........................................................................ [ 70%]
+...........................................................              [100%]
+203 passed in 28.24s
+[orchestrator 2026-08-29T02:12:04Z] MILESTONE PYTEST OK
+[orchestrator 2026-08-29T02:12:04Z] RUN git add results/civil_comments/ docs/civil_comments_overnight_report.md
+[orchestrator 2026-08-29T02:12:05Z]   ERROR rc=128: fatal: pathspec 'docs/civil_comments_overnight_report.md' did not match any files
+[orchestrator 2026-08-29T02:12:05Z] RUN git commit -m Civil Comments LLM extension: frozen 24-test analysis, missingness audit, cross-evaluator summary
+
+Runs the prespecified secondary replication family (3 evaluators x 8 identities, Holm across 24), binned-Z sensitivities, negative controls, and the cross-evaluator comparison over Detoxify/GPT/Claude/Gemini, after the Gemini store was frozen. No scientific specification changed.
+[orchestrator 2026-08-29T02:12:05Z]   stdout: On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	results/civil_comments/cross_evaluator_summary.json
+	results/civil_comments/llm_audit_results.json
+	results/civil_comments/llm_exclusion_audit.json
+	results/civil_comments/llm_scoring_claude.log
+	results/civil_comments/llm_scoring_gemini.log
+	results/civil_comments/llm_scoring_gpt.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+[orchestrator 2026-08-29T02:12:05Z]   ERROR rc=1: (no stderr)
+[orchestrator 2026-08-29T02:12:05Z]   pushed origin/main
+[orchestrator 2026-08-29T02:12:05Z] MILESTONE report written: results/civil_comments/overnight_report.json, docs/civil_comments_overnight_report.md
+[orchestrator 2026-08-29T02:12:05Z] RUN git add results/civil_comments/overnight_report.json docs/civil_comments_overnight_report.md
+[orchestrator 2026-08-29T02:12:05Z] RUN git commit -m Add overnight run final report (Civil Comments LLM extension)
+[orchestrator 2026-08-29T02:12:05Z]   stdout: [main 98d0967] Add overnight run final report (Civil Comments LLM extension)
+ 2 files changed, 1488 insertions(+)
+ create mode 100644 docs/civil_comments_overnight_report.md
+ create mode 100644 results/civil_comments/overnight_report.json
+[orchestrator 2026-08-29T02:12:07Z]   pushed origin/main
+[orchestrator 2026-08-29T02:12:07Z] MILESTONE ORCHESTRATOR COMPLETE final_commit=98d09672115468a14ea142d628be9e8db4bcaa0b failures=[]

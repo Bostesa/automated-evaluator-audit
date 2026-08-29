@@ -1,0 +1,293 @@
+{
+  "n_manifest": 69573,
+  "gpt": {
+    "n_records": 69573,
+    "n_excluded": 0,
+    "n_technical": 0,
+    "n_invalid_response": 0,
+    "exclusion_rate": 0.0,
+    "total_retries": 10416,
+    "error_status_kinds": [],
+    "by_identity": {
+      "male": {
+        "excluded_a1": 0,
+        "retained_a1": 6101,
+        "excluded_a0": 0,
+        "retained_a0": 63472,
+        "fisher_two_sided_p": 1.0
+      },
+      "female": {
+        "excluded_a1": 0,
+        "retained_a1": 6668,
+        "excluded_a0": 0,
+        "retained_a0": 62905,
+        "fisher_two_sided_p": 1.0
+      },
+      "LGBTQ": {
+        "excluded_a1": 0,
+        "retained_a1": 1055,
+        "excluded_a0": 0,
+        "retained_a0": 68518,
+        "fisher_two_sided_p": 1.0
+      },
+      "christian": {
+        "excluded_a1": 0,
+        "retained_a1": 2837,
+        "excluded_a0": 0,
+        "retained_a0": 66736,
+        "fisher_two_sided_p": 1.0
+      },
+      "muslim": {
+        "excluded_a1": 0,
+        "retained_a1": 1872,
+        "excluded_a0": 0,
+        "retained_a0": 67701,
+        "fisher_two_sided_p": 1.0
+      },
+      "other_religions": {
+        "excluded_a1": 0,
+        "retained_a1": 851,
+        "excluded_a0": 0,
+        "retained_a0": 68722,
+        "fisher_two_sided_p": 1.0
+      },
+      "black": {
+        "excluded_a1": 0,
+        "retained_a1": 1952,
+        "excluded_a0": 0,
+        "retained_a0": 67621,
+        "fisher_two_sided_p": 1.0
+      },
+      "white": {
+        "excluded_a1": 0,
+        "retained_a1": 2994,
+        "excluded_a0": 0,
+        "retained_a0": 66579,
+        "fisher_two_sided_p": 1.0
+      }
+    },
+    "comment_length": "no exclusions"
+  },
+  "claude": {
+    "n_records": 69573,
+    "n_excluded": 0,
+    "n_technical": 0,
+    "n_invalid_response": 0,
+    "exclusion_rate": 0.0,
+    "total_retries": 0,
+    "error_status_kinds": [],
+    "by_identity": {
+      "male": {
+        "excluded_a1": 0,
+        "retained_a1": 6101,
+        "excluded_a0": 0,
+        "retained_a0": 63472,
+        "fisher_two_sided_p": 1.0
+      },
+      "female": {
+        "excluded_a1": 0,
+        "retained_a1": 6668,
+        "excluded_a0": 0,
+        "retained_a0": 62905,
+        "fisher_two_sided_p": 1.0
+      },
+      "LGBTQ": {
+        "excluded_a1": 0,
+        "retained_a1": 1055,
+        "excluded_a0": 0,
+        "retained_a0": 68518,
+        "fisher_two_sided_p": 1.0
+      },
+      "christian": {
+        "excluded_a1": 0,
+        "retained_a1": 2837,
+        "excluded_a0": 0,
+        "retained_a0": 66736,
+        "fisher_two_sided_p": 1.0
+      },
+      "muslim": {
+        "excluded_a1": 0,
+        "retained_a1": 1872,
+        "excluded_a0": 0,
+        "retained_a0": 67701,
+        "fisher_two_sided_p": 1.0
+      },
+      "other_religions": {
+        "excluded_a1": 0,
+        "retained_a1": 851,
+        "excluded_a0": 0,
+        "retained_a0": 68722,
+        "fisher_two_sided_p": 1.0
+      },
+      "black": {
+        "excluded_a1": 0,
+        "retained_a1": 1952,
+        "excluded_a0": 0,
+        "retained_a0": 67621,
+        "fisher_two_sided_p": 1.0
+      },
+      "white": {
+        "excluded_a1": 0,
+        "retained_a1": 2994,
+        "excluded_a0": 0,
+        "retained_a0": 66579,
+        "fisher_two_sided_p": 1.0
+      }
+    },
+    "comment_length": "no exclusions"
+  },
+  "gemini": {
+    "n_records": 69573,
+    "n_excluded": 2390,
+    "n_technical": 2384,
+    "n_invalid_response": 6,
+    "exclusion_rate": 0.03435240682448651,
+    "total_retries": 7428,
+    "error_status_kinds": [
+      "HTTP 429 after 3 retries: {\n  \"error\": {",
+      "HTTP 503 after 3 retries: {\n  \"error\": {",
+      "network error after 3 retries: <urlopen "
+    ],
+    "by_identity": {
+      "male": {
+        "excluded_a1": 213,
+        "retained_a1": 5888,
+        "excluded_a0": 2177,
+        "retained_a0": 61295,
+        "fisher_two_sided_p": 0.7967103401950352
+      },
+      "female": {
+        "excluded_a1": 253,
+        "retained_a1": 6415,
+        "excluded_a0": 2137,
+        "retained_a0": 60768,
+        "fisher_two_sided_p": 0.09642863013529634
+      },
+      "LGBTQ": {
+        "excluded_a1": 37,
+        "retained_a1": 1018,
+        "excluded_a0": 2353,
+        "retained_a0": 66165,
+        "fisher_two_sided_p": 0.8646622100412491
+      },
+      "christian": {
+        "excluded_a1": 133,
+        "retained_a1": 2704,
+        "excluded_a0": 2257,
+        "retained_a0": 64479,
+        "fisher_two_sided_p": 0.00033581614499337057
+      },
+      "muslim": {
+        "excluded_a1": 70,
+        "retained_a1": 1802,
+        "excluded_a0": 2320,
+        "retained_a0": 65381,
+        "fisher_two_sided_p": 0.4404584054275055
+      },
+      "other_religions": {
+        "excluded_a1": 35,
+        "retained_a1": 816,
+        "excluded_a0": 2355,
+        "retained_a0": 66367,
+        "fisher_two_sided_p": 0.2563311041512548
+      },
+      "black": {
+        "excluded_a1": 59,
+        "retained_a1": 1893,
+        "excluded_a0": 2331,
+        "retained_a0": 65290,
+        "fisher_two_sided_p": 0.3441396705459797
+      },
+      "white": {
+        "excluded_a1": 119,
+        "retained_a1": 2875,
+        "excluded_a0": 2271,
+        "retained_a0": 64308,
+        "fisher_two_sided_p": 0.10058152982799867
+      }
+    },
+    "comment_length": {
+      "median_excluded": 230.0,
+      "median_retained": 225.0,
+      "mannwhitney_two_sided_p": 0.27726194461075293
+    },
+    "request_order_positions_of_exclusions": {
+      "first_decile_count": 1,
+      "last_decile_count": 22,
+      "positions_summary": [
+        2180,
+        21164,
+        63083
+      ]
+    }
+  },
+  "gemini_credential_segments": [
+    {
+      "label": "gemini_primary",
+      "start_utc": "2026-08-27T15:46:42+00:00",
+      "start_request_sequence": 1,
+      "status": "ended: provider daily quota exhausted",
+      "provider_model_echoed": "gemini-3.7-flash",
+      "end_utc": "2026-08-27T16:46:30+00:00",
+      "end_request_sequence": 10561,
+      "n_attempted": 10561,
+      "n_successful_scores": 10000,
+      "n_invalid_responses": 2,
+      "n_technical_failures_http429_quota": 559,
+      "http_error_categories": [
+        "429 RESOURCE_EXHAUSTED (daily per-project request quota)"
+      ],
+      "reason_for_rotation": "sustained HTTP 429 RESOURCE_EXHAUSTED daily-quota errors beginning 2026-08-27T16:30:20Z after exactly 10,000 successful requests; scoring process stopped at 16:46 to halt the flood; the 559 quota-period failure records are preserved as frozen technical exclusions"
+    },
+    {
+      "label": "gemini_backup1",
+      "smoke_verification": "8 non-dataset synthetic sentences, 8/8 structured scores, 0 retries, model echoed gemini-3.7-flash, 2026-08-27T16:52Z",
+      "start_utc": "2026-08-27T16:53:00+00:00",
+      "start_request_sequence": 10562,
+      "status": "ended: provider daily quota exhausted",
+      "provider_model_echoed": "gemini-3.7-flash",
+      "end_utc": "2026-08-27T17:56:00+00:00",
+      "n_attempted": 11000,
+      "n_successful_scores": 9971,
+      "n_invalid_responses": 0,
+      "n_technical_failures_http429_quota": 1029,
+      "http_error_categories": [
+        "429 RESOURCE_EXHAUSTED (daily per-project request quota)"
+      ],
+      "reason_for_rotation": "sustained HTTP 429 RESOURCE_EXHAUSTED daily-quota errors after ~9,971 successful requests (same ~10k/day per-project cap as segment 1); process stopped 17:56Z; monitoring threshold error allowed ~1,029 flood exclusions before stop -- subsequent segments use a proactive watchdog (stop at ~9,850 segment successes or 25 segment failures)"
+    },
+    {
+      "label": "gemini_backup2",
+      "smoke_verification": "8 non-dataset synthetic sentences, 8/8 structured scores, 0 retries, model echoed gemini-3.7-flash, 2026-08-27T18:00Z",
+      "start_utc": "2026-08-27T18:01:00+00:00",
+      "status": "ended: provider daily quota exhausted",
+      "proactive_watchdog": "external infrastructure watchdog stops the process at ~9,850 segment successes or >=25 segment technical failures to rotate before the daily quota flood; scoring code, model, prompt, settings unchanged",
+      "provider_model_echoed": "gemini-3.7-flash",
+      "end_utc": "2026-08-27T18:18:00+00:00",
+      "n_successful_scores": 2791,
+      "n_invalid_responses": 1,
+      "n_technical_failures_http429_quota": 232,
+      "http_error_categories": [
+        "429 RESOURCE_EXHAUSTED (daily per-project request quota)"
+      ],
+      "reason_for_rotation": "daily quota exhausted after ~2,791 successful requests (smaller or partially consumed allotment than segments 1-2); watchdog stopped the process; 232 flood exclusions preserved as final under the frozen retry policy",
+      "note": "includes the 18 successful rows scored 18:05Z before an erroneous watchdog stop (stale log line) and the relaunch; all rows append-only, none rescored"
+    },
+    {
+      "label": "gemini_backup1",
+      "segment": 4,
+      "smoke_verification": "single-call non-dataset probe returned a valid structured score (prober monitor)",
+      "start_utc": "2026-08-27T19:50:45+00:00",
+      "status": "ended: false-positive quota probe; project still daily-exhausted",
+      "provider_model_echoed": "gemini-3.7-flash",
+      "proactive_watchdog": "stop at >=9,700 segment successes or >=25 segment technical failures",
+      "end_utc": "2026-08-27T20:05:52+00:00",
+      "n_successful_scores": 7,
+      "n_technical_failures_http429_quota": 507,
+      "http_error_categories": [
+        "429 RESOURCE_EXHAUSTED (daily per-project request quota)"
+      ],
+      "reason_for_rotation": "single-call probe success was a token-bucket trickle, not a daily reset; sustained scoring flooded immediately and the watchdog stopped it; prober hardened to require 15 consecutive clean non-dataset calls before any future resumption"
+    }
+  ]
+}

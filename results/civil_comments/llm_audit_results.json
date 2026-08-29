@@ -1,0 +1,1356 @@
+{
+  "study": "civil_comments_llm_evaluator_extension",
+  "frozen_inputs": {
+    "addendum_config": "config/civil_comments_llm_evaluator_addendum.json",
+    "primary_manifest_sha256": "892245a7899401c1041f3cf7bc17528d80d9812efacefe994dbfd16fec97469e",
+    "negative_control_labels_sha256": "c2215e561b71b41f4018d0a8ad500b30971b61a8d7a5b98ccbbed2341220f73c",
+    "score_stores": {
+      "gpt": "0d3a82be930d7084c99fd430fa6775ab4581f287fdaf5db1defefec24086c509",
+      "claude": "941c718757dab16e51e327ffcadd161c669ac14d0ad9c9404845d1a31d216034",
+      "gemini": "3ef469677c9ae7f0a89924af3476fc0b92c352376b464d8b888efa454a4f58f1"
+    },
+    "model_ids": {
+      "gpt": "gpt-5.4-mini-2026-03-17",
+      "claude": "claude-haiku-4-5-20251001",
+      "gemini": "gemini-3.7-flash"
+    }
+  },
+  "n_permutations": 999,
+  "llm_secondary_replication_family": {
+    "definition": "3 evaluators x 8 identities; Holm across all 24 raw p-values",
+    "status": "secondary cross-evaluator replication; NOT the original confirmatory family",
+    "tests": {
+      "gpt:male": {
+        "identity_index": 0,
+        "seed_spawn_key": [
+          11,
+          0
+        ],
+        "n_total": 69573,
+        "n_a1_total": 6101,
+        "n_informative_strata": 542,
+        "n_retained_informative": 61706,
+        "n_retained_a1": 5310,
+        "observed_conditional_g2": 1572.958661952638,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 2,
+        "p_raw": 0.003,
+        "weighted_mean_gap_1to5": 0.11366496585550416,
+        "evaluator": "gpt-5.4-mini-2026-03-17",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gpt:female": {
+        "identity_index": 1,
+        "seed_spawn_key": [
+          11,
+          1
+        ],
+        "n_total": 69573,
+        "n_a1_total": 6668,
+        "n_informative_strata": 548,
+        "n_retained_informative": 61781,
+        "n_retained_a1": 5695,
+        "observed_conditional_g2": 1765.6224529731553,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.17034618286931266,
+        "evaluator": "gpt-5.4-mini-2026-03-17",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gpt:LGBTQ": {
+        "identity_index": 2,
+        "seed_spawn_key": [
+          11,
+          2
+        ],
+        "n_total": 69573,
+        "n_a1_total": 1055,
+        "n_informative_strata": 242,
+        "n_retained_informative": 57272,
+        "n_retained_a1": 776,
+        "observed_conditional_g2": 720.312644278747,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 3,
+        "p_raw": 0.004,
+        "weighted_mean_gap_1to5": 0.25478351439358843,
+        "evaluator": "gpt-5.4-mini-2026-03-17",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gpt:christian": {
+        "identity_index": 3,
+        "seed_spawn_key": [
+          11,
+          3
+        ],
+        "n_total": 69573,
+        "n_a1_total": 2837,
+        "n_informative_strata": 342,
+        "n_retained_informative": 59864,
+        "n_retained_a1": 2590,
+        "observed_conditional_g2": 1050.7254825364798,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 1,
+        "p_raw": 0.002,
+        "weighted_mean_gap_1to5": 0.043407293815780824,
+        "evaluator": "gpt-5.4-mini-2026-03-17",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gpt:muslim": {
+        "identity_index": 4,
+        "seed_spawn_key": [
+          11,
+          4
+        ],
+        "n_total": 69573,
+        "n_a1_total": 1872,
+        "n_informative_strata": 321,
+        "n_retained_informative": 59164,
+        "n_retained_a1": 1480,
+        "observed_conditional_g2": 1303.8862291139085,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.5677314343844266,
+        "evaluator": "gpt-5.4-mini-2026-03-17",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gpt:other_religions": {
+        "identity_index": 5,
+        "seed_spawn_key": [
+          11,
+          5
+        ],
+        "n_total": 69573,
+        "n_a1_total": 851,
+        "n_informative_strata": 176,
+        "n_retained_informative": 56930,
+        "n_retained_a1": 725,
+        "observed_conditional_g2": 651.4841818088898,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.3800862488645773,
+        "evaluator": "gpt-5.4-mini-2026-03-17",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gpt:black": {
+        "identity_index": 6,
+        "seed_spawn_key": [
+          11,
+          6
+        ],
+        "n_total": 69573,
+        "n_a1_total": 1952,
+        "n_informative_strata": 329,
+        "n_retained_informative": 58417,
+        "n_retained_a1": 1482,
+        "observed_conditional_g2": 1207.012118688086,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.4578112968202861,
+        "evaluator": "gpt-5.4-mini-2026-03-17",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gpt:white": {
+        "identity_index": 7,
+        "seed_spawn_key": [
+          11,
+          7
+        ],
+        "n_total": 69573,
+        "n_a1_total": 2994,
+        "n_informative_strata": 418,
+        "n_retained_informative": 59850,
+        "n_retained_a1": 2350,
+        "observed_conditional_g2": 1798.9848620429402,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.5885138602122247,
+        "evaluator": "gpt-5.4-mini-2026-03-17",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "claude:male": {
+        "identity_index": 0,
+        "seed_spawn_key": [
+          12,
+          0
+        ],
+        "n_total": 69573,
+        "n_a1_total": 6101,
+        "n_informative_strata": 542,
+        "n_retained_informative": 61706,
+        "n_retained_a1": 5310,
+        "observed_conditional_g2": 1263.1250930052483,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 9,
+        "p_raw": 0.01,
+        "weighted_mean_gap_1to5": 0.07748550168193448,
+        "evaluator": "claude-haiku-4-5-20251001",
+        "p_holm": 0.04,
+        "reject_holm_at_0.05": true
+      },
+      "claude:female": {
+        "identity_index": 1,
+        "seed_spawn_key": [
+          12,
+          1
+        ],
+        "n_total": 69573,
+        "n_a1_total": 6668,
+        "n_informative_strata": 548,
+        "n_retained_informative": 61781,
+        "n_retained_a1": 5695,
+        "observed_conditional_g2": 1546.2499600459123,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.13171941771384202,
+        "evaluator": "claude-haiku-4-5-20251001",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "claude:LGBTQ": {
+        "identity_index": 2,
+        "seed_spawn_key": [
+          12,
+          2
+        ],
+        "n_total": 69573,
+        "n_a1_total": 1055,
+        "n_informative_strata": 242,
+        "n_retained_informative": 57272,
+        "n_retained_a1": 776,
+        "observed_conditional_g2": 677.2459501361009,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.1760861453204911,
+        "evaluator": "claude-haiku-4-5-20251001",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "claude:christian": {
+        "identity_index": 3,
+        "seed_spawn_key": [
+          12,
+          3
+        ],
+        "n_total": 69573,
+        "n_a1_total": 2837,
+        "n_informative_strata": 342,
+        "n_retained_informative": 59864,
+        "n_retained_a1": 2590,
+        "observed_conditional_g2": 791.7605372045655,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 106,
+        "p_raw": 0.107,
+        "weighted_mean_gap_1to5": 0.038247939912294276,
+        "evaluator": "claude-haiku-4-5-20251001",
+        "p_holm": 0.321,
+        "reject_holm_at_0.05": false
+      },
+      "claude:muslim": {
+        "identity_index": 4,
+        "seed_spawn_key": [
+          12,
+          4
+        ],
+        "n_total": 69573,
+        "n_a1_total": 1872,
+        "n_informative_strata": 321,
+        "n_retained_informative": 59164,
+        "n_retained_a1": 1480,
+        "observed_conditional_g2": 1203.148835643893,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.3724418203706862,
+        "evaluator": "claude-haiku-4-5-20251001",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "claude:other_religions": {
+        "identity_index": 5,
+        "seed_spawn_key": [
+          12,
+          5
+        ],
+        "n_total": 69573,
+        "n_a1_total": 851,
+        "n_informative_strata": 176,
+        "n_retained_informative": 56930,
+        "n_retained_a1": 725,
+        "observed_conditional_g2": 665.6215397217311,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.3383654404056808,
+        "evaluator": "claude-haiku-4-5-20251001",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "claude:black": {
+        "identity_index": 6,
+        "seed_spawn_key": [
+          12,
+          6
+        ],
+        "n_total": 69573,
+        "n_a1_total": 1952,
+        "n_informative_strata": 329,
+        "n_retained_informative": 58417,
+        "n_retained_a1": 1482,
+        "observed_conditional_g2": 1056.7701384259854,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.2901847494045491,
+        "evaluator": "claude-haiku-4-5-20251001",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "claude:white": {
+        "identity_index": 7,
+        "seed_spawn_key": [
+          12,
+          7
+        ],
+        "n_total": 69573,
+        "n_a1_total": 2994,
+        "n_informative_strata": 418,
+        "n_retained_informative": 59850,
+        "n_retained_a1": 2350,
+        "observed_conditional_g2": 1503.985610852018,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.36061690327322965,
+        "evaluator": "claude-haiku-4-5-20251001",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gemini:male": {
+        "identity_index": 0,
+        "seed_spawn_key": [
+          13,
+          0
+        ],
+        "n_total": 67183,
+        "n_a1_total": 5888,
+        "n_informative_strata": 527,
+        "n_retained_informative": 59473,
+        "n_retained_a1": 5122,
+        "observed_conditional_g2": 1222.3390757932793,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 4,
+        "p_raw": 0.005,
+        "weighted_mean_gap_1to5": 0.060589216338367204,
+        "evaluator": "gemini-3.7-flash",
+        "p_holm": 0.025,
+        "reject_holm_at_0.05": true
+      },
+      "gemini:female": {
+        "identity_index": 1,
+        "seed_spawn_key": [
+          13,
+          1
+        ],
+        "n_total": 67183,
+        "n_a1_total": 6415,
+        "n_informative_strata": 533,
+        "n_retained_informative": 59591,
+        "n_retained_a1": 5478,
+        "observed_conditional_g2": 1298.9921749971109,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.07798294685365899,
+        "evaluator": "gemini-3.7-flash",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gemini:LGBTQ": {
+        "identity_index": 2,
+        "seed_spawn_key": [
+          13,
+          2
+        ],
+        "n_total": 67183,
+        "n_a1_total": 1018,
+        "n_informative_strata": 231,
+        "n_retained_informative": 54831,
+        "n_retained_a1": 743,
+        "observed_conditional_g2": 543.7248633779818,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 244,
+        "p_raw": 0.245,
+        "weighted_mean_gap_1to5": 0.11552285218108935,
+        "evaluator": "gemini-3.7-flash",
+        "p_holm": 0.49,
+        "reject_holm_at_0.05": false
+      },
+      "gemini:christian": {
+        "identity_index": 3,
+        "seed_spawn_key": [
+          13,
+          3
+        ],
+        "n_total": 67183,
+        "n_a1_total": 2704,
+        "n_informative_strata": 332,
+        "n_retained_informative": 57749,
+        "n_retained_a1": 2467,
+        "observed_conditional_g2": 718.2477181911236,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 271,
+        "p_raw": 0.272,
+        "weighted_mean_gap_1to5": 0.0032556251202791233,
+        "evaluator": "gemini-3.7-flash",
+        "p_holm": 0.49,
+        "reject_holm_at_0.05": false
+      },
+      "gemini:muslim": {
+        "identity_index": 4,
+        "seed_spawn_key": [
+          13,
+          4
+        ],
+        "n_total": 67183,
+        "n_a1_total": 1802,
+        "n_informative_strata": 314,
+        "n_retained_informative": 57073,
+        "n_retained_a1": 1425,
+        "observed_conditional_g2": 933.7074835804524,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.25431448752053354,
+        "evaluator": "gemini-3.7-flash",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gemini:other_religions": {
+        "identity_index": 5,
+        "seed_spawn_key": [
+          13,
+          5
+        ],
+        "n_total": 67183,
+        "n_a1_total": 816,
+        "n_informative_strata": 170,
+        "n_retained_informative": 54920,
+        "n_retained_a1": 693,
+        "observed_conditional_g2": 472.92498857714236,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.13825562857755314,
+        "evaluator": "gemini-3.7-flash",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gemini:black": {
+        "identity_index": 6,
+        "seed_spawn_key": [
+          13,
+          6
+        ],
+        "n_total": 67183,
+        "n_a1_total": 1893,
+        "n_informative_strata": 321,
+        "n_retained_informative": 56354,
+        "n_retained_a1": 1436,
+        "observed_conditional_g2": 885.6732878022594,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.16349397864273524,
+        "evaluator": "gemini-3.7-flash",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      },
+      "gemini:white": {
+        "identity_index": 7,
+        "seed_spawn_key": [
+          13,
+          7
+        ],
+        "n_total": 67183,
+        "n_a1_total": 2875,
+        "n_informative_strata": 406,
+        "n_retained_informative": 57752,
+        "n_retained_a1": 2250,
+        "observed_conditional_g2": 1216.5075626613107,
+        "n_permutations": 999,
+        "permutation_exceedance_count": 0,
+        "p_raw": 0.001,
+        "weighted_mean_gap_1to5": 0.2763438033869054,
+        "evaluator": "gemini-3.7-flash",
+        "p_holm": 0.024,
+        "reject_holm_at_0.05": true
+      }
+    }
+  },
+  "sensitivity_binned_z": {
+    "gpt": {
+      "analysis_slot": 14,
+      "tests": {
+        "male": {
+          "identity_index": 0,
+          "seed_spawn_key": [
+            14,
+            0
+          ],
+          "n_total": 69573,
+          "n_a1_total": 6101,
+          "n_informative_strata": 303,
+          "n_retained_informative": 68791,
+          "n_retained_a1": 6072,
+          "observed_conditional_g2": 1146.2281941678375,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.1097702844266937
+        },
+        "female": {
+          "identity_index": 1,
+          "seed_spawn_key": [
+            14,
+            1
+          ],
+          "n_total": 69573,
+          "n_a1_total": 6668,
+          "n_informative_strata": 301,
+          "n_retained_informative": 68624,
+          "n_retained_a1": 6615,
+          "observed_conditional_g2": 1219.074949538568,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.1598862590095262
+        },
+        "LGBTQ": {
+          "identity_index": 2,
+          "seed_spawn_key": [
+            14,
+            2
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1055,
+          "n_informative_strata": 156,
+          "n_retained_informative": 64963,
+          "n_retained_a1": 1037,
+          "observed_conditional_g2": 578.8208337733522,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.2200618880728312
+        },
+        "christian": {
+          "identity_index": 3,
+          "seed_spawn_key": [
+            14,
+            3
+          ],
+          "n_total": 69573,
+          "n_a1_total": 2837,
+          "n_informative_strata": 183,
+          "n_retained_informative": 66716,
+          "n_retained_a1": 2829,
+          "observed_conditional_g2": 635.3064676537178,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 6,
+          "p_raw": 0.007,
+          "weighted_mean_gap_1to5": 0.0316825009154634
+        },
+        "muslim": {
+          "identity_index": 4,
+          "seed_spawn_key": [
+            14,
+            4
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1872,
+          "n_informative_strata": 184,
+          "n_retained_informative": 66106,
+          "n_retained_a1": 1857,
+          "observed_conditional_g2": 1040.0816072737798,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.5364163826510765
+        },
+        "other_religions": {
+          "identity_index": 5,
+          "seed_spawn_key": [
+            14,
+            5
+          ],
+          "n_total": 69573,
+          "n_a1_total": 851,
+          "n_informative_strata": 122,
+          "n_retained_informative": 64358,
+          "n_retained_a1": 848,
+          "observed_conditional_g2": 531.7859170222655,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.36211803385463626
+        },
+        "black": {
+          "identity_index": 6,
+          "seed_spawn_key": [
+            14,
+            6
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1952,
+          "n_informative_strata": 177,
+          "n_retained_informative": 65805,
+          "n_retained_a1": 1931,
+          "observed_conditional_g2": 844.1239175491501,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.43903243588932
+        },
+        "white": {
+          "identity_index": 7,
+          "seed_spawn_key": [
+            14,
+            7
+          ],
+          "n_total": 69573,
+          "n_a1_total": 2994,
+          "n_informative_strata": 195,
+          "n_retained_informative": 66884,
+          "n_retained_a1": 2968,
+          "observed_conditional_g2": 1317.5109077924863,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.5522047632136744
+        }
+      }
+    },
+    "claude": {
+      "analysis_slot": 15,
+      "tests": {
+        "male": {
+          "identity_index": 0,
+          "seed_spawn_key": [
+            15,
+            0
+          ],
+          "n_total": 69573,
+          "n_a1_total": 6101,
+          "n_informative_strata": 303,
+          "n_retained_informative": 68791,
+          "n_retained_a1": 6072,
+          "observed_conditional_g2": 1033.6472142473795,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.0698285549273452
+        },
+        "female": {
+          "identity_index": 1,
+          "seed_spawn_key": [
+            15,
+            1
+          ],
+          "n_total": 69573,
+          "n_a1_total": 6668,
+          "n_informative_strata": 301,
+          "n_retained_informative": 68624,
+          "n_retained_a1": 6615,
+          "observed_conditional_g2": 1272.0025271670893,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.12703091544661455
+        },
+        "LGBTQ": {
+          "identity_index": 2,
+          "seed_spawn_key": [
+            15,
+            2
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1055,
+          "n_informative_strata": 156,
+          "n_retained_informative": 64963,
+          "n_retained_a1": 1037,
+          "observed_conditional_g2": 540.3592531478498,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.16969948948643573
+        },
+        "christian": {
+          "identity_index": 3,
+          "seed_spawn_key": [
+            15,
+            3
+          ],
+          "n_total": 69573,
+          "n_a1_total": 2837,
+          "n_informative_strata": 183,
+          "n_retained_informative": 66716,
+          "n_retained_a1": 2829,
+          "observed_conditional_g2": 569.6639556046575,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 14,
+          "p_raw": 0.015,
+          "weighted_mean_gap_1to5": 0.03047225087042377
+        },
+        "muslim": {
+          "identity_index": 4,
+          "seed_spawn_key": [
+            15,
+            4
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1872,
+          "n_informative_strata": 184,
+          "n_retained_informative": 66106,
+          "n_retained_a1": 1857,
+          "observed_conditional_g2": 1024.6132748527452,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.36407810666217255
+        },
+        "other_religions": {
+          "identity_index": 5,
+          "seed_spawn_key": [
+            15,
+            5
+          ],
+          "n_total": 69573,
+          "n_a1_total": 851,
+          "n_informative_strata": 122,
+          "n_retained_informative": 64358,
+          "n_retained_a1": 848,
+          "observed_conditional_g2": 622.9632906136103,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.34706519647833417
+        },
+        "black": {
+          "identity_index": 6,
+          "seed_spawn_key": [
+            15,
+            6
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1952,
+          "n_informative_strata": 177,
+          "n_retained_informative": 65805,
+          "n_retained_a1": 1931,
+          "observed_conditional_g2": 811.3963030504528,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.27194505715930994
+        },
+        "white": {
+          "identity_index": 7,
+          "seed_spawn_key": [
+            15,
+            7
+          ],
+          "n_total": 69573,
+          "n_a1_total": 2994,
+          "n_informative_strata": 195,
+          "n_retained_informative": 66884,
+          "n_retained_a1": 2968,
+          "observed_conditional_g2": 1146.6452623056248,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.3395752616094263
+        }
+      }
+    },
+    "gemini": {
+      "analysis_slot": 16,
+      "tests": {
+        "male": {
+          "identity_index": 0,
+          "seed_spawn_key": [
+            16,
+            0
+          ],
+          "n_total": 67183,
+          "n_a1_total": 5888,
+          "n_informative_strata": 301,
+          "n_retained_informative": 66424,
+          "n_retained_a1": 5859,
+          "observed_conditional_g2": 985.5000111982226,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.056288182321025206
+        },
+        "female": {
+          "identity_index": 1,
+          "seed_spawn_key": [
+            16,
+            1
+          ],
+          "n_total": 67183,
+          "n_a1_total": 6415,
+          "n_informative_strata": 294,
+          "n_retained_informative": 66197,
+          "n_retained_a1": 6360,
+          "observed_conditional_g2": 1014.0600445691962,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.07052611510088697
+        },
+        "LGBTQ": {
+          "identity_index": 2,
+          "seed_spawn_key": [
+            16,
+            2
+          ],
+          "n_total": 67183,
+          "n_a1_total": 1018,
+          "n_informative_strata": 153,
+          "n_retained_informative": 61705,
+          "n_retained_a1": 1000,
+          "observed_conditional_g2": 500.4374316558242,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 3,
+          "p_raw": 0.004,
+          "weighted_mean_gap_1to5": 0.09158629789228212
+        },
+        "christian": {
+          "identity_index": 3,
+          "seed_spawn_key": [
+            16,
+            3
+          ],
+          "n_total": 67183,
+          "n_a1_total": 2704,
+          "n_informative_strata": 181,
+          "n_retained_informative": 64403,
+          "n_retained_a1": 2695,
+          "observed_conditional_g2": 510.25701336655766,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 258,
+          "p_raw": 0.259,
+          "weighted_mean_gap_1to5": -0.003022405469505472
+        },
+        "muslim": {
+          "identity_index": 4,
+          "seed_spawn_key": [
+            16,
+            4
+          ],
+          "n_total": 67183,
+          "n_a1_total": 1802,
+          "n_informative_strata": 179,
+          "n_retained_informative": 63762,
+          "n_retained_a1": 1788,
+          "observed_conditional_g2": 791.0716984390747,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.24071955016403665
+        },
+        "other_religions": {
+          "identity_index": 5,
+          "seed_spawn_key": [
+            16,
+            5
+          ],
+          "n_total": 67183,
+          "n_a1_total": 816,
+          "n_informative_strata": 120,
+          "n_retained_informative": 62080,
+          "n_retained_a1": 813,
+          "observed_conditional_g2": 396.5030026824679,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 1,
+          "p_raw": 0.002,
+          "weighted_mean_gap_1to5": 0.1444913014859895
+        },
+        "black": {
+          "identity_index": 6,
+          "seed_spawn_key": [
+            16,
+            6
+          ],
+          "n_total": 67183,
+          "n_a1_total": 1893,
+          "n_informative_strata": 175,
+          "n_retained_informative": 63447,
+          "n_retained_a1": 1871,
+          "observed_conditional_g2": 657.6482394388877,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.13761443522857256
+        },
+        "white": {
+          "identity_index": 7,
+          "seed_spawn_key": [
+            16,
+            7
+          ],
+          "n_total": 67183,
+          "n_a1_total": 2875,
+          "n_informative_strata": 190,
+          "n_retained_informative": 64498,
+          "n_retained_a1": 2848,
+          "observed_conditional_g2": 896.3497556105722,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 0,
+          "p_raw": 0.001,
+          "weighted_mean_gap_1to5": 0.24447374904658217
+        }
+      }
+    }
+  },
+  "negative_control": {
+    "gpt": {
+      "analysis_slot": 17,
+      "tests": {
+        "male": {
+          "identity_index": 0,
+          "seed_spawn_key": [
+            17,
+            0
+          ],
+          "n_total": 69573,
+          "n_a1_total": 6101,
+          "n_informative_strata": 542,
+          "n_retained_informative": 61706,
+          "n_retained_a1": 5310,
+          "observed_conditional_g2": 1439.6921529440442,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 687,
+          "p_raw": 0.688,
+          "weighted_mean_gap_1to5": -0.0029353257818701688
+        },
+        "female": {
+          "identity_index": 1,
+          "seed_spawn_key": [
+            17,
+            1
+          ],
+          "n_total": 69573,
+          "n_a1_total": 6668,
+          "n_informative_strata": 548,
+          "n_retained_informative": 61781,
+          "n_retained_a1": 5695,
+          "observed_conditional_g2": 1535.3990687081823,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 197,
+          "p_raw": 0.198,
+          "weighted_mean_gap_1to5": -0.016670399366877635
+        },
+        "LGBTQ": {
+          "identity_index": 2,
+          "seed_spawn_key": [
+            17,
+            2
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1055,
+          "n_informative_strata": 242,
+          "n_retained_informative": 57272,
+          "n_retained_a1": 776,
+          "observed_conditional_g2": 651.3931262510596,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 604,
+          "p_raw": 0.605,
+          "weighted_mean_gap_1to5": 0.015958545760274157
+        },
+        "christian": {
+          "identity_index": 3,
+          "seed_spawn_key": [
+            17,
+            3
+          ],
+          "n_total": 69573,
+          "n_a1_total": 2837,
+          "n_informative_strata": 342,
+          "n_retained_informative": 59864,
+          "n_retained_a1": 2590,
+          "observed_conditional_g2": 949.7526534934295,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 391,
+          "p_raw": 0.392,
+          "weighted_mean_gap_1to5": -0.0030473518902169104
+        },
+        "muslim": {
+          "identity_index": 4,
+          "seed_spawn_key": [
+            17,
+            4
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1872,
+          "n_informative_strata": 321,
+          "n_retained_informative": 59164,
+          "n_retained_a1": 1480,
+          "observed_conditional_g2": 854.9759852883872,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 926,
+          "p_raw": 0.927,
+          "weighted_mean_gap_1to5": -0.002754273638182284
+        },
+        "other_religions": {
+          "identity_index": 5,
+          "seed_spawn_key": [
+            17,
+            5
+          ],
+          "n_total": 69573,
+          "n_a1_total": 851,
+          "n_informative_strata": 176,
+          "n_retained_informative": 56930,
+          "n_retained_a1": 725,
+          "observed_conditional_g2": 480.6710523079382,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 806,
+          "p_raw": 0.807,
+          "weighted_mean_gap_1to5": 0.056121945957472684
+        },
+        "black": {
+          "identity_index": 6,
+          "seed_spawn_key": [
+            17,
+            6
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1952,
+          "n_informative_strata": 329,
+          "n_retained_informative": 58417,
+          "n_retained_a1": 1482,
+          "observed_conditional_g2": 898.4949856892927,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 807,
+          "p_raw": 0.808,
+          "weighted_mean_gap_1to5": -0.0029705255541455362
+        },
+        "white": {
+          "identity_index": 7,
+          "seed_spawn_key": [
+            17,
+            7
+          ],
+          "n_total": 69573,
+          "n_a1_total": 2994,
+          "n_informative_strata": 418,
+          "n_retained_informative": 59850,
+          "n_retained_a1": 2350,
+          "observed_conditional_g2": 1147.7052265153034,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 415,
+          "p_raw": 0.416,
+          "weighted_mean_gap_1to5": 0.05377698226414369
+        }
+      }
+    },
+    "claude": {
+      "analysis_slot": 18,
+      "tests": {
+        "male": {
+          "identity_index": 0,
+          "seed_spawn_key": [
+            18,
+            0
+          ],
+          "n_total": 69573,
+          "n_a1_total": 6101,
+          "n_informative_strata": 542,
+          "n_retained_informative": 61706,
+          "n_retained_a1": 5310,
+          "observed_conditional_g2": 1183.1077208883362,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 476,
+          "p_raw": 0.477,
+          "weighted_mean_gap_1to5": -0.0016257410132741767
+        },
+        "female": {
+          "identity_index": 1,
+          "seed_spawn_key": [
+            18,
+            1
+          ],
+          "n_total": 69573,
+          "n_a1_total": 6668,
+          "n_informative_strata": 548,
+          "n_retained_informative": 61781,
+          "n_retained_a1": 5695,
+          "observed_conditional_g2": 1202.966245578602,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 561,
+          "p_raw": 0.562,
+          "weighted_mean_gap_1to5": -0.0067693792874355
+        },
+        "LGBTQ": {
+          "identity_index": 2,
+          "seed_spawn_key": [
+            18,
+            2
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1055,
+          "n_informative_strata": 242,
+          "n_retained_informative": 57272,
+          "n_retained_a1": 776,
+          "observed_conditional_g2": 538.2670298258308,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 539,
+          "p_raw": 0.54,
+          "weighted_mean_gap_1to5": 0.02982558297677944
+        },
+        "christian": {
+          "identity_index": 3,
+          "seed_spawn_key": [
+            18,
+            3
+          ],
+          "n_total": 69573,
+          "n_a1_total": 2837,
+          "n_informative_strata": 342,
+          "n_retained_informative": 59864,
+          "n_retained_a1": 2590,
+          "observed_conditional_g2": 791.66457127803,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 105,
+          "p_raw": 0.106,
+          "weighted_mean_gap_1to5": 0.013404037268348388
+        },
+        "muslim": {
+          "identity_index": 4,
+          "seed_spawn_key": [
+            18,
+            4
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1872,
+          "n_informative_strata": 321,
+          "n_retained_informative": 59164,
+          "n_retained_a1": 1480,
+          "observed_conditional_g2": 786.6623138703872,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 283,
+          "p_raw": 0.284,
+          "weighted_mean_gap_1to5": 0.004385473663862415
+        },
+        "other_religions": {
+          "identity_index": 5,
+          "seed_spawn_key": [
+            18,
+            5
+          ],
+          "n_total": 69573,
+          "n_a1_total": 851,
+          "n_informative_strata": 176,
+          "n_retained_informative": 56930,
+          "n_retained_a1": 725,
+          "observed_conditional_g2": 395.53879476198927,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 712,
+          "p_raw": 0.713,
+          "weighted_mean_gap_1to5": 0.04435425218645679
+        },
+        "black": {
+          "identity_index": 6,
+          "seed_spawn_key": [
+            18,
+            6
+          ],
+          "n_total": 69573,
+          "n_a1_total": 1952,
+          "n_informative_strata": 329,
+          "n_retained_informative": 58417,
+          "n_retained_a1": 1482,
+          "observed_conditional_g2": 782.3445052767638,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 649,
+          "p_raw": 0.65,
+          "weighted_mean_gap_1to5": 0.02964467186286188
+        },
+        "white": {
+          "identity_index": 7,
+          "seed_spawn_key": [
+            18,
+            7
+          ],
+          "n_total": 69573,
+          "n_a1_total": 2994,
+          "n_informative_strata": 418,
+          "n_retained_informative": 59850,
+          "n_retained_a1": 2350,
+          "observed_conditional_g2": 943.5561575107276,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 732,
+          "p_raw": 0.733,
+          "weighted_mean_gap_1to5": 0.011734937057767304
+        }
+      }
+    },
+    "gemini": {
+      "analysis_slot": 19,
+      "tests": {
+        "male": {
+          "identity_index": 0,
+          "seed_spawn_key": [
+            19,
+            0
+          ],
+          "n_total": 67183,
+          "n_a1_total": 5883,
+          "n_informative_strata": 532,
+          "n_retained_informative": 59500,
+          "n_retained_a1": 5118,
+          "observed_conditional_g2": 1134.4176996425958,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 549,
+          "p_raw": 0.55,
+          "weighted_mean_gap_1to5": 0.003969601560126485
+        },
+        "female": {
+          "identity_index": 1,
+          "seed_spawn_key": [
+            19,
+            1
+          ],
+          "n_total": 67183,
+          "n_a1_total": 6425,
+          "n_informative_strata": 536,
+          "n_retained_informative": 59613,
+          "n_retained_a1": 5482,
+          "observed_conditional_g2": 1133.2073940339033,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 716,
+          "p_raw": 0.717,
+          "weighted_mean_gap_1to5": -0.003288500884267051
+        },
+        "LGBTQ": {
+          "identity_index": 2,
+          "seed_spawn_key": [
+            19,
+            2
+          ],
+          "n_total": 67183,
+          "n_a1_total": 1018,
+          "n_informative_strata": 234,
+          "n_retained_informative": 55191,
+          "n_retained_a1": 743,
+          "observed_conditional_g2": 546.1326017499669,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 342,
+          "p_raw": 0.343,
+          "weighted_mean_gap_1to5": 0.022722259264991416
+        },
+        "christian": {
+          "identity_index": 3,
+          "seed_spawn_key": [
+            19,
+            3
+          ],
+          "n_total": 67183,
+          "n_a1_total": 2751,
+          "n_informative_strata": 336,
+          "n_retained_informative": 57763,
+          "n_retained_a1": 2514,
+          "observed_conditional_g2": 760.9110958327074,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 32,
+          "p_raw": 0.033,
+          "weighted_mean_gap_1to5": 0.00037472173292905106
+        },
+        "muslim": {
+          "identity_index": 4,
+          "seed_spawn_key": [
+            19,
+            4
+          ],
+          "n_total": 67183,
+          "n_a1_total": 1810,
+          "n_informative_strata": 314,
+          "n_retained_informative": 57111,
+          "n_retained_a1": 1434,
+          "observed_conditional_g2": 756.0866229962558,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 155,
+          "p_raw": 0.156,
+          "weighted_mean_gap_1to5": 0.0047626412518353345
+        },
+        "other_religions": {
+          "identity_index": 5,
+          "seed_spawn_key": [
+            19,
+            5
+          ],
+          "n_total": 67183,
+          "n_a1_total": 825,
+          "n_informative_strata": 171,
+          "n_retained_informative": 54946,
+          "n_retained_a1": 703,
+          "observed_conditional_g2": 357.2584252631059,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 932,
+          "p_raw": 0.933,
+          "weighted_mean_gap_1to5": 0.02865491138385556
+        },
+        "black": {
+          "identity_index": 6,
+          "seed_spawn_key": [
+            19,
+            6
+          ],
+          "n_total": 67183,
+          "n_a1_total": 1870,
+          "n_informative_strata": 319,
+          "n_retained_informative": 56357,
+          "n_retained_a1": 1411,
+          "observed_conditional_g2": 739.2486778496532,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 628,
+          "p_raw": 0.629,
+          "weighted_mean_gap_1to5": 0.015885531517160562
+        },
+        "white": {
+          "identity_index": 7,
+          "seed_spawn_key": [
+            19,
+            7
+          ],
+          "n_total": 67183,
+          "n_a1_total": 2885,
+          "n_informative_strata": 408,
+          "n_retained_informative": 57758,
+          "n_retained_a1": 2259,
+          "observed_conditional_g2": 889.1570968276355,
+          "n_permutations": 999,
+          "permutation_exceedance_count": 905,
+          "p_raw": 0.906,
+          "weighted_mean_gap_1to5": 0.006002647566099788
+        }
+      }
+    },
+    "status": "calibration sanity check, NOT confirmatory"
+  }
+}
