@@ -1,15 +1,5 @@
 # Automated Evaluator Audit
 
-Code, preregistration, and frozen artifacts for the paper
-**"What Else Do Automated Evaluators Measure?"**
-
-> A note on names. The repository is called Automated Evaluator Audit. The
-> Python package and CLI keep the project's original internal name,
-> `offcriterion`, because the preregistration, file hashes, and frozen
-> analysis records reference it. `evaluator-audit` and `offcriterion` run
-> the same CLI. Historical documents that say "OffCriterion" are frozen
-> records and have not been edited.
-
 ## The question
 
 An automated evaluator assigns a score `S` to a piece of work. Alongside
