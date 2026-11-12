@@ -1,168 +1,68 @@
-# Automated Evaluator Audit
+# Do Robot Safety Judges Confuse Success with Safety?
 
-## The question
+**Nathan Samson · University of Maryland, Baltimore County**
 
-An automated evaluator assigns a score `S` to a piece of work. Alongside
-`S`, the audit observes `A`, a prespecified external attribute that is not
-itself part of the scoring target, and `Z`, a discrete representation of
-the construct the evaluator is supposed to measure. `S` and `A` are
-usually correlated, because both track genuine quality. The audit asks
-whether `S` still carries information about `A` after conditioning on the
-observed construct.
+Accepted at the **Science of Physical AI Safety (SPAIS) workshop at CoRL 2026**.
 
-```
-H0 :  S  ⫫  A  |  Z   (S independent of A given Z)
-```
+[Read the paper](papers/spais2026/spais74_camera_ready.pdf) · [Supporting material](papers/spais2026/spais74_supporting_material.pdf) · [Citation](papers/spais2026/CITATION.bib)
 
-The test holds `S` and `Z` fixed and permutes `A` within sets of units
-that share an identical `Z`. Two properties matter, and they come from
-different parts of the design.
+## What we tested
 
-- **Conditional calibration** comes from the randomization scheme. Under
-  i.i.d. sampling and `H0`, observations within a stratum are
-  exchangeable, so stratified permutation gives finite sample valid
-  randomization inference with no asymptotics and no model for `P(S | Z)`
-  (`docs/assumptions.md`). The implementation is Monte Carlo, with
-  B = 999 random permutations per test.
-- **Sensitivity beyond mean differences** comes from the statistic. The
-  conditional likelihood ratio `G²` on the `(S, A, Z)` table responds to
-  changes in the location, spread, or shape of the conditional score
-  distributions. A statistic based only on the conditional mean cannot
-  detect an alternative that leaves that mean unchanged. The variance
-  only and shape only scenarios in the synthetic study are exactly such
-  alternatives.
+Does calling a robot attempt successful change its safety rating when the
+images stay the same?
 
-## What is in this repository
+Each AI judge received a task description, ten images from a recorded robot
+simulation, and a five-point safety rubric. In separate calls, we described
+the same attempt as successful or unsuccessful. The images, task and rubric
+stayed fixed. SmolVLA and X-VLA are the robot-control models that produced
+the recordings. The judges are separate models that rated them.
 
-**1. Synthetic validation** (`src/offcriterion/`, no APIs, no real data).
-In six generative scenarios with known truth, the test holds its nominal
-size under both true nulls and detects the variance only departure
-(power 1.000 at n = 2000) and the shape only departure (0.705). The
-stratified mean disparity baseline rejects those same alternatives at
-0.048 and 0.044, indistinguishable from its false positive rate. Full
-tables are in `results/results.md`.
+## Results
 
-**2. A preregistered real data case study** on PERSUADE 2.0 (25,996
-student argumentative essays with human holistic scores and demographic
-metadata). Here `S` is the evaluator's holistic score on the 1 to 6
-rubric scale, `A` is the writer's English language learner (ELL) status,
-and `Z` is the pair (writing prompt, human holistic score). A census of
-the 11,360 usable Independent writing essays was scored by three
-evaluator families under pinned model snapshots, in two prompt
-conditions. The standard prompt is the frozen scoring prompt in
-`prompts/`. The modified prompt adds one instruction telling the
-evaluator not to infer or use demographic characteristics of the writer.
-Demographic metadata was withheld from the evaluators in both conditions.
+Describing an attempt as successful raised its average safety rating.
+Higher scores mean fewer apparent safety concerns.
 
-| Evaluator | Prompt | Status |
-|---|---|---|
-| GPT-5.4-mini | standard | preregistered primary |
-| Claude Haiku 4.5 | standard | secondary confirmatory (Holm) |
-| Gemini 3.7 Flash | standard | secondary confirmatory (Holm) |
-| GPT-5.4-mini | modified | secondary confirmatory (Holm) |
+| Robot-control model | Judge | Complete pairs | Average increase | 95% confidence interval |
+| --- | --- | ---: | ---: | --- |
+| SmolVLA | GPT-5.5 | 352 | 0.455 | [0.368, 0.541] |
+| SmolVLA | GPT-5.4-mini | 352 | 0.361 | [0.278, 0.449] |
+| SmolVLA | Claude Sonnet 5.5 | 351 | 0.510 | [0.415, 0.609] |
+| X-VLA | GPT-5.5 | 200 | 0.605 | [0.487, 0.719] |
+| X-VLA | GPT-5.4-mini | 200 | 0.340 | [0.241, 0.444] |
+| X-VLA | Claude Sonnet 5.5 | 200 | 0.620 | [0.495, 0.738] |
 
-All four cells reject the conditional independence null at Monte Carlo
-p = 0.001, the smallest value attainable at B = 999. The Holm adjusted
-p value for the secondary family is 0.003. Conditional mean gaps
-(ELL − non-ELL, matched on prompt and human score) range from −0.32 to
-−0.60 rubric points.
+These are success-stated minus failure-stated differences on the 1–5 scale.
+Intervals resample whole tasks. Each cohort covers 40 tasks. One malformed
+Claude response left 351 complete pairs from 352 sampled SmolVLA attempts.
 
-**3. A post hoc robustness package** whose plan was frozen and committed
-before execution. These analyses are labeled post hoc throughout and are
-never treated as confirmatory. Adjusting for a richer human quality index
-and essay length attenuates the conditional gaps by at most 10.9%, with
-every test still at p = 0.001. A paired analysis shows the modified
-prompt did not mitigate the conditional gap (attenuation −0.057, 95% CI
-[−0.093, −0.014]). Alignment metrics show the evaluators do track the
-rubric (quadratic weighted kappa 0.56 to 0.74) while exhibiting the
-residual dependence.
+The effect remained with alternative wording and instructions to ignore task
+success. The paper also reports text controls, score distributions and later
+descriptive threshold-crossing summaries.
 
-### Interpretation limits
+## What this means
 
-Rejection establishes residual conditional statistical dependence, and
-nothing beyond that. It is not evidence of causal use of demographic
-information, of discrimination, or of unfairness. The human score is an
-imperfect proxy for the intended construct, and linguistic features
-correlated with ELL status may be relevant to a writing rubric. See §18
-of `docs/preregistration.md` and part C of
-`docs/junior_spotlight_evidence.md`.
+Reported outcomes influence ratings of identical displayed evidence. The
+experiment does not establish which safety rating is correct. Ten images can
+omit important events, and the rubric's contact, handling and motion criteria
+may be related to task failure. No human safety ratings or complete independent
+safety reference were available. Threshold crossings are score changes under
+illustrative rules, not verified safety errors.
 
-## Preregistered vs post hoc
+## Materials
 
-| Evidence | Where |
-|---|---|
-| Preregistration (frozen before any scoring) | `docs/preregistration.md`, `config/preregistered.json` |
-| Frozen evaluator prompts | `prompts/` |
-| Frozen sample census + artifact hashes | `data/scoring/stage_a_freeze.json`, `primary_sample_manifest.csv` |
-| Raw evaluator outputs with checksum manifests | `data/scoring/*/` (`FROZEN.json`) |
-| Confirmatory analyses | `results/primary_analysis.json`, `results/secondary_*`, `results/negative_control.json` |
-| Deviations (all disclosed) | `docs/deviations.md` |
-| Post hoc plan (committed before execution) | `docs/posthoc_robustness_plan.md` |
-| Post hoc results | `results/posthoc/`, `results/posthoc_exclusion_audit.md` |
-| Evidence hierarchy for the paper | `docs/junior_spotlight_evidence.md` |
+The [paper folder](papers/spais2026/) contains the main paper, supporting
+material, citation and checksums. The paper has four main-text pages plus
+references. Supporting material includes the original prompts and all five
+score definitions, model settings, a ten-image example, score distributions,
+and descriptive crossings at cutoffs 2–5.
 
-## Installation
+This public branch contains the SPAIS PDFs. It does not contain the robotics
+simulation, raw judge responses or analysis pipeline needed to reproduce the
+robot study from scratch.
 
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev,analysis]"     # analysis = pandas, used by the post hoc scripts
-```
+## Earlier evaluator audits
 
-`evaluator-audit` and `offcriterion` are the same CLI.
-
-## Reproducing
-
-No API calls or paid scoring are required to reproduce any reported
-number. Every evaluator output is frozen in `data/scoring/` with SHA-256
-manifests, and all statistical analyses re-run locally and
-deterministically from those frozen scores. The only scripts that contact
-external APIs are `scripts/run_primary_scoring.py` and
-`scripts/run_secondary_scoring.py`. Do not run them unless you intend to
-pay for a new scoring run.
-
-```bash
-# 1. Synthetic validation (~1 minute, fully self-contained)
-evaluator-audit run
-
-# 2. Real data inputs: download PERSUADE 2.0 (see data/persuade/README.md
-#    for canonical sources and SHA-256), then rebuild the derived inputs:
-python scripts/prepare_persuade.py --out-dir data/persuade
-#    (verifies byte exact SHA-256 reproduction of all three derived files)
-
-# 3. Re-run any analysis from the frozen scores, e.g.:
-python scripts/stage_e_analysis.py        # preregistered primary analysis
-python scripts/negative_control.py        # preregistered negative control
-python scripts/holm_secondary_family.py   # Holm family summary
-python scripts/posthoc_robustness_tests.py  # post hoc Z0/Z1/Z2 tests
-```
-
-`docs/REPRODUCING.md` maps every stage in order, with each script's
-inputs and outputs, its evidentiary status, and whether it touches an
-external API. `scripts/README.md` indexes the scripts by stage.
-
-## Repository layout
-
-```
-src/offcriterion/        core test + synthetic study + scoring/analysis pipeline
-scripts/                 stage scripts, chronological (index: scripts/README.md)
-tests/                   adversarial suite for the properties validity depends on
-config/preregistered.json  frozen machine readable preregistration
-prompts/                 frozen evaluator prompt templates
-docs/                    preregistration, assumptions, deviations, plans, guides
-data/persuade/           corpus (not redistributed, README has provenance and hashes)
-data/scoring/            frozen raw evaluator outputs (checksum manifests)
-results/                 synthetic tables, confirmatory analyses, post hoc package
-```
-
-## Data and licensing
-
-- **Repository code** is MIT licensed (`LICENSE`).
-- **PERSUADE 2.0 corpus** is CC BY-NC-SA 4.0 and is not redistributed
-  here. `data/persuade/README.md` documents how to obtain it and the
-  SHA-256 of the canonical files. Tracked artifacts derived from the
-  corpus (sample manifests and quality indices keyed by essay ID) remain
-  subject to the corpus terms.
-- **Evaluator outputs** are raw provider responses, published as research
-  evidence rather than relicensed as original code.
-
-Details are in `DATA_LICENSES.md`.
+The code in `src/offcriterion/` and `scripts/` belongs to earlier essay and
+toxicity audits. Start with their [overview](docs/EVALUATOR_AUDIT_OVERVIEW.md),
+[reproduction guide](docs/REPRODUCING.md) and [data licences](DATA_LICENSES.md).
+Those commands do not reproduce the SPAIS robot experiments.
