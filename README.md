@@ -4,7 +4,7 @@
 
 Accepted at the **Science of Physical AI Safety (SPAIS) workshop at CoRL 2026**.
 
-[Paper and supporting material](https://nathan-tes-samson.com/publication/robot-safety-judges/)
+[Paper](https://nathan-tes-samson.com/publication/robot-safety-judges/)
 
 ## What we tested
 
