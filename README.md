@@ -4,7 +4,7 @@
 
 Accepted at the **Science of Physical AI Safety (SPAIS) workshop at CoRL 2026**.
 
-[Read the paper](papers/spais2026/spais74_camera_ready.pdf) · [Supporting material](papers/spais2026/spais74_supporting_material.pdf) · [Citation](papers/spais2026/CITATION.bib)
+[Paper and supporting material](https://nathan-tes-samson.com/publication/robot-safety-judges/)
 
 ## What we tested
 
@@ -47,18 +47,6 @@ omit important events, and the rubric's contact, handling and motion criteria
 may be related to task failure. No human safety ratings or complete independent
 safety reference were available. Threshold crossings are score changes under
 illustrative rules, not verified safety errors.
-
-## Materials
-
-The [paper folder](papers/spais2026/) contains the main paper, supporting
-material, citation and checksums. The paper has four main-text pages plus
-references. Supporting material includes the original prompts and all five
-score definitions, model settings, a ten-image example, score distributions,
-and descriptive crossings at cutoffs 2–5.
-
-This public branch contains the SPAIS PDFs. It does not contain the robotics
-simulation, raw judge responses or analysis pipeline needed to reproduce the
-robot study from scratch.
 
 ## Earlier evaluator audits
 
